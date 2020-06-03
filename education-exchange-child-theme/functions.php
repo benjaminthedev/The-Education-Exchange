@@ -25,6 +25,14 @@ function oceanwp_child_enqueue_parent_style() {
 	$version = $theme->get( 'Version' );
 	// Load the stylesheet
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'oceanwp-style' ), $version );
+
+
+	//New Scripts & Styles
+	wp_enqueue_script( 'customjs', get_stylesheet_directory_uri() . '/custom-js/app.js', array(), '1.0.0', true );
+	//wp_enqueue_style( 'customStyle', get_stylesheet_directory_uri() . '/assets/custom-css.css', array() );
 	
 }
 add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
+
+
+
