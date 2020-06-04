@@ -25,8 +25,12 @@ get_header(); ?>
 			<?php the_field('box_3_left'); ?>
 		</div>
 
-		<div class="ms-section" id="left3">
+		<div class="ms-section" id="left4">
 			<?php the_field('box_4_left'); ?>
+		</div>
+		
+		<div class="ms-section" id="left5">
+			<?php the_field('box_5_left'); ?>
 		</div>
 	</div>
 	
@@ -43,8 +47,12 @@ get_header(); ?>
 			<?php the_field('box_3_right'); ?>
 		</div>
 
-		<div class="ms-section" id="right3">
+		<div class="ms-section" id="right4">
 			<?php the_field('box_4_right'); ?>
+		</div>
+
+		<div class="ms-section" id="right5">
+			<?php the_field('box_5_right'); ?>
 		</div>
 	</div>	
 </div>
@@ -59,6 +67,31 @@ get_header(); ?>
 
 
 <style>
+
+/*-- Temp Styles --*/
+
+#left1,
+#left3,
+#left5{
+	background-color: #6EC1E3;
+}
+
+#left2,
+#left4{
+	background-color: #ED7FA0;
+}
+
+#right1,
+#right3,
+#right5{
+	background-color: #7E8F7C;
+}
+
+#right2,
+#right4{
+	background-color: #7A7A7A;
+}
+
 
 
 
@@ -95,7 +128,7 @@ get_header(); ?>
 		console.log('Working scroller');
 
 		jQuery('#myContainer').multiscroll({
-				sectionsColor: ['#6EC1E3', '#ED7FA0', '#7E8F7C', '#7A7A7A'],
+				// sectionsColor: ['#6EC1E3', '#ED7FA0', '#7E8F7C', '#7A7A7A'],
 				navigation: true,
         		navigationPosition: 'right',
         		navigationColor: '#000',
@@ -104,9 +137,9 @@ get_header(); ?>
 
 
 				onLeave: function(index, nextIndex, direction){
-				//after leaving section 4
-				if(nextIndex == '4'){
-					console.log("Going to section 3!");
+				//after leaving section 5
+				if(nextIndex == '5'){
+					console.log("Going to section 5!");
 					jQuery('.elementor-location-footer').addClass('goingUp');
 				} else {
 					jQuery('.elementor-location-footer').removeClass('goingUp');
@@ -114,7 +147,6 @@ get_header(); ?>
 
 			},
 			});
-
 		
 			
 		//On hover footer
