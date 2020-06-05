@@ -24,11 +24,25 @@ body{
     display: flex;
     animation-delay: 2s;
     flex-wrap: wrap;
+    /* If I want to make it boxed more 
+    width: 960px;
+    margin: 0 auto;
+    */
+
 }
 
 .main-box{
     min-width: 30%;
     margin: 20px 10px;
+}
+
+.main-box:nth-child(6){
+    background-color: #FC485C;
+    
+}
+
+.main-box:nth-child(6) .box-heading{
+    color: #fff;
 }
 
 
@@ -244,7 +258,7 @@ article.box_rule:hover .box-rule-details  {
 
                         <a href="#" class="main-box two">
                             <article class="box_rule">
-                                <div class="golden-rule__number">1</div>
+                                <div class="golden-rule__number">2</div>
                                     
 
                                 <div class="box-rule-details">
@@ -257,7 +271,7 @@ article.box_rule:hover .box-rule-details  {
 
                         <a href="#" class="main-box three">
                             <article class="box_rule">
-                                <div class="golden-rule__number">1</div>
+                                <div class="golden-rule__number">3</div>
                                     
 
                                 <div class="box-rule-details">
@@ -270,7 +284,7 @@ article.box_rule:hover .box-rule-details  {
                         
                         <a href="#" class="main-box four">
                             <article class="box_rule">
-                                <div class="golden-rule__number">1</div>
+                                <div class="golden-rule__number">4</div>
                                     
 
                                 <div class="box-rule-details">
@@ -283,7 +297,7 @@ article.box_rule:hover .box-rule-details  {
                         
                         <a href="#" class="main-box five">
                             <article class="box_rule">
-                                <div class="golden-rule__number">1</div>
+                                <div class="golden-rule__number">5</div>
                                     
 
                                 <div class="box-rule-details">
@@ -296,14 +310,16 @@ article.box_rule:hover .box-rule-details  {
                         
                         <a href="#" class="main-box six">
                             <article class="box_rule">
-                                <div class="golden-rule__number">1</div>
+                                <!-- <div class="golden-rule__number">1</div> -->
                                     
 
                                 <div class="box-rule-details">
                                     <p>This is the part which is show on hover</p>
                                 </div>    
-
+                                
                                 <h1 class="box-heading">Heading Now</h1>
+
+                                <!-- <div class="arrow">></div> -->
                             </article>
                         </a>                        
 
