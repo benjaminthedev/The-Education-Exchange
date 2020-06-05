@@ -1,6 +1,7 @@
 <?php
 /*
- * Template Name: Boxes Example
+ * Template Name: Blank Template
+ * 
  *
  *
  * @package OceanWP WordPress theme
