@@ -75,7 +75,6 @@ body{
   }
 
   .main-box{
-
     min-width: 100%;
   }
 
@@ -87,7 +86,8 @@ body{
 article.box_rule {
     border: solid 10px #fff;
     padding: 30px;
-    height: 22rem;
+    /* height: 22rem; */
+    height: 34rem;
     position: relative;
     background-color: transparent;
     -webkit-transition: background-color .4s,opacity .4s;
@@ -109,8 +109,16 @@ article.box_rule:hover .box-rule-details  {
 }
 
 article.box_rule:hover .golden-rule__number,
-article.box_rule:hover .box-heading{
+article.box_rule:hover .box-heading,
+article.box_rule:hover .box-image{
     display: none;
+}
+
+/*-- The Image --*/
+
+img.box-image {
+    width: 62%;
+    margin: 20px 0;
 }
 
 
@@ -279,6 +287,11 @@ article.box_rule:hover .box-heading{
                                     <p><?php the_field('box_2_hover_text'); ?></p>
                                 </div>    
 
+
+                                <?php if( get_field('box_2_image') ): ?>
+                                    <img src="<?php the_field('box_2_image'); ?>" class="box-image"/>
+                                <?php endif; ?>
+
                                    <h1 class="box-heading">
                                     <?php the_field('box_2_heading'); ?>
                                   </h1>
@@ -293,6 +306,11 @@ article.box_rule:hover .box-heading{
                                 <div class="box-rule-details">
                                     <p><?php the_field('box_3_hover_text'); ?></p>
                                 </div>    
+
+
+                                <?php if( get_field('box_3_image') ): ?>
+                                    <img src="<?php the_field('box_3_image'); ?>" class="box-image"/>
+                                <?php endif; ?>
 
                                  <h1 class="box-heading">
                                     <?php the_field('box_3__heading'); ?>
@@ -309,6 +327,11 @@ article.box_rule:hover .box-heading{
                                     <p><?php the_field('box_4_hover_text'); ?></p>
                                 </div>    
 
+
+                                <?php if( get_field('box_4_image') ): ?>
+                                    <img src="<?php the_field('box_4_image'); ?>" class="box-image"/>
+                                <?php endif; ?>
+
                                  <h1 class="box-heading">
                                     <?php the_field('box_4_heading'); ?>
                                   </h1>
@@ -324,6 +347,12 @@ article.box_rule:hover .box-heading{
                                     <p><?php the_field('box_5_hover_text'); ?></p>
                                 </div>    
 
+
+
+                                <?php if( get_field('box_5_image') ): ?>
+                                    <img src="<?php the_field('box_5_image'); ?>" class="box-image"/>
+                                <?php endif; ?>
+
                                   <h1 class="box-heading">
                                     <?php the_field('box_5_heading'); ?>
                                   </h1>
@@ -338,6 +367,11 @@ article.box_rule:hover .box-heading{
                                 <div class="box-rule-details">
                                     <p><?php the_field('box_6_hover_text'); ?></p>
                                 </div>    
+
+
+                                <?php if( get_field('box_6_image') ): ?>
+                                    <img src="<?php the_field('box_6_image'); ?>" class="box-image"/>
+                                <?php endif; ?>
                                 
                                  <h1 class="box-heading">
                                     <?php the_field('box_6_heading'); ?>
