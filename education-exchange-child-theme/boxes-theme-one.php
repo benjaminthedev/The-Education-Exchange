@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Boxes Example
+ * Template Name: Boxes Example 2
  *
  *
  * @package OceanWP WordPress theme
@@ -259,10 +259,6 @@ article.box_rule:hover .box-heading{
                                 <div class="box-rule-details">
                                     <p><?php the_field('box_1_hover_text'); ?></p>
                                 </div>    
-
-                                <?php if( get_field('box_1_image') ): ?>
-                                    <img src="<?php the_field('box_1_image'); ?>" class="box-image"/>
-                                <?php endif; ?>
 
                                   <h1 class="box-heading">
                                     <?php the_field('box_1_heading'); ?>
