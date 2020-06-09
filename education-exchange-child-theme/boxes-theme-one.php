@@ -34,6 +34,7 @@ body{
     width: 30%;
     max-width: 30%;
     margin: 20px 10px;
+    
 }
 
 .main-box:nth-child(6){
