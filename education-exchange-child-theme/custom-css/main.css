@@ -147,6 +147,23 @@ img.box-image {
 
 
 
+/*-- Top header --*/
+
+h1.main_heading {
+    font-size: 24px;
+    color:#25346B;
+    margin-bottom: 0px;
+}
+
+h3.smaller_heading {
+    font-size: 19px;
+        color:#25346B;
+}
+
+
+
+
+
 
 /* Fade In Animation */
 
@@ -241,11 +258,45 @@ img.box-image {
 
 
 
+
+
+
+
+
+
+
+
+/*-- Themed Boxes - Box Two --*/
+/* Headings & number */
+.page-template-boxes-theme-two h1.main_heading,
+.page-template-boxes-theme-two h3.smaller_heading,
+.page-template-boxes-theme-two .golden-rule__number, 
+.page-template-boxes-theme-two .box-heading{
+  color: #5EB3E4;
+}
+/* Border */
+.page-template-boxes-theme-two article.box_rule{
+  border: solid 5px #5EB3E4 ;
+}
+/* Hover State */
+.page-template-boxes-theme-two article.box_rule:hover{
+  background: #5EB3E4;
+}
+
+/* Box 6 */
+.page-template-boxes-theme-two .main-box:nth-child(6) {
+    background-color: #5EB3E4 !important;
+}
+
+
+
+
+
 /*-- Responsive --*/
 
 @media only screen and (max-width: 1210px) {
   body {
-    background-color: green;
+    /* background-color: green; */
   }
   
   .main-box{
@@ -265,7 +316,7 @@ img.box-image {
 
 @media only screen and (max-width: 960px) {
     body {
-    background-color: teal;
+    /* background-color: teal; */
   }
 
    img.box-image{
@@ -278,7 +329,7 @@ img.box-image {
 
 @media only screen and (max-width: 712px) {
   body {
-    background-color: lightblue;
+    /* background-color: lightblue; */
   }
 
   .main-box{
