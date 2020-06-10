@@ -68,54 +68,7 @@ get_header(); ?>
 
 <style>
 
-/*-- Temp Styles --*/
 
-#left1,
-#left3,
-#left5{
-	background-color: #6EC1E3;
-}
-
-#left2,
-#left4{
-	background-color: #ED7FA0;
-}
-
-#right1,
-#right3,
-#right5{
-	background-color: #7E8F7C;
-}
-
-#right2,
-#right4{
-	background-color: #7A7A7A;
-}
-
-
-
-
-.elementor.elementor-1032.elementor-location-footer {
-	top: 100%;
-	transition: 2s !important;
-	transition-delay: 0.4s !important;
-	width: 100% !important;
-	position: fixed !important;
-}
-
-.goingUp {
-	display: block !important;
-    top: 90% !important;
-}
-
-.showMoreFooter {
-    top: 60% !important;
-}
-
-.ms-section *{
-	color: #fff;
-	padding: 0 40px;
-}
 
 </style>
 
