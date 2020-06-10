@@ -29,7 +29,7 @@ function oceanwp_child_enqueue_parent_style() {
 
 	//New Scripts & Styles
 	//wp_enqueue_script( 'customjs', get_stylesheet_directory_uri() . '/custom-js/app.js', array(), '1.0.0', true );
-	//wp_enqueue_style( 'mainStyle', get_stylesheet_directory_uri() . '/custom-css/main.css', array() );
+	wp_enqueue_style( 'mainStyle', get_stylesheet_directory_uri() . '/custom-css/main.css', array() );
 
 
 

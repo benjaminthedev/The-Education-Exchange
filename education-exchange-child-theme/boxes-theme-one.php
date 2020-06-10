@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Boxes Example 2
+ * Template Name: Theme One 
  *
  *
  * @package OceanWP WordPress theme
@@ -34,20 +34,20 @@ body{
     width: 30%;
     max-width: 30%;
     margin: 20px 10px;
-    
+    background: #fff !important;
 }
 
 .main-box:nth-child(6){
-    background-color: #FC485C;
+    /* background-color: #FC485C; */
 }
 
 .main-box:nth-child(6) .box-heading{
-    color: #fff;
+    /* color: #fff; */
 }
 
 .box-rule-details p {
-    text-align: center;
-    margin-top: 40px;
+    color:#fff;
+    margin-top: 100px;
 }
 
 
@@ -76,7 +76,6 @@ body{
   }
 
   .main-box{
-
     min-width: 100%;
   }
 
@@ -86,10 +85,12 @@ body{
 }
 
 article.box_rule {
-    border: solid 10px #fff;
+    border: solid 5px #25346B;
     padding: 30px;
-    height: 22rem;
+    height: 24rem;
+    /* height: 34rem; */
     position: relative;
+    /* background-color: transparent; */
     background-color: transparent;
     -webkit-transition: background-color .4s,opacity .4s;
     transition: background-color .4s,opacity .4s;
@@ -97,7 +98,7 @@ article.box_rule {
 }
 
 article.box_rule:hover {
-    background: white;
+    background: #25346B;
     opacity: 1;
 }
 
@@ -110,8 +111,30 @@ article.box_rule:hover .box-rule-details  {
 }
 
 article.box_rule:hover .golden-rule__number,
-article.box_rule:hover .box-heading{
+article.box_rule:hover .box-heading,
+article.box_rule:hover .box-image{
     display: none;
+}
+
+/*-- The Image --*/
+
+.image-wrapper {
+    display: flex;
+    /* align-items: flex-end; */
+    width: 100%;
+    /* background: aqua; */
+    /* justify-content: flex-end; */
+    justify-content: center;
+        margin-top: -30px;
+}
+
+img.box-image {
+    width: 62%;
+    /* margin: 20px 0; */
+}
+
+.golden-rule__number.sixNum {
+    text-indent: -9999px;
 }
 
 
@@ -122,7 +145,7 @@ article.box_rule:hover .box-heading{
 }
 
 .golden-rule__number {
-    color: #fc485d;
+    color: #25346B;
     font-size: 3.125rem;
     top: 0;
     left: 0;
@@ -133,7 +156,7 @@ article.box_rule:hover .box-heading{
 
 .box-heading{
        font-size: 2.125rem;
-    font-weight: 300;
+    font-weight: 700;
     letter-spacing: -.11px;
     color: #282828;
     line-height: 120%;
@@ -247,6 +270,8 @@ article.box_rule:hover .box-heading{
 
 </style>
 	
+  <h1>1 - The Purpose and vision of education</h1>
+  <h3>Connect with educators globally to explore what school is for.</h3>
 
     
                     <div class="custom-boxes">
@@ -261,9 +286,12 @@ article.box_rule:hover .box-heading{
                                     <p><?php the_field('box_1_hover_text'); ?></p>
                                 </div>    
 
+
+                              <div class="image-wrapper">
                                 <?php if( get_field('box_1_image') ): ?>
                                     <img src="<?php the_field('box_1_image'); ?>" class="box-image"/>
                                 <?php endif; ?>
+                              </div>  
 
                                   <h1 class="box-heading">
                                     <?php the_field('box_1_heading'); ?>
@@ -280,10 +308,11 @@ article.box_rule:hover .box-heading{
                                     <p><?php the_field('box_2_hover_text'); ?></p>
                                 </div>    
 
-
+                              <div class="image-wrapper">
                                 <?php if( get_field('box_2_image') ): ?>
                                     <img src="<?php the_field('box_2_image'); ?>" class="box-image"/>
                                 <?php endif; ?>
+                              </div>  
 
                                    <h1 class="box-heading">
                                     <?php the_field('box_2_heading'); ?>
@@ -300,10 +329,11 @@ article.box_rule:hover .box-heading{
                                     <p><?php the_field('box_3_hover_text'); ?></p>
                                 </div>    
 
-
+                              <div class="image-wrapper">      
                                 <?php if( get_field('box_3_image') ): ?>
                                     <img src="<?php the_field('box_3_image'); ?>" class="box-image"/>
                                 <?php endif; ?>
+                              </div>  
 
                                  <h1 class="box-heading">
                                     <?php the_field('box_3__heading'); ?>
@@ -320,10 +350,11 @@ article.box_rule:hover .box-heading{
                                     <p><?php the_field('box_4_hover_text'); ?></p>
                                 </div>    
 
-
+                              <div class="image-wrapper">      
                                 <?php if( get_field('box_4_image') ): ?>
                                     <img src="<?php the_field('box_4_image'); ?>" class="box-image"/>
                                 <?php endif; ?>
+                              </div>  
 
                                  <h1 class="box-heading">
                                     <?php the_field('box_4_heading'); ?>
@@ -341,10 +372,11 @@ article.box_rule:hover .box-heading{
                                 </div>    
 
 
-
+                              <div class="image-wrapper">        
                                 <?php if( get_field('box_5_image') ): ?>
                                     <img src="<?php the_field('box_5_image'); ?>" class="box-image"/>
                                 <?php endif; ?>
+                              </div>  
 
                                   <h1 class="box-heading">
                                     <?php the_field('box_5_heading'); ?>
@@ -354,17 +386,18 @@ article.box_rule:hover .box-heading{
                         
                         <a href="<?php the_field('box_6_link_url'); ?>" class="main-box six">
                             <article class="box_rule">
-                                <!-- <div class="golden-rule__number">1</div> -->
+                                <div class="golden-rule__number sixNum">6</div>
                                     
 
                                 <div class="box-rule-details">
                                     <p><?php the_field('box_6_hover_text'); ?></p>
                                 </div>    
 
-
+                               <div class="image-wrapper">     
                                 <?php if( get_field('box_6_image') ): ?>
                                     <img src="<?php the_field('box_6_image'); ?>" class="box-image"/>
                                 <?php endif; ?>
+                               </div> 
                                 
                                  <h1 class="box-heading">
                                     <?php the_field('box_6_heading'); ?>
@@ -377,24 +410,6 @@ article.box_rule:hover .box-heading{
 
 
                     </div>
-                    
-
-                        <!-- 
-
-                            //Flexbox
-
-
-                            1, outer-box - number
-                            2, inner-content
-                            3, hover-state - number
-                        
-
-
-                        -->
-
-
-
-
     </div>
 
 
