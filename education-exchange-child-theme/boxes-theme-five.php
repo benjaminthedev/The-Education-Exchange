@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Boxes Example
+ * Template Name: Boxes Theme Five
  *
  *
  * @package OceanWP WordPress theme
@@ -12,13 +12,6 @@ get_header(); ?>
 <div id="content-wrap" class="container clr">
 
     <div id="primary" class=" clr">
-
-    <style>
-
-
-
-
-</style>
 	
       <?php if( get_field('main_heading') ): ?>
          <h1 class="main_heading"><?php the_field('main_heading'); ?></h1>                               
@@ -27,9 +20,6 @@ get_header(); ?>
           <?php if( get_field('smaller_heading') ): ?>
           <h3 class="smaller_heading"><?php the_field('smaller_heading'); ?></h3>                                                                     
           <?php endif; ?>
-
-  
-
     
                     <div class="custom-boxes">
 
@@ -162,28 +152,7 @@ get_header(); ?>
                                 <!-- <div class="arrow">></div> -->
                             </article>
                         </a>                        
-
-
-
                     </div>
-    </div>
-
-
+        </div>
 </div>
-	
-
-		
-
-	
-
-	
-
-	
-
-
-                     
-
-                    
-         
-
 <?php get_footer(); ?>

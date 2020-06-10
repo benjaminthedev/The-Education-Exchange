@@ -258,6 +258,40 @@ h3.smaller_heading {
 
 
 
+
+
+
+
+
+
+
+
+/*-- Themed Boxes - Box Two --*/
+/* Headings & number */
+.page-template-boxes-theme-two h1.main_heading,
+.page-template-boxes-theme-two h3.smaller_heading,
+.page-template-boxes-theme-two .golden-rule__number, 
+.page-template-boxes-theme-two .box-heading{
+  color: #5EB3E4;
+}
+/* Border */
+.page-template-boxes-theme-two article.box_rule{
+  border: solid 5px #5EB3E4 ;
+}
+/* Hover State */
+.page-template-boxes-theme-two article.box_rule:hover{
+  background: #5EB3E4;
+}
+
+/* Box 6 */
+.page-template-boxes-theme-two .main-box:nth-child(6) {
+    background-color: #5EB3E4 !important;
+}
+
+
+
+
+
 /*-- Responsive --*/
 
 @media only screen and (max-width: 1210px) {

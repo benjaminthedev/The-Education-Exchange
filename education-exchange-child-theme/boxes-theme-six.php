@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Boxes Theme One
+ * Template Name: Boxes Theme Six
  *
  *
  * @package OceanWP WordPress theme
@@ -20,8 +20,7 @@ get_header(); ?>
           <?php if( get_field('smaller_heading') ): ?>
           <h3 class="smaller_heading"><?php the_field('smaller_heading'); ?></h3>                                                                     
           <?php endif; ?>
-
-
+    
                     <div class="custom-boxes">
 
                         <a href="<?php the_field('box_1_link_url'); ?>" class="main-box one" >
@@ -153,28 +152,7 @@ get_header(); ?>
                                 <!-- <div class="arrow">></div> -->
                             </article>
                         </a>                        
-
-
-
                     </div>
-    </div>
-
-
+        </div>
 </div>
-	
-
-		
-
-	
-
-	
-
-	
-
-
-                     
-
-                    
-         
-
 <?php get_footer(); ?>
