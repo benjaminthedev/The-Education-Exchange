@@ -22,11 +22,11 @@ body{
 }
 
 .main-box:nth-child(6){
-    /* background-color: #FC485C; */
+    background-color: #25346B !important;
 }
 
 .main-box:nth-child(6) .box-heading{
-    /* color: #fff; */
+    color: #fff;
 }
 
 .box-rule-details p {
@@ -37,36 +37,7 @@ body{
 
 
 
-@media only screen and (max-width: 1210px) {
-  body {
-    background-color: green;
-  }
-  
 
-  .main-box{
-    /* max-width:45%; */
-    min-width: 45%;
-  }
-
-  article.box_rule{
-    /* max-width:45%; */
-    min-width: 45%;
-  }
-}
-
-@media only screen and (max-width: 712px) {
-  body {
-    background-color: lightblue;
-  }
-
-  .main-box{
-    min-width: 100%;
-  }
-
-  article.box_rule{
-    min-width: 100%;
-  }
-}
 
 article.box_rule {
     border: solid 5px #25346B;
@@ -86,6 +57,17 @@ article.box_rule:hover {
     opacity: 1;
 }
 
+/*-- Box 6 --*/
+
+.main-box:nth-child(6) article.box_rule:hover {
+    background: #fff;
+    opacity: 1;
+}
+
+.main-box:nth-child(6) .box-rule-details p{
+  color: #25346B;
+}
+
 .box-rule-details {
     display: none;
 }
@@ -98,6 +80,13 @@ article.box_rule:hover .golden-rule__number,
 article.box_rule:hover .box-heading,
 article.box_rule:hover .box-image{
     display: none;
+}
+
+
+
+
+article.box_rule:hover .box-rule-details  {
+    display:block;
 }
 
 /*-- The Image --*/
@@ -139,7 +128,7 @@ img.box-image {
 }
 
 .box-heading{
-       font-size: 2.125rem;
+    font-size: 2.125rem;
     font-weight: 700;
     letter-spacing: -.11px;
     color: #282828;
@@ -248,4 +237,63 @@ img.box-image {
   -webkit-animation-delay: 3.3s;
   -moz-animation-delay: 3.3s;
   animation-delay: 3.3s;
+}
+
+
+
+/*-- Responsive --*/
+
+@media only screen and (max-width: 1210px) {
+  body {
+    background-color: green;
+  }
+  
+  .main-box{
+    /* max-width:45%; */
+    min-width: 45%;
+  }
+
+  article.box_rule{
+    /* max-width:45%; */
+    min-width: 45%;
+  }
+
+  img.box-image{
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+    background-color: teal;
+  }
+
+   img.box-image{
+    /* width: 150px;
+    height: 150px; */
+    width: 50%;
+  }
+
+}
+
+@media only screen and (max-width: 712px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .main-box{
+    min-width: 100%;
+  }
+
+  article.box_rule{
+    min-width: 100%;
+  }
+
+   /* img.box-image{
+    width: 40%;
+  } */
+
+  /* .image-wrapper{
+    display: none;
+  } */
 }
