@@ -20,8 +20,15 @@ get_header(); ?>
 
 </style>
 	
-  <h1>1 - The Purpose and vision of education</h1>
-  <h3>Connect with educators globally to explore what school is for.</h3>
+      <?php if( get_field('main_heading') ): ?>
+         <h1 class="main_heading"><?php the_field('main_heading'); ?></h1>                               
+      <?php endif; ?>
+
+          <?php if( get_field('smaller_heading') ): ?>
+          <h3 class="smaller_heading"><?php the_field('smaller_heading'); ?></h3>                                                                     
+          <?php endif; ?>
+
+  
 
     
                     <div class="custom-boxes">
