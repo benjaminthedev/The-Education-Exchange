@@ -26,7 +26,6 @@ get_header(); ?>
     
                     <div class="custom-boxes">
 
-
                         <a href="<?php the_field('box_1_link_url'); ?>" class="main-box one" >
                             <article class="box_rule">
                                 <div class="golden-rule__number">1</div>
