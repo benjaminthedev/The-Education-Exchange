@@ -8,14 +8,9 @@
 
 get_header(); ?>
 
-	
 <div id="content-wrap" class="container clr">
 
     <div id="primary" class=" clr">
-	
-   
-
-
                     <div class="custom-boxes">
 
                       <div class="main-box customOne">
@@ -141,29 +136,7 @@ get_header(); ?>
                                   </h1>
                             </article>
                         </a>      
-                     
-
-
-
                     </div>
-    </div>
-
-
+              </div>
 </div>
-	
-
-		
-
-	
-
-	
-
-	
-
-
-                     
-
-                    
-         
-
 <?php get_footer(); ?>
