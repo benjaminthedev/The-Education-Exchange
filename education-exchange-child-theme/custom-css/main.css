@@ -1,4 +1,56 @@
 
+/*-- Home Page Boxes --*/
+
+/*-- Temp Styles --*/
+
+#left1,
+#left3,
+#left5{
+	background-color: #6EC1E3;
+}
+
+#left2,
+#left4{
+	background-color: #ED7FA0;
+}
+
+#right1,
+#right3,
+#right5{
+	background-color: #7E8F7C;
+}
+
+#right2,
+#right4{
+	background-color: #7A7A7A;
+}
+
+.elementor.elementor-1032.elementor-location-footer {
+	top: 100%;
+	transition: 2s !important;
+	transition-delay: 0.4s !important;
+	width: 100% !important;
+	position: fixed !important;
+}
+
+.goingUp {
+	display: block !important;
+    top: 90% !important;
+}
+
+.showMoreFooter {
+    top: 60% !important;
+}
+
+.ms-section *{
+	color: #fff;
+	padding: 0 40px;
+}
+
+
+/*-- End of Home Page Styles --*/
+
+
 
 body{
     background-color: #ececec;
@@ -49,11 +101,6 @@ h3.smaller_heading {
     font-size: 19px;
         color:#fff;
 }
-
-
-
-
-
 
 article.box_rule {
     border: solid 5px #25346B;
@@ -272,9 +319,22 @@ img.box-image {
 
 
 /*-- Themed Boxes - Box Two --*/
+
+/*-- First Box --*/
+.page-template-boxes-theme-two .main-box:nth-child(1){
+    background-color: #5EB3E4 !important;
+}
+
+.page-template-boxes-theme-two .main-box:nth-child(1) .box-heading{
+    color: #fff;
+}
+
+.page-template-boxes-theme-two .box-rule-details p {
+    color:#fff;
+    margin-top: 100px;
+}
+
 /* Headings & number */
-.page-template-boxes-theme-two h1.main_heading,
-.page-template-boxes-theme-two h3.smaller_heading,
 .page-template-boxes-theme-two .golden-rule__number, 
 .page-template-boxes-theme-two .box-heading{
   color: #5EB3E4;
@@ -288,10 +348,34 @@ img.box-image {
   background: #5EB3E4;
 }
 
-/* Box 6 */
-.page-template-boxes-theme-two .main-box:nth-child(6) {
-    background-color: #5EB3E4 !important;
+
+/*-- Themed Boxes - Box Two END --*/
+
+
+
+
+/*-- Themed Boxes - Box Three --*/
+/* Headings & number */
+.page-template-boxes-theme-three h1.main_heading,
+.page-template-boxes-theme-three h3.smaller_heading,
+.page-template-boxes-theme-three .golden-rule__number, 
+.page-template-boxes-theme-three .box-heading{
+  color: #FBC771;
 }
+/* Border */
+.page-template-boxes-theme-three article.box_rule{
+  border: solid 5px #FBC771 ;
+}
+/* Hover State */
+.page-template-boxes-theme-three article.box_rule:hover{
+  background: #FBC771;
+}
+
+/* Box 6 */
+.page-template-boxes-theme-three .main-box:nth-child(6) {
+    background-color: #FBC771 !important;
+}
+/*-- Themed Boxes - Box Two END --*/
 
 
 
