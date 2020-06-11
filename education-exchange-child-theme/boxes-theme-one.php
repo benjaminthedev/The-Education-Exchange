@@ -13,16 +13,27 @@ get_header(); ?>
 
     <div id="primary" class=" clr">
 	
-      <?php if( get_field('main_heading') ): ?>
-         <h1 class="main_heading"><?php the_field('main_heading'); ?></h1>                               
-      <?php endif; ?>
-
-          <?php if( get_field('smaller_heading') ): ?>
-          <h3 class="smaller_heading"><?php the_field('smaller_heading'); ?></h3>                                                                     
-          <?php endif; ?>
+   
 
 
                     <div class="custom-boxes">
+
+                      <div class="main-box customOne">
+                       <article class="box_rule">
+
+                          <?php if( get_field('main_heading') ): ?>
+                            <h1 class="main_heading"><?php the_field('main_heading'); ?></h1>                               
+                          <?php endif; ?>
+
+                              <?php if( get_field('smaller_heading') ): ?>
+                                <h3 class="smaller_heading"><?php the_field('smaller_heading'); ?></h3>                                                                     
+                              <?php endif; ?>
+
+                            </article>
+                      </div>
+
+
+
 
                         <a href="<?php the_field('box_1_link_url'); ?>" class="main-box one" >
                             <article class="box_rule">
@@ -130,29 +141,7 @@ get_header(); ?>
                                   </h1>
                             </article>
                         </a>      
-                        
-                        <a href="<?php the_field('box_6_link_url'); ?>" class="main-box six">
-                            <article class="box_rule">
-                                <div class="golden-rule__number sixNum">6</div>
-                                    
-
-                                <div class="box-rule-details">
-                                    <p><?php the_field('box_6_hover_text'); ?></p>
-                                </div>    
-
-                               <div class="image-wrapper">     
-                                <?php if( get_field('box_6_image') ): ?>
-                                    <img src="<?php the_field('box_6_image'); ?>" class="box-image"/>
-                                <?php endif; ?>
-                               </div> 
-                                
-                                 <h1 class="box-heading">
-                                    <?php the_field('box_6_heading'); ?>
-                                  </h1>
-
-                                <!-- <div class="arrow">></div> -->
-                            </article>
-                        </a>                        
+                     
 
 
 
