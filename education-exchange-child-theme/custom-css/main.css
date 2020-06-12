@@ -341,7 +341,7 @@ img.box-image {
 }
 /* Border */
 .page-template-boxes-theme-two article.box_rule{
-  border: solid 5px #5EB3E4 ;
+  border: solid 5px #5EB3E4;
 }
 /* Hover State */
 .page-template-boxes-theme-two article.box_rule:hover{
@@ -355,27 +355,78 @@ img.box-image {
 
 
 /*-- Themed Boxes - Box Three --*/
+
+/*-- First Box --*/
+.page-template-boxes-theme-three .main-box:nth-child(1){
+    background-color: #FBC771 !important;
+}
 /* Headings & number */
-.page-template-boxes-theme-three h1.main_heading,
-.page-template-boxes-theme-three h3.smaller_heading,
 .page-template-boxes-theme-three .golden-rule__number, 
 .page-template-boxes-theme-three .box-heading{
   color: #FBC771;
 }
 /* Border */
 .page-template-boxes-theme-three article.box_rule{
-  border: solid 5px #FBC771 ;
+  border: solid 5px #FBC771;
 }
 /* Hover State */
 .page-template-boxes-theme-three article.box_rule:hover{
   background: #FBC771;
 }
 
-/* Box 6 */
-.page-template-boxes-theme-three .main-box:nth-child(6) {
-    background-color: #FBC771 !important;
+/*-- Themed Boxes - Box Three END --*/
+
+
+
+
+/*-- Themed Boxes - Four Three --*/
+
+/*-- First Box --*/
+.page-template-boxes-theme-four .main-box:nth-child(1){
+    background-color: #EE7EA0 !important;
 }
-/*-- Themed Boxes - Box Two END --*/
+/* Headings & number */
+.page-template-boxes-theme-four .golden-rule__number, 
+.page-template-boxes-theme-four .box-heading{
+  color: #EE7EA0;
+}
+/* Border */
+.page-template-boxes-theme-four article.box_rule{
+  border: solid 5px #EE7EA0;
+}
+/* Hover State */
+.page-template-boxes-theme-four article.box_rule:hover{
+  background: #EE7EA0;
+}
+
+/*-- Themed Boxes - Box Four END --*/
+
+
+
+
+
+
+/*-- Themed Boxes - Five Three --*/
+
+/*-- First Box --*/
+.page-template-boxes-theme-five .main-box:nth-child(1){
+    background-color: #A176b0 !important;
+}
+/* Headings & number */
+.page-template-boxes-theme-five .golden-rule__number, 
+.page-template-boxes-theme-five .box-heading{
+  color: #A176b0;
+}
+/* Border */
+.page-template-boxes-theme-five article.box_rule{
+  border: solid 5px #A176b0;
+}
+/* Hover State */
+.page-template-boxes-theme-five article.box_rule:hover{
+  background: #A176b0;
+}
+
+/*-- Themed Boxes - Box Five END --*/
 
 
 
