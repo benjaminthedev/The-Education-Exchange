@@ -39,7 +39,6 @@ function oceanwp_child_enqueue_parent_style() {
 	if (is_page(4110)) {
 		wp_enqueue_script( 'ms01', get_stylesheet_directory_uri() . '/scroll/jquery.multiscroll.js', array(), '', true );
 		wp_enqueue_script( 'ms02', get_stylesheet_directory_uri() . '/scroll/jquery.multiscroll.min.js', array(), '', true );
-		wp_enqueue_script( 'extensions', get_stylesheet_directory_uri() . '/scroll/jquery.multiscroll.extensions.min.js', array(), '', true );
 		wp_enqueue_script( 'msEasing', get_stylesheet_directory_uri() . '/scroll/vendors/jquery.easings.min.js', array(), '', true );
 		
 		//Scroll Plugin CSS
