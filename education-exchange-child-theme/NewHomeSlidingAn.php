@@ -1,13 +1,59 @@
 <?php
 /*
- * Template Name: New Home Page
+ * Template Name: New Home Page SLIDIN!
  *
  *
  * @package OceanWP WordPress theme
  */
 
 get_header(); ?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollToPlugin.min.js"></script>
+
+<script>
+function goToSection(i, st) {
+  gsap.to(window, {
+    scrollTo: {
+      y: (i + 1) * innerHeight, 
+      autoKill: false
+    },
+    duration: 1,
+    onUpdate: () => {
+      const scrollY = st.scroll() * 2 - innerHeight * 2;
+      if(scrollY >= 0) {
+        setRightScroll(scrollY);
+      }
+    }
+  });
+}
+
+const setRightScroll = gsap.quickSetter(".right-section", "y", "px");
+const snapSections = gsap.utils.toArray(".left-section .box");
+snapSections.forEach((section, i) => {
+  
+  ScrollTrigger.create({
+    trigger: section,
+    onEnter: self => goToSection(i, self),
+  });
+  
+  if(i !== snapSections.length - 1) {
+    ScrollTrigger.create({
+      trigger: section,
+      start: "bottom bottom",
+      onEnterBack: self => goToSection(i, self),
+    });
+  }
+});
+</script>
+
+
 <div class="clear"></div>
+
+
+
+
 
     <div class="headerSectionNew">
 
@@ -24,6 +70,32 @@ get_header(); ?>
     <img src="<?php the_field('header_graphic')?>" alt="Home Page Graphic" class="homePageMainImg">
     
     </div><!-- end headerSectionNew -->
+
+
+
+<!-- fun starts -->
+
+<div class="sections-container">
+  <div class="left-section">
+    <div class="box box1"><?php the_field('box_1_left'); ?></div>
+    <div class="box box3"><?php the_field('box_2_left'); ?></div>
+    <div class="box box5"><?php the_field('box_3_left'); ?></div>
+    <div class="box box7"><?php the_field('box_4_left'); ?></div>
+    <div class="box box9"><?php the_field('box_5_left'); ?></div>
+  </div>
+
+  <div class="right-section">
+    <div class="box box10"><?php the_field('box_5_right'); ?></div>
+    <div class="box box8"><?php the_field('box_4_right'); ?></div>
+    <div class="box box6"><?php the_field('box_3_right'); ?></div>
+    <div class="box box4"><?php the_field('box_2_right'); ?></div>
+    <div class="box box2"><?php the_field('box_1_right'); ?></div>
+  </div>
+</div>
+
+<!-- fun ends -->
+
+
 
 
     <div class="flexWrapper">
@@ -106,6 +178,30 @@ get_header(); ?>
 
 <style>
 
+
+
+.sections-container {
+  position: relative;
+  height: 300vh;
+  overflow-y: hidden;
+}
+.left-section {
+  width: 50vw;
+}
+.right-section {
+  width: 50vw;
+  position: absolute;
+  left: 50vw;
+  bottom: 200vh;
+}
+.box {
+  height: 100vh;
+}
+
+
+
+
+
 .clear{
     clear:both;
 }
@@ -184,8 +280,7 @@ get_header(); ?>
 .fourthBoxRight,
 .fifthBoxLeft{
     width: 50%;
-    /* height: 100vh; */
-    height: 95vh;
+    height: 100vh;
     align-items: center;
     padding:100px 170px 50px 170px;
     color: #fff;
@@ -198,8 +293,7 @@ get_header(); ?>
 .fourthBoxLeft,
 .fifthBoxRight{
     width: 50%;
-    /* height: 100vh; */
-    height: 95vh;
+    height: 100vh;
     padding: 30px 60px;
 }
 /* Image Styling */
@@ -216,6 +310,37 @@ get_header(); ?>
 } */
 
 /* First Boxes - Backgrounds */
+.box1 {
+  background: #25346b;  
+}
+.box2 {
+  background: #3a4779;
+}
+.box3 {
+  background: #fcb34d;
+}
+.box4 {
+  background-color: yellow;
+}
+.box5 {
+  background-color: orange;
+}
+.box6 {
+  background-color: purple;
+}
+.box7 {
+  background-color: grey;
+}
+.box8 {
+  background-color: yellow;
+}
+.box9 {
+  background-color: green;
+}
+.box10 {
+  background-color: pink;
+}
+
 .firstBoxLeft {
     background: #25346b;    
 }
@@ -263,7 +388,9 @@ get_header(); ?>
 
 
 
-
+.flexWrapper{
+    dispay:none;
+}
 
 /* Responsive Styles */
 @media only screen and (max-width: 960px) {
@@ -296,7 +423,26 @@ get_header(); ?>
     padding: 50px 60px;
   } 
 
+ 
+
+
+
 }
+
+
+
+
+
+
+
 </style>
+
+
+<script>
+
+</script>
+
+
+
 
 <?php get_footer(); ?>
