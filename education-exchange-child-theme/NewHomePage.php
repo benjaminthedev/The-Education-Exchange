@@ -8,11 +8,52 @@
 
 get_header(); ?>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollToPlugin.min.js"></script>
+
+<script>
+function goToSection(i, st) {
+  gsap.to(window, {
+    scrollTo: {
+      y: (i + 1) * innerHeight, 
+      autoKill: false
+    },
+    duration: 1,
+    onUpdate: () => {
+      const scrollY = st.scroll() * 2 - innerHeight * 2;
+      if(scrollY >= 0) {
+        setRightScroll(scrollY);
+      }
+    }
+  });
+}
+
+const setRightScroll = gsap.quickSetter(".right-section", "y", "px");
+const snapSections = gsap.utils.toArray(".left-section .box");
+snapSections.forEach((section, i) => {
+  
+  ScrollTrigger.create({
+    trigger: section,
+    onEnter: self => goToSection(i, self),
+  });
+  
+  if(i !== snapSections.length - 1) {
+    ScrollTrigger.create({
+      trigger: section,
+      start: "bottom bottom",
+      onEnterBack: self => goToSection(i, self),
+    });
+  }
+});
+</script>
+
+
 <div class="clear"></div>
 
 
-<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+
 
     <div class="headerSectionNew">
 
@@ -47,14 +88,12 @@ get_header(); ?>
 
 
     <div class="secondBoxLeft">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <?php the_field('box_2_left'); ?>
     </div><!-- end secondBoxLeft -->
     
 
     <div class="secondBoxRight">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <?php the_field('box_2_right'); ?>
     </div><!-- end secondBoxLeft -->
 
     </div><!-- end flexWrapper -->
@@ -62,16 +101,14 @@ get_header(); ?>
  
 
 
-    <div class="flexWrapper" >
+    <div class="flexWrapper">
 
     <div class="thirdBoxLeft">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <?php the_field('box_3_left'); ?>
     </div><!-- end thirdBoxLeft -->
 
     <div class="thirdBoxRight">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <?php the_field('box_3_right'); ?>
     </div><!-- end thirdBoxLeft -->
 
     </div><!-- end flexWrapper -->
@@ -81,13 +118,11 @@ get_header(); ?>
     <div class="flexWrapper">
 
     <div class="fourthBoxLeft">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <?php the_field('box_4_left'); ?>
     </div><!-- end fourthBoxLeft -->
 
     <div class="fourthBoxRight">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <?php the_field('box_4_right'); ?>
     </div><!-- end fourthBoxLeft -->
 
     </div><!-- end flexWrapper -->
@@ -97,13 +132,11 @@ get_header(); ?>
     <div class="flexWrapper">
 
     <div class="fifthBoxLeft">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <?php the_field('box_5_left'); ?>
     </div><!-- end fifthhBoxLeft -->
 
     <div class="fifthBoxRight">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <?php the_field('box_5_right'); ?>
     </div><!-- end fifthBoxLeft -->
 
     </div><!-- end flexWrapper -->    
@@ -154,125 +187,122 @@ get_header(); ?>
 
 /* Btn */
 
-.standardBtn {
-    padding: 10px 50px;
+.standardBtn, 
+.standardBtn-box2,
+.standardBtn-box3,
+.standardBtn-box4{
+    padding: 10px 75px;
     background: #f1637e;    
     border-radius: 5px;
     text-transform:capitalize;
     font-weight: 700;
     letter-spacing: 0.04rem;
     color: #fff;
+    margin-top: 40px;
+    display: inline-block;
 }
 
-/* First Boxes */
-.firstBoxLeft {
-    width: 50%;
+.standardBtn-box2{
+    background: #fcb34d;
+}
+
+.standardBtn-box3{
+    background: #5eb3e4;
+} 
+
+.standardBtn-box4{
     background: #25346b;
-    height: 100vh;
-    align-items: center;
-    padding:100px 170px 50px 170px;
 }
 
-.firstBoxLeft h2{
+
+
+/*-- Boxes General Styles --*/
+/*Headings*/
+.flexWrapper h2{
     font-size: 31px;
     font-weight: 700;
     color: #fff;
 }
-
-.firstBoxLeft p,
-.firstBoxLeft ul li{
+/* Widths and Padding - Text Boxes */
+.firstBoxLeft,
+.secondBoxRight, 
+.thirdBoxLeft,
+.fourthBoxRight,
+.fifthBoxLeft{
+    width: 50%;
+    height: 100vh;
+    align-items: center;
+    padding:100px 170px 50px 170px;
     color: #fff;
 }
 
+/* Widths and Padding - Image Boxes */
+.firstBoxRight,
+.secondBoxLeft,
+.thirdBoxRight,
+.fourthBoxLeft,
+.fifthBoxRight{
+    width: 50%;
+    height: 100vh;
+    padding: 30px 60px;
+}
+/* Image Styling */
+.flexWrapper img {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
 
+/* Text Colours */
+/* .flexWrapper p,
+.flexWrapper ul li,{
+    color: #fff;
+} */
 
-
+/* First Boxes - Backgrounds */
+.firstBoxLeft {
+    background: #25346b;    
+}
 
 .firstBoxRight {
-    width: 50%;
     background: #3a4779;
-    height: 100vh;
-    align-items: center;
-    padding: 30px 60px;
 }
 
-.firstBoxRight img {
-    width: 50%;
-    margin: 0 auto;
-}
-
-/* Second Boxes */
+/* Second Boxes - Backgrounds */
 
 .secondBoxLeft {
-    width: 50%;
     background: #7ec2e9;
-    height: 100vh;
-    align-items: center;
-    padding: 30px 60px;
 }
-
-
 
 .secondBoxRight {
-    width: 50%;
     background: #5eb3e4;
-    height: 100vh;
-    align-items: center;
-    padding: 30px 60px;
 }
 
-/* third Boxes */
+/* Third Boxes - Backgrounds */
 .thirdBoxLeft {
-    width: 50%;
     background: #fcb34d;
-    height: 100vh;
-    align-items: center;
-    padding: 30px 60px;
 }
 
 .thirdBoxRight {
-    width: 50%;
     background: #fdc982;
-    height: 100vh;
-    align-items: center;
-    padding: 30px 60px;
 }
 
-
-/* fourth Boxes */
+/* Fourth Boxes - Backgrounds */
 .fourthBoxLeft {
-    width: 50%;
     background: #f591a4;
-    height: 100vh;
-    align-items: center;
-    padding: 30px 60px;
 }
 
 .fourthBoxRight {
-    width: 50%;
     background: #f1637e;
-    height: 100vh;
-    align-items: center;
-    padding: 30px 60px;
 }
 
-
-
-/* fifth Boxes */
+/* Fifth Boxes - Backgrounds */
 .fifthBoxLeft {
-    width: 50%;
     background: #9646b2;
-    height: 100vh;
-    align-items: center;
-    padding: 30px 60px;
 }
 
 .fifthBoxRight {
-    width: 50%;
     background: #ab6bc1;
-    height: 100vh;
-    align-items: center;
-    padding: 30px 60px;
 }
 
 
