@@ -31,12 +31,10 @@ get_header(); ?>
 
 </style>
 
+<div class="emptySpace"></div>
 
+<div class="newConMove">
 <div id="myContainer">
-
-	
-
-
 	<div class="ms-left">
 		<div class="ms-section" id="left1">
 			<?php the_field('box_1_left'); ?>
@@ -80,6 +78,8 @@ get_header(); ?>
 			<?php the_field('box_5_right'); ?>
 		</div>
 	</div>	
+</div>
+
 </div>
 
 
