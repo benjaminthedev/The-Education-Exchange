@@ -31,6 +31,12 @@
     width: 50%;
   }
 
+  .headerSectionNew{
+    padding: 0;
+  }
+
+
+
 }
 
 @media only screen and (max-width: 712px) {

@@ -51,11 +51,6 @@
 /*-- End of Home Page Styles --*/
 
 
-
-body{
-    background-color: #ececec;
-}
-
 .custom-boxes {
     display: flex;
     animation-delay: 2s;
