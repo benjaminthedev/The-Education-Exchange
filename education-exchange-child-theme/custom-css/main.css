@@ -424,6 +424,19 @@ img.box-image {
 /*-- Themed Boxes - Box Five END --*/
 
 
+/* Blog Posts Comments Section */
 
+div#wpd-post-rating {
+    display: none;
+}
 
+.wpd-vote {
+    display: none !important;
+}
+.wpd-filter.wpdf-reacted.wpd_not_clicked {
+    display: none;
+}
 
+.wpd-filter.wpdf-hottest.wpd_not_clicked {
+    display: none;
+}

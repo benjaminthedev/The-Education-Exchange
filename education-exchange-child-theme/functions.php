@@ -51,3 +51,33 @@ add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
 
 
 
+// Custom Login
+
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+        background-image: url('http://staging.theeducation.exchange/wp-content/uploads/2020/05/EducationExchange_MainLogo_White.png');
+		height: 65px;
+    	width: 320px;
+    	background-size: 271px 135px;
+    	background-repeat: no-repeat;
+    	padding-bottom: 60px;
+		}
+		/* Body */
+		body.login {
+		background:#1B2342;
+		color:#fff;
+		}
+		/* Log In Section */
+		form#loginform,
+		form#lostpasswordform,
+		form#registerform {
+ 		   background: #1B2342;
+    	   border: none;
+		}
+		.login #backtoblog a, .login #nav a {
+    		color: #fff !important;
+		}
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
