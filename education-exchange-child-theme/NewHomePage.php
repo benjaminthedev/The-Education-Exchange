@@ -7,6 +7,15 @@
  */
 
 get_header(); ?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollToPlugin.min.js"></script>
+
+
+
+
+
+
 <div class="clear"></div>
 
     <div class="headerSectionNew">
@@ -25,20 +34,23 @@ get_header(); ?>
     
     </div><!-- end headerSectionNew -->
 
+    <div class="st1">
 
     <div class="flexWrapper">
 
-    <div class="firstBoxLeft">
-        <?php the_field('box_1_left'); ?>
-    </div><!-- end firstBoxLeft -->
+        <div class="firstBoxLeft">
+            <?php the_field('box_1_left'); ?>
+        </div><!-- end firstBoxLeft -->
 
-    <div class="firstBoxRight">
-        <?php the_field('box_1_right'); ?>
-    </div><!-- end firstBoxRight -->
+        <div class="firstBoxRight">
+            <?php the_field('box_1_right'); ?>
+        </div><!-- end firstBoxRight -->
 
     </div><!-- end flexWrapper -->
 
-    <div class="flexWrapper" >
+    </div><!-- end st1 -->
+
+    <div class="flexWrapper">
 
 
     <div class="secondBoxLeft">
@@ -105,6 +117,22 @@ get_header(); ?>
 
 
 <style>
+
+
+/* Test */
+
+#test01{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+
+#test01.fade-in{
+    opacity: 1;
+    transform: translateY(50px);
+}
+
+/* Test END */
 
 .clear{
     clear:both;
@@ -300,3 +328,77 @@ get_header(); ?>
 </style>
 
 <?php get_footer(); ?>
+
+<script>
+jQuery(document).ready(function(){
+ //console.log('loaded');
+
+
+});
+
+// gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
+
+
+// gsap.to(".firstBoxLeft", {
+//   scrollTrigger: ".firstBoxLeft", 
+//   y: -100,
+//   duration: 3,
+//   toggleClass: {
+//       targets: ".firstBoxLeft", 
+//       className: "testClass"
+//   },
+//   pin: true,
+//   start: "bottom bottom",
+//   toggleActions: "play complete play reset",
+//   scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+//   markers: {startColor: "red", endColor: "red", fontSize: "18px", fontWeight: "bold", indent: 20},
+//   snap: {
+//       snapTo: 'flexWrapper',
+//       duration: {min: 0.2, max: 3}, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+//         delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+//         ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
+//   }
+// });
+
+
+function goToSection(i, st) {
+  gsap.to(window, {
+    scrollTo: {
+      y: (i + 1) * innerHeight, 
+      autoKill: false
+    },
+    duration: 1,
+    onUpdate: () => {
+      const scrollY = st.scroll() * 2 - innerHeight * 2;
+      if(scrollY >= 0) {
+        setRightScroll(scrollY);
+      }
+    }
+  });
+}
+
+const setRightScroll = gsap.quickSetter(".right-section", "y", "px");
+const snapSections = gsap.utils.toArray(".left-section .box");
+snapSections.forEach((section, i) => {
+  
+  ScrollTrigger.create({
+    trigger: section,
+    onEnter: self => goToSection(i, self),
+  });
+  
+  if(i !== snapSections.length - 1) {
+    ScrollTrigger.create({
+      trigger: section,
+      start: "bottom bottom",
+      onEnterBack: self => goToSection(i, self),
+    });
+  }
+});
+
+
+
+
+
+
+</script>
