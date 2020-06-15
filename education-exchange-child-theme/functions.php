@@ -78,6 +78,14 @@ function my_login_logo() { ?>
 		.login #backtoblog a, .login #nav a {
     		color: #fff !important;
 		}
+
+		/* When you Sign up - success message */
+
+		p.message {
+			color: #1b2442 !important;
+			font-weight: 700;
+			text-align: center;
+		}
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
