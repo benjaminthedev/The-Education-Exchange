@@ -440,3 +440,16 @@ div#wpd-post-rating {
 .wpd-filter.wpdf-hottest.wpd_not_clicked {
     display: none;
 }
+
+/* -- Blog Post Comments-- Removes Odd Name Issue -- */
+.wpd-login {
+    display: none;
+}
+
+
+
+/* -- Main Header Menu -- */
+
+ul#menu-1-2145010d {
+    margin: 0 auto;
+}

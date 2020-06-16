@@ -89,3 +89,14 @@ function my_login_logo() { ?>
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+// Log in redirect back to same page!
+
+if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || (isset($_POST['login_location']) && !empty($_POST['login_location'])) ) {
+    add_filter('login_redirect', 'my_login_redirect', 10, 3);
+    function my_login_redirect() {
+        $location = $_SERVER['HTTP_REFERER'];
+        wp_safe_redirect($location);
+        exit();
+    }
+}
