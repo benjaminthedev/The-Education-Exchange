@@ -100,3 +100,29 @@ if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || (isset($_POST['l
         exit();
     }
 }
+
+//If somehow the user is logged in the need to be redirect to home page if they end on login / register page
+
+// function redirect_to_specific_page() {
+	
+// 	if ( is_page('home') && is_user_logged_in() ) {
+		
+// 		wp_redirect( 'https://staging.theeducation.exchange/my-account/', 301 ); 
+// 		exit;
+//     }
+// }
+// add_action( 'template_redirect', 'redirect_to_specific_page' );
+
+
+
+// function add_login_check()
+// {
+//     if (is_user_logged_in()) {
+//         if (is_page('home')){
+//             wp_redirect('staging.theeducation.exchange/my-account/');
+//             exit; 
+//         }
+//     }
+// }
+
+// add_action('wp', 'add_login_check');
