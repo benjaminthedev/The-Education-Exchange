@@ -25,7 +25,7 @@ get_header(); ?>
 
                     <!-- wp query -->
 
-                    <h1>User Submitted Links</h1>
+                    <h1 class="elementor-heading-title elementor-size-large">User Submitted Links</h1>
                     <hr />
 <style>
 .linkBoxWrapper {
@@ -91,7 +91,7 @@ box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
                         wp_reset_postdata();
                     ?>
 
-
+<p>Do you have an link you would like to be shared on the site? If so please visit the <a href="/submit-link/">Share Your Link</a> page</p>
 </div><!-- end linkBox -->
 
 				<?php do_action( 'ocean_after_content_inner' ); ?>

@@ -77,7 +77,7 @@ box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
                             <?php the_excerpt(); ?>
 
 
-                                                        <a href="<?php the_permalink(); ?>" target="_blank" alt="User Submitted Link">Read More...</a>
+                        <a href="<?php the_permalink(); ?>" target="_blank" alt="User Submitted Post">Read More...</a>
 
 
                             <a href="<?php the_field('url_of_link'); ?>" target="_blank" alt="User Submitted Link"><?php the_field('url_of_link'); ?></a>
