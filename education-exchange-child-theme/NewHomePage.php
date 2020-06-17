@@ -397,6 +397,34 @@ snapSections.forEach((section, i) => {
 });
 
 
+const btnGet = document.querySelectorAll('.standardBtn');
+console.log(btnGet);
+
+
+
+if (document.body.classList.contains('logged-in')) {
+    // do some stuff
+    //This will redirect the user to the page
+     //location.replace("https://staging.theeducation.exchange/my-account/");
+    //this will change the url link!
+     btnGet[0].href = "https://staging.theeducation.exchange/my-account/";
+}
+
+
+
+
+
+
+
+
+
+// if(){
+//     log('in')
+// }else{
+//     console.log('out'); 
+// }
+
+
 
 
 
