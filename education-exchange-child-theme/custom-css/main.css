@@ -1,3 +1,7 @@
+a:hover{
+  color:#f1637e;
+}
+
 
 /*-- Home Page Boxes --*/
 
@@ -317,7 +321,7 @@ img.box-image {
 
 /*-- First Box --*/
 .page-template-boxes-theme-two .main-box:nth-child(1){
-    background-color: #5EB3E4 !important;
+    background-color: #6cc4e8 !important;
 }
 
 .page-template-boxes-theme-two .main-box:nth-child(1) .box-heading{
@@ -332,15 +336,15 @@ img.box-image {
 /* Headings & number */
 .page-template-boxes-theme-two .golden-rule__number, 
 .page-template-boxes-theme-two .box-heading{
-  color: #5EB3E4;
+  color: #6cc4e8;
 }
 /* Border */
 .page-template-boxes-theme-two article.box_rule{
-  border: solid 5px #5EB3E4;
+  border: solid 5px #6cc4e8;
 }
 /* Hover State */
 .page-template-boxes-theme-two article.box_rule:hover{
-  background: #5EB3E4;
+  background: #6cc4e8;
 }
 
 
@@ -353,20 +357,20 @@ img.box-image {
 
 /*-- First Box --*/
 .page-template-boxes-theme-three .main-box:nth-child(1){
-    background-color: #FBC771 !important;
+    background-color: #fcb34d !important;
 }
 /* Headings & number */
 .page-template-boxes-theme-three .golden-rule__number, 
 .page-template-boxes-theme-three .box-heading{
-  color: #FBC771;
+  color: #fcb34d;
 }
 /* Border */
 .page-template-boxes-theme-three article.box_rule{
-  border: solid 5px #FBC771;
+  border: solid 5px #fcb34d;
 }
 /* Hover State */
 .page-template-boxes-theme-three article.box_rule:hover{
-  background: #FBC771;
+  background: #fcb34d;
 }
 
 /*-- Themed Boxes - Box Three END --*/
@@ -378,20 +382,20 @@ img.box-image {
 
 /*-- First Box --*/
 .page-template-boxes-theme-four .main-box:nth-child(1){
-    background-color: #EE7EA0 !important;
+    background-color: #f1637e !important;
 }
 /* Headings & number */
 .page-template-boxes-theme-four .golden-rule__number, 
 .page-template-boxes-theme-four .box-heading{
-  color: #EE7EA0;
+  color: #f1637e;
 }
 /* Border */
 .page-template-boxes-theme-four article.box_rule{
-  border: solid 5px #EE7EA0;
+  border: solid 5px #f1637e;
 }
 /* Hover State */
 .page-template-boxes-theme-four article.box_rule:hover{
-  background: #EE7EA0;
+  background: #f1637e;
 }
 
 /*-- Themed Boxes - Box Four END --*/
@@ -405,20 +409,20 @@ img.box-image {
 
 /*-- First Box --*/
 .page-template-boxes-theme-five .main-box:nth-child(1){
-    background-color: #A176b0 !important;
+    background-color: #9646B2 !important;
 }
 /* Headings & number */
 .page-template-boxes-theme-five .golden-rule__number, 
 .page-template-boxes-theme-five .box-heading{
-  color: #A176b0;
+  color: #9646B2;
 }
 /* Border */
 .page-template-boxes-theme-five article.box_rule{
-  border: solid 5px #A176b0;
+  border: solid 5px #9646B2;
 }
 /* Hover State */
 .page-template-boxes-theme-five article.box_rule:hover{
-  background: #A176b0;
+  background: #9646B2;
 }
 
 /*-- Themed Boxes - Box Five END --*/
