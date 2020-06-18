@@ -457,3 +457,32 @@ div#wpd-post-rating {
 ul#menu-1-2145010d {
     margin: 0 auto;
 }
+
+
+
+
+/* BBPress Styles */
+
+.bbp-template-notice.info,
+span#subscription-toggle {
+    display: none;
+}
+
+.bbp-breadcrumb p {
+    font-size: 20px;
+    color: #06183a;
+}
+
+
+.bbp-breadcrumb a {
+    font-size: 20px;
+    color: #06183a;
+    text-decoration: blink;
+}
+
+.bbp-pagination * {
+    font-size: 15px;
+    color: #06183a;
+    text-transform: capitalize;
+    font-style: italic;
+}
