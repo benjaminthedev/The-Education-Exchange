@@ -559,3 +559,37 @@ div#new-topic-0 {
     background-color: #f1637e !important;
     color: white;
 }
+/* --Home Page Styles */
+/* --Home Page Standard Btn */
+.standardBtn {
+    padding: 10px 75px;
+    background: #f1637e;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 0.04rem;
+    color: #fff;
+    margin-top: 40px;
+    display: inline-block;
+}
+/* Fist Arrow */
+img.firstArrow {
+    transform: rotate(-160deg);
+    width: 20%;
+    margin: 0px 0px -20px 110px;
+    display: block;
+}
+div#firstArrowHeading h5 {
+transform: rotate(-380deg);
+    margin-left: -30px;
+    font-size: 22px;
+    width: 70%;
+    margin-bottom: 0px;
+}
+
+/* -- Boxes -- */
+
+.box01Left, 
+.box1Right {
+    padding: 100px 180px !important;
+}
