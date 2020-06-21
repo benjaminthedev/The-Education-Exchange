@@ -559,7 +559,7 @@ div#new-topic-0 {
     background-color: #f1637e !important;
     color: white;
 }
-/* --Home Page Styles */
+/* --NEW Home Page Styles */
 /* --Home Page Standard Btn */
 .standardBtn {
     padding: 10px 75px;
@@ -587,9 +587,25 @@ transform: rotate(-380deg);
     margin-bottom: 0px;
 }
 
-/* -- Boxes -- */
+/* -- First Box -- */
 
 .box01Left, 
 .box1Right {
     padding: 100px 180px !important;
 }
+ul.mainUL {
+    margin: 0 0 0 70px;
+}
+ul.mainUL li {
+  list-style-position: inside;
+}
+
+
+/* -- Second Box -- */
+/* BTN */
+.standardBtn-box2 {
+    background: #fcb34d;
+}
+
+
+
