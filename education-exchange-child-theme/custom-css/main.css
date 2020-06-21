@@ -608,4 +608,24 @@ ul.mainUL li {
 }
 
 
+/* -- Third Box -- */
+div#firstArrowHeading h5 {
+transform: rotate(-380deg);
+    margin-left: -30px;
+    font-size: 22px;
+    width: 70%;
+    margin-bottom: 0px;
+}
+
+img.thirdArrow {
+    transform: rotate(-150deg);
+    width: 20%;
+    margin: 0px 0px -20px 110px;
+    display: block;
+}
+
+.standardBtn-box3 {
+    background: #5eb3e4;
+}
+
 
