@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Sliding Home
+ * Template Name: Custom Home Template
  * 
  *
  *

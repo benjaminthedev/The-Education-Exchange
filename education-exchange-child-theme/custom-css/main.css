@@ -571,6 +571,13 @@ div#new-topic-0 {
     color: #fff;
     margin-top: 40px;
     display: inline-block;
+-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+
+/* -webkit-box-shadow: 10px 10px 15px -10px rgba(97,98,102,1) !important;
+-moz-box-shadow: 10px 10px 15px -10px rgba(97,98,102,1) !important;
+box-shadow: 10px 10px 15px -10px rgba(97,98,102,1) !important; */
 }
 /* Fist Arrow */
 img.firstArrow {
@@ -589,10 +596,10 @@ transform: rotate(-380deg);
 
 /* -- First Box -- */
 
-.box01Left, 
+/* .box01Left, 
 .box1Right {
     padding: 100px 180px !important;
-}
+} */
 ul.mainUL {
     margin: 0 0 0 70px;
 }
@@ -629,3 +636,8 @@ img.thirdArrow {
 }
 
 
+/* -- Fourth Box -- */
+
+.standardBtn-box4 {
+    background: #25346b;
+}
