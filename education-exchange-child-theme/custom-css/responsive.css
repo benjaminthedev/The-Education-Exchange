@@ -30,12 +30,17 @@
   }
 
   .box01Left,
-  .box1Right {
+  .box1Right,
+  .box2Left, 
+  .box02Right,
+  .box03Left, 
+  .box03Right,
+  .box04Left, 
+  .box04Right,
+  .box05Left, 
+  .box05Right {
       padding: 50px 10px !important;
   }
-
-
-
 }
 
 @media only screen and (max-width: 712px) {
@@ -47,7 +52,37 @@
     min-width: 100%;
   }
   .box01Left,
-  .box1Right {
+  .box1Right,
+  .box2Left, 
+  .box02Right,
+  .box03Left, 
+  .box03Right,
+  .box04Left, 
+  .box04Right,
+  .box05Left, 
+  .box05Right{
       padding: 50px 10px !important;
+  }
+
+  ul.mainUL {
+    margin: 0px 0 0 0px;
+  }
+
+  div#firstArrowHeading h5 {
+    transform: rotate(-380deg);
+    margin-left: 0px;
+}
+
+  div#secondArrowHeading h5{
+    margin-left: 10px;
+    margin-bottom: -20px;
+  }
+
+  div#thirdArrowHeading h5{
+    margin-left: 0px;
+  }
+  div#fourthArrowHeading h5,
+  div#firthArrowHeading h5{
+    margin-right:0px;
   }
 }
