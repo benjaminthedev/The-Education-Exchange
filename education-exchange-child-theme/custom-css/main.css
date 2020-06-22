@@ -596,10 +596,11 @@ transform: rotate(-380deg);
 
 /* -- First Box -- */
 
-/* .box01Left, 
+.box01Left,
 .box1Right {
-    padding: 100px 180px !important;
-} */
+    padding: 0px 180px !important;
+}
+
 ul.mainUL {
     margin: 0 0 0 70px;
 }
