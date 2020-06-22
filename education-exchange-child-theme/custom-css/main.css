@@ -5,6 +5,43 @@ a:hover{
 
 /*-- Home Page Boxes --*/
 
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../fonts/AvenirLTStd-Black.woff2') format('woff2'),
+        url('../fonts/AvenirLTStd-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap; 
+}
+
+/* Flower Font */
+
+@font-face {
+    font-family: 'Indie Flower';
+    src: url('../fonts/IndieFlower.woff2') format('woff2'),
+        url('../fonts/IndieFlower.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.home h1,
+.home h2, 
+.home h3, 
+.home h4{
+    font-family: 'Avenir LT Std' !important; 
+    text-shadow: 1px 1px 1px #000;
+} 
+
+.home h5{
+     font-family: 'Indie Flower'!important;
+}
+
+
+
+
+
+
 /*-- Temp Styles --*/
 
 #left1,
@@ -579,20 +616,7 @@ box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
 -moz-box-shadow: 10px 10px 15px -10px rgba(97,98,102,1) !important;
 box-shadow: 10px 10px 15px -10px rgba(97,98,102,1) !important; */
 }
-/* Fist Arrow */
-img.firstArrow {
-    transform: rotate(-160deg);
-    width: 20%;
-    margin: 0px 0px -20px 110px;
-    display: block;
-}
-div#firstArrowHeading h5 {
-transform: rotate(-380deg);
-    margin-left: -30px;
-    font-size: 22px;
-    width: 70%;
-    margin-bottom: 0px;
-}
+
 
 /* -- First Box -- */
 
@@ -608,15 +632,13 @@ ul.mainUL li {
   list-style-position: inside;
 }
 
-
-/* -- Second Box -- */
-/* BTN */
-.standardBtn-box2 {
-    background: #fcb34d;
+/* First Arrow */
+img.firstArrow {
+    transform: rotate(-160deg);
+    width: 20%;
+    margin: 0px 0px -20px 110px;
+    display: block;
 }
-
-
-/* -- Third Box -- */
 div#firstArrowHeading h5 {
 transform: rotate(-380deg);
     margin-left: -30px;
@@ -625,10 +647,56 @@ transform: rotate(-380deg);
     margin-bottom: 0px;
 }
 
-img.thirdArrow {
-    transform: rotate(-150deg);
+
+/* -- Second Box -- */
+
+.box2Left, 
+.box02Right {
+    padding: 0 150px;
+}
+
+/* BTN */
+.standardBtn-box2 {
+    background: #fcb34d;
+}
+/* Second Arrow */
+img.secondArrow {
+    transform: rotate(-160deg);
     width: 20%;
-    margin: 0px 0px -20px 110px;
+    margin: 40px 0px -30px 110px;
+    display: block;
+}
+div#secondArrowHeading h5 {
+    transform: rotate(-377deg);
+    margin-left: -70px;
+    font-size: 22px;
+    width: 80%;
+    margin-bottom: -10px;
+    margin-top: 30px;
+}
+
+
+
+/* -- Third Box -- */
+
+.box03Left, 
+.box03Right {
+    padding: 0px 150px;
+}
+
+div#thirdArrowHeading h5 {
+    transform: rotate(-370deg);
+    margin-left: -60px;
+    font-size: 22px;
+    width: 63%;
+    margin-bottom: 0px;
+
+}
+
+img.thirdArrow {
+    transform: scaleX(-1) rotate(-90deg);
+    width: 14%;
+    margin: 30px 0px -110px 100px;
     display: block;
 }
 
@@ -638,7 +706,53 @@ img.thirdArrow {
 
 
 /* -- Fourth Box -- */
+.box04Left, 
+.box04Right {
+    padding: 0px 150px;
+}
+
+div#fourthArrowHeading h5 {
+    transform: rotate(-340deg);
+    margin-right: -60px;
+    font-size: 22px;
+    width: 70%;
+    float: right;
+    margin-bottom: 0px;
+}
+
+img.fourthArrow {
+    transform: rotate(-90deg);
+    float: right;
+    width: 14%;
+    margin: 40px 0px -30px 0px;
+    display: block;
+}
 
 .standardBtn-box4 {
     background: #25346b;
+}
+
+
+/* -- Fifth Box -- */
+
+.box05Left, 
+.box05Right {
+    padding: 0px 150px;
+}
+
+div#firthArrowHeading h5 {
+    transform: rotate(-370deg);
+    margin-right: -30px;
+    font-size: 22px;
+    width: 70%;
+    float: right;
+    margin-bottom: 0px;
+}
+
+img.fifthArrow {
+    transform: scaleX(-1) rotate(-270deg);
+    width: 14%;
+    /* margin: 40px 0px -30px 0px; */
+    display: block;
+    margin: 0 auto;
 }
