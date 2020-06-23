@@ -64,10 +64,6 @@
       padding: 50px 10px !important;
   }
 
-  ul.mainUL {
-    margin: 0px 0 0 0px;
-  }
-
   div#firstArrowHeading h5 {
     transform: rotate(-380deg);
     margin-left: 0px;

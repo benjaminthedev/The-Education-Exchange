@@ -614,13 +614,14 @@ p.form-allowed-tags {
     color: #fff;
     margin-top: 40px;
     display: inline-block;
--webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
--moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+}
 
-/* -webkit-box-shadow: 10px 10px 15px -10px rgba(97,98,102,1) !important;
--moz-box-shadow: 10px 10px 15px -10px rgba(97,98,102,1) !important;
-box-shadow: 10px 10px 15px -10px rgba(97,98,102,1) !important; */
+.standardBtn:hover{
+    background: #fcb34d;
+    color: #fff;
 }
 
 
@@ -631,12 +632,7 @@ box-shadow: 10px 10px 15px -10px rgba(97,98,102,1) !important; */
     padding: 0px 180px !important;
 }
 
-ul.mainUL {
-    margin: 0 0 0 70px;
-}
-ul.mainUL li {
-  list-style-position: inside;
-}
+
 
 /* First Arrow */
 img.firstArrow {
@@ -665,6 +661,12 @@ transform: rotate(-380deg);
 .standardBtn-box2 {
     background: #fcb34d;
 }
+
+.standardBtn-box2:hover{
+    background: #f1637e;
+    color: #fff;
+}
+
 /* Second Arrow */
 img.secondArrow {
     transform: rotate(-160deg);
@@ -709,6 +711,10 @@ img.thirdArrow {
 .standardBtn-box3 {
     background: #5eb3e4;
 }
+.standardBtn-box3:hover{
+    background: #25346b;
+    color: #fff;
+}
 
 
 /* -- Fourth Box -- */
@@ -736,6 +742,11 @@ img.fourthArrow {
 
 .standardBtn-box4 {
     background: #25346b;
+}
+
+.standardBtn-box4:hover{
+    background: #5eb3e4;
+    color: #fff;
 }
 
 
