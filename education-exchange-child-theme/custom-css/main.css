@@ -587,6 +587,12 @@ div#new-topic-0 {
     margin-bottom: 5px;
 }
 
+/* form-allowed-tags */
+
+p.form-allowed-tags {
+    display: none;
+}
+
 .wpulike-default .wp_ulike_btn, .wpulike-default .count-box:before {
     background-color: #f1637e !important;
 }
@@ -756,3 +762,24 @@ img.fifthArrow {
     display: block;
     margin: 0 auto;
 }
+
+
+
+/* -- Category Footer Issue Fix */
+
+.category .elementor-location-footer {
+    margin-top: 100px;
+}
+
+/* -- Comment Post Bubble  -- */
+
+#wpd-bubble-wrapper > div,
+#wpd-bubble-wrapper > #wpd-bubble #wpd-bubble-add-message {
+    background-color: #001035;
+}
+
+#wpd-bubble-wrapper > #wpd-bubble #wpd-bubble-add-message::before {
+    border-left-color: #001035;
+    border-right-color: #001035;
+}
+
