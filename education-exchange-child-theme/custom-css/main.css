@@ -631,12 +631,7 @@ box-shadow: 10px 10px 15px -10px rgba(97,98,102,1) !important; */
     padding: 0px 180px !important;
 }
 
-ul.mainUL {
-    margin: 0 0 0 70px;
-}
-ul.mainUL li {
-  list-style-position: inside;
-}
+
 
 /* First Arrow */
 img.firstArrow {
