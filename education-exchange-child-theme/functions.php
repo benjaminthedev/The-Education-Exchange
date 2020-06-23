@@ -34,15 +34,14 @@ function oceanwp_child_enqueue_parent_style() {
 
 
 
-	//Scroll Plugin JS
+	//Home Page JS
+	if (is_page('home')) {
+		wp_enqueue_script( 'homeJS', get_stylesheet_directory_uri() . '/custom-js/home.js', array(), '', true );
+	}
 
-	if (is_page(4110)) {
-		wp_enqueue_script( 'ms01', get_stylesheet_directory_uri() . '/scroll/jquery.multiscroll.js', array(), '', true );
-		wp_enqueue_script( 'ms02', get_stylesheet_directory_uri() . '/scroll/jquery.multiscroll.min.js', array(), '', true );
-		wp_enqueue_script( 'msEasing', get_stylesheet_directory_uri() . '/scroll/vendors/jquery.easings.min.js', array(), '', true );
-		
-		//Scroll Plugin CSS
-		wp_enqueue_style( 'ms01style', get_stylesheet_directory_uri() . '/scroll/jquery.multiscroll.css', array(), true );
+	//Home Page JS
+	if (is_page('post-template-default')) {
+		wp_enqueue_script( 'postJS', get_stylesheet_directory_uri() . '/custom-js/blogpost.js', array(), '', true );
 	}
 	
 	
@@ -92,14 +91,14 @@ add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 // Log in redirect back to same page!
 
-if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || (isset($_POST['login_location']) && !empty($_POST['login_location'])) ) {
-    add_filter('login_redirect', 'my_login_redirect', 10, 3);
-    function my_login_redirect() {
-        $location = $_SERVER['HTTP_REFERER'];
-        wp_safe_redirect($location);
-        exit();
-    }
-}
+// if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || (isset($_POST['login_location']) && !empty($_POST['login_location'])) ) {
+//     add_filter('login_redirect', 'my_login_redirect', 10, 3);
+//     function my_login_redirect() {
+//         $location = $_SERVER['HTTP_REFERER'];
+//         wp_safe_redirect($location);
+//         exit();
+//     }
+// }
 
 //If somehow the user is logged in the need to be redirect to home page if they end on login / register page
 

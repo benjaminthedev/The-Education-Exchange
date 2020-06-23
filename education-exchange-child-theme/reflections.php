@@ -22,7 +22,7 @@ if ( !is_user_logged_in() ) {
 
 		<?php do_action( 'ocean_before_primary' ); ?>
 
-		<div id="primary" class="content-area clr">
+		<div id="primary" class=" clr">
 
 			<?php do_action( 'ocean_before_content' ); ?>
 
@@ -315,18 +315,18 @@ function filterTasks(e) {
                 </script>
 
 
-				<?php do_action( 'ocean_after_content_inner' ); ?>
+				<?php //do_action( 'ocean_after_content_inner' ); ?>
 
 			</div><!-- #content -->
 
-			<?php do_action( 'ocean_after_content' ); ?>
+			<?php //do_action( 'ocean_after_content' ); ?>
 
 		</div><!-- #primary -->
 
-		<?php do_action( 'ocean_after_primary' ); ?>
+		<?php //do_action( 'ocean_after_primary' ); ?>
 
 	</div><!-- #content-wrap -->
 
-	<?php do_action( 'ocean_after_content_wrap' ); ?>
+	<?php //do_action( 'ocean_after_content_wrap' ); ?>
 
 <?php get_footer(); ?>
