@@ -25,6 +25,10 @@ a:hover{
     font-display: swap;
 }
 
+.center {
+    text-align: center;
+}
+
 .home h1,
 .home h2, 
 .home h3, 
@@ -716,7 +720,6 @@ img.thirdArrow {
     color: #fff;
 }
 
-
 /* -- Fourth Box -- */
 .box04Left, 
 .box04Right {
@@ -819,4 +822,31 @@ a.sso {
 
 .bbp-login-form #nsl-custom-login-form-1{
     display: none;
+}
+
+/* User Submitted Links */
+
+ .page-template-links-template .standardBtn {
+    padding: 10px 75px;
+    background: #f1637e;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 0.04rem;
+    color: #fff;
+    margin-top: 10px;
+    display: inline-block;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+    margin: 0 auto;
+    display: block;
+    width: 32%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-template-links-template .standardBtn:hover {
+    background: #fcb34d;
+    color: #fff;
 }
