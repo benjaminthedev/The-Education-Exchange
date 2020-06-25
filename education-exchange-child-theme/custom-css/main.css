@@ -794,3 +794,29 @@ img.fifthArrow {
     border-right-color: #001035;
 }
 
+/* LogIn / Register */
+
+a.sso {
+    background: #001035;
+    color: #fff;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: -15px !important;
+    display: block;
+    width: 51%;
+}
+
+.newSocialLogin {
+    margin-top: 60px;
+}
+
+.user-registration-page .newSocialLogin {
+    margin-top: 30px;
+}
+
+/* Social Logins */
+
+.bbp-login-form #nsl-custom-login-form-1{
+    display: none;
+}
