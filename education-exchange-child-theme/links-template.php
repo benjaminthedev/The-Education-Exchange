@@ -60,7 +60,14 @@ box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
 </style>
 
 
+<h5 class="center">Do you have an link you would like to be shared on the site? If so please </h5>
+<div class="clear"></div>
+<a href="/submit-link/" class="standardBtn">Share Your Link</a>
+
 <div class="linkBoxWrapper">
+
+
+
 
                     <?php
                         $the_query = new WP_Query( array(
@@ -75,6 +82,10 @@ box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
                             <h3><?php the_title(); ?></h3>
 
                             <a href="<?php the_field('url_of_link'); ?>" target="_blank" alt="User Submitted Link"><?php the_field('url_of_link'); ?></a>
+
+                            <p>By: <?php the_field('name'); ?></p>
+
+                            <p>From: <?php the_field('country'); ?></p>
 
                         </div><!-- end linkBox -->
 
@@ -91,7 +102,7 @@ box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
                         wp_reset_postdata();
                     ?>
 
-<p>Do you have an link you would like to be shared on the site? If so please visit the <a href="/submit-link/">Share Your Link</a> page</p>
+
 </div><!-- end linkBox -->
 
 				<?php do_action( 'ocean_after_content_inner' ); ?>
