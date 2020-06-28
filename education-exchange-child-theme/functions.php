@@ -113,7 +113,6 @@ add_action( 'login_enqueue_scripts', 'my_login_logo' );
 // add_action( 'template_redirect', 'redirect_to_specific_page' );
 
 
-
 // function add_login_check()
 // {
 //     if (is_user_logged_in()) {
