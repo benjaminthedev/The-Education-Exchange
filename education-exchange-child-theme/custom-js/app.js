@@ -86,6 +86,21 @@ setInterval(function () {
 
 
 
+const newTesting = document.querySelectorAll('.acf-checkbox-list li label input');
+
+console.log(newTesting);
+
+
+
+//newTesting[0].innerText = 'Building learning independence?!';
+
+newTesting[0].classList.add('removeCheck');
+newTesting[7].classList.add('removeCheck');
+newTesting[14].classList.add('removeCheck');
+newTesting[21].classList.add('removeCheck');
+newTesting[28].classList.add('removeCheck');
+
+
 
 
 

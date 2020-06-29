@@ -850,3 +850,12 @@ a.sso {
     background: #fcb34d;
     color: #fff;
 }
+
+
+/* ul.acf-checkbox-list li.removeCheck input[type="checkbox"] {
+    display: none !important;
+} */
+
+.newBG {
+    background: green !important;
+}
