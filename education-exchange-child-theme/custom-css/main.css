@@ -826,7 +826,8 @@ a.sso {
 
 /* User Submitted Links */
 
- .page-template-links-template .standardBtn {
+ .page-template-links-template .standardBtn,
+ .page-template-links-template-connecting-expanding-learning .standardBtn {
     padding: 10px 75px;
     background: #f1637e;
     border-radius: 5px;
@@ -846,7 +847,8 @@ a.sso {
     margin-bottom: 20px;
 }
 
-.page-template-links-template .standardBtn:hover {
+.page-template-links-template .standardBtn:hover,
+.page-template-links-template-connecting-expanding-learning .standardBtn:hover {
     background: #fcb34d;
     color: #fff;
 }
@@ -857,4 +859,37 @@ input.removeCheck {
 
 .newBG {
     background: green !important;
+}
+
+
+/* User Submitted Posts Output */
+
+.linkBoxWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.linkBox {
+    width: 48%;
+    min-width: 48%;
+    
+    min-height: 160px;
+    border: 1px solid #0c183a;
+    margin: 10px 5px;
+    padding: 40px;
+    text-align: center;
+    /*shadow*/
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
+    box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
+}
+
+
+
+/* Responsive */
+
+@media only screen and (max-width: 554px) {
+    .linkBox {
+        min-width: 98%;
+    }
 }
