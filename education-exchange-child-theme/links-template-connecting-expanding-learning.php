@@ -1,9 +1,7 @@
 <?php
 /*
- * Template Name: Links Custom Page
+ * Template Name: Links - Connecting & Expanding Learning
  * 
- * 
- * This one can be for Building Learning Independence theme
  *
  *
  * @package OceanWP WordPress theme
@@ -27,7 +25,7 @@ get_header(); ?>
 
                     <!-- wp query -->
 
-                    <h1 class="elementor-heading-title elementor-size-large">User Submitted Links</h1>
+                    <h1 class="elementor-heading-title elementor-size-large">Connecting and expanding learning links</h1>
                     <hr />
 <style>
 .linkBoxWrapper {
@@ -70,8 +68,25 @@ box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
 
                     <?php
                         $the_query = new WP_Query( array(
-                            'post_type' => 'links'
-                        ) );
+                            // 'post_type' => 'links',
+                            // 'field' => 'term_id',
+                            // 'terms' => array('299')  
+                            
+                            
+
+                            'post_type'      => 'links',
+                                'tax_query'      => array(
+                                    array(
+                                        'taxonomy' => 'user_submitted_link_categories', 
+                                        'field'    => 'id',
+                                        'terms'    => array(299, 272, 273)
+                                    ),
+                                ),
+                                ));
+
+
+
+                        // ) );
 
                         while ( $the_query->have_posts() ) :
                             $the_query->the_post();?>
