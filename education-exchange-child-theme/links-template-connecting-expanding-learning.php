@@ -27,37 +27,7 @@ get_header(); ?>
 
                     <h1 class="elementor-heading-title elementor-size-large">Connecting and expanding learning links</h1>
                     <hr />
-<style>
-.linkBoxWrapper {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.linkBox {
-    width: 48%;
-    min-width: 48%;
-    
-    min-height: 160px;
-    border: 1px solid #0c183a;
-    margin: 10px 5px;
-    padding: 40px;
-    text-align: center;
-    /*shadow*/
--webkit-box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
--moz-box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
-box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
-}
-
-
-
-/* Responsive */
-
-@media only screen and (max-width: 554px) {
-    .linkBox {
-        min-width: 98%;
-    }
-}
-</style>
 
 
 <h5 class="center">Do you have an link you would like to be shared on the site? If so please </h5>
@@ -68,25 +38,15 @@ box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
 
                     <?php
                         $the_query = new WP_Query( array(
-                            // 'post_type' => 'links',
-                            // 'field' => 'term_id',
-                            // 'terms' => array('299')  
-                            
-                            
-
                             'post_type'      => 'links',
                                 'tax_query'      => array(
                                     array(
                                         'taxonomy' => 'user_submitted_link_categories', 
                                         'field'    => 'id',
-                                        'terms'    => array(299, 272, 273)
+                                        'terms'    => array(282, 272, 283, 284, 285, 286, 287)
                                     ),
                                 ),
                                 ));
-
-
-
-                        // ) );
 
                         while ( $the_query->have_posts() ) :
                             $the_query->the_post();?>
