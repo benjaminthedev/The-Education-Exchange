@@ -827,7 +827,8 @@ a.sso {
 /* User Submitted Links */
 
  .page-template-links-template .standardBtn,
- .page-template-links-template-connecting-expanding-learning .standardBtn {
+ .page-template-links-template-connecting-expanding-learning .standardBtn,
+ .page-template-links-template-online-and-digital-learning .standardBtn{
     padding: 10px 75px;
     background: #f1637e;
     border-radius: 5px;
@@ -848,7 +849,8 @@ a.sso {
 }
 
 .page-template-links-template .standardBtn:hover,
-.page-template-links-template-connecting-expanding-learning .standardBtn:hover {
+.page-template-links-template-connecting-expanding-learning .standardBtn:hover,
+.page-template-links-template-online-and-digital-learning .standardBtn:hover {
     background: #fcb34d;
     color: #fff;
 }
