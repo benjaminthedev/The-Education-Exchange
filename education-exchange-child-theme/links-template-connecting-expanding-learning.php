@@ -25,12 +25,12 @@ get_header(); ?>
 
                     <!-- wp query -->
 
-                    <h1 class="elementor-heading-title elementor-size-large">Connecting and expanding learning links</h1>
+                    <h1 class="elementor-heading-title elementor-size-large">Links shared by our community</h1>
                     <hr />
 
 
 
-<h5 class="center">Do you have an link you would like to be shared on the site? If so please </h5>
+<h5 class="center">Do you have an link you would like to be shared on the site?</h5>
 <div class="clear"></div>
 <a href="/submit-link/" class="standardBtn">Share Your Link</a>
 
@@ -57,7 +57,7 @@ get_header(); ?>
 
                             <a href="<?php the_field('url_of_link'); ?>" target="_blank" alt="User Submitted Link"><?php the_field('url_of_link'); ?></a>
 
-                            <p>By: <?php the_field('name'); ?></p>
+                            <p>Submitted by: <?php the_field('name'); ?></p>
 
                             <p>From: <?php the_field('country'); ?></p>
 

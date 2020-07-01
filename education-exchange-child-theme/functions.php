@@ -124,23 +124,3 @@ add_action( 'login_enqueue_scripts', 'my_login_logo' );
 // }
 
 // add_action('wp', 'add_login_check');
-
-/* Checking the ACF Dropdown */
-
-function custom_acf_taxonomy_hierarchy( $args, $field, $post_id ){
-    $args['parent'] = empty($_POST['parent']) ? 0 : $_POST['parent'];    
-    return $args;
-}
-add_filter('acf/fields/taxonomy/query/key=field_5ef445b39a88d', 'custom_acf_taxonomy_hierarchy',10,3);
-
-
-
-//Change BBPRESS Warn text when no activity
-
-// function change_translate_text( $translated_text ) {
-//   if ( $translated_text == ‘Oh bother! No topics were found here!’) {
-//     $translated_text = ‘No topics were found here!’;
-//   }
-//   return $translated_text;
-// }
-// add_filter( 'gettext', 'change_translate_text', 20 );

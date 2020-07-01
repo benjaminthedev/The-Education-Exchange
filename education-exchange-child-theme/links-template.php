@@ -62,7 +62,7 @@ box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
 </style>
 
 
-<h5 class="center">Do you have an link you would like to be shared on the site? If so please </h5>
+<h5 class="center">Do you have an link you would like to be shared on the site?</h5>
 <div class="clear"></div>
 <a href="/submit-link/" class="standardBtn">Share Your Link</a>
 
@@ -82,7 +82,7 @@ box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
 
                             <a href="<?php the_field('url_of_link'); ?>" target="_blank" alt="User Submitted Link"><?php the_field('url_of_link'); ?></a>
 
-                            <p>By: <?php the_field('name'); ?></p>
+                            <p>Submitted by: <?php the_field('name'); ?></p>
 
                             <p>From: <?php the_field('country'); ?></p>
 
