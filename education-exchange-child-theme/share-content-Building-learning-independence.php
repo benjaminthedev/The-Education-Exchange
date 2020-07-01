@@ -55,7 +55,7 @@ get_header(); ?>
         
                             <h3><?php the_title(); ?></h3>
 
-                            <p>By: <?php the_field('name'); ?></p>
+                            <p>Submitted by: <?php the_field('name'); ?></p>
 
                             <p>From: <?php the_field('country'); ?></p>
 
