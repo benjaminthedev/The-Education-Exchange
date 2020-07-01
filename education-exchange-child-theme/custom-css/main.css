@@ -559,13 +559,16 @@ li.bbp-header,
     margin: 5px 0 5px;
 }
 
-p.bbp-topic-meta,
+/* p.bbp-topic-meta,
 .sgi-letter-avatar,
-a.bbp-author-link
- {
+a.bbp-author-link{
+    display: none;
+} */
+
+.bbp-author-role,
+.topic-template-default .bbp-template-notice{
     display: none;
 }
-
 
 #bbpress-forums li.bbp-body ul li:nth-child(1),
 #bbpress-forums li.bbp-body ul li:nth-child(4) {
@@ -838,8 +841,9 @@ a.sso {
  .page-template-links-template-online-and-digital-learning .standardBtn,
  .page-template-links-template-building-learning-independence .standardBtn, 
  .page-template-links-template-The-Purpose-And-Vision-Of-Education .standardBtn,
- .page-template-links-template-Professional-learning-for-the-21st-century .standardBtn {
-    padding: 10px 75px;
+ .page-template-links-template-Professional-learning-for-the-21st-century .standardBtn, 
+ .page-template-share-content-Building-learning-independence .standardBtn{
+    padding: 10px 15px;
     background: #f1637e;
     border-radius: 5px;
     text-transform: capitalize;
@@ -863,7 +867,8 @@ a.sso {
 .page-template-links-template-online-and-digital-learning .standardBtn:hover,
 .page-template-links-template-building-learning-independence .standardBtn:hover, 
 .page-template-links-template-The-Purpose-And-Vision-Of-Education .standardBtn:hover,
-.page-template-links-template-Professional-learning-for-the-21st-century .standardBtn:hover {
+.page-template-links-template-Professional-learning-for-the-21st-century .standardBtn:hover,
+.page-template-share-content-Building-learning-independence .standardBtn:hover {
     background: #fcb34d;
     color: #fff;
 }

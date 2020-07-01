@@ -124,3 +124,9 @@ add_action( 'login_enqueue_scripts', 'my_login_logo' );
 // }
 
 // add_action('wp', 'add_login_check');
+
+//remove the [...] on excerpt.
+function new_excerpt_more( $more ) {
+    return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');

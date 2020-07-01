@@ -34,8 +34,42 @@ get_header(); ?>
 <div class="clear"></div>
 <a href="/shared-content-form" class="standardBtn">Shared Content Page</a>
 
-<div class="">
+<style>
 
+  
+
+    article.sharedContentArticle{
+        display: flex;
+        margin-top: 50px;
+    }    
+
+
+    .sharedContent {
+        padding: 20px 20px;
+        margin: 10px;   
+
+
+        background-color: #fff;
+        width: 100%;
+        min-height: 100%;
+        border-radius: 3px;
+        border: 0 solid #818a91;
+
+        -webkit-transition: all .25s;
+        -o-transition: all .25s;
+        transition: all .25s;
+
+        -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+
+    }
+
+</style>
+
+
+
+
+<article class="sharedContentArticle">
                     <?php
                         $the_query = new WP_Query( array(
                             'post_type'      => 'share',
@@ -51,19 +85,28 @@ get_header(); ?>
                         while ( $the_query->have_posts() ) :
                             $the_query->the_post();?>
 
-                            <div class="elementor-post__card">
+                            <div class="sharedContent"> 
         
-                            <h3><?php the_title(); ?></h3>
-
-                            <p>Submitted by: <?php the_field('name'); ?></p>
-
-                            <p>From: <?php the_field('country'); ?></p>
+                            <h3>
+                                <a href="<?php the_permalink(); ?>" alt="Read The Shared Content">
+                                    <?php the_title(); ?>
+                                </a>
+                            </h3>
 
                             <?php the_excerpt(); ?>
 
-                            <a href="#" alt="Read More">Read More...</a>
+                                <hr />
 
-                        </div><!-- end linkBox -->
+                                <?php if( get_field('name') ): ?>
+                                    <p>Submitted by: <?php the_field('name'); ?></p>
+                                <?php endif; ?>
+
+                        <?php if( get_field('country') ): ?>                
+                            <p>From: <?php the_field('country'); ?></p>
+                        <?php endif; ?>
+                            <a href="<?php the_permalink(); ?>" alt="Read More">Read More »</a>
+
+                        </div>
 
                         <? endwhile;
 
@@ -73,9 +116,9 @@ get_header(); ?>
                         */
                         wp_reset_postdata();
                     ?>
+</article>
 
 
-</div><!-- end linkBox -->
 
 				<?php do_action( 'ocean_after_content_inner' ); ?>
 
@@ -92,3 +135,10 @@ get_header(); ?>
 	<?php do_action( 'ocean_after_content_wrap' ); ?>
 
 <?php get_footer(); ?>
+
+
+
+
+
+
+
