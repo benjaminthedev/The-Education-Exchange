@@ -799,6 +799,8 @@ img.fifthArrow {
 
 /* LogIn / Register */
 
+
+
 a.sso {
     background: #001035;
     color: #fff;
@@ -808,6 +810,10 @@ a.sso {
     margin-top: -15px !important;
     display: block;
     width: 51%;
+}
+
+.page-id-5397 a.sso {
+    margin-top: 55px !important;
 }
 
 .newSocialLogin {
@@ -830,7 +836,8 @@ a.sso {
  .page-template-links-template-connecting-expanding-learning .standardBtn,
  .page-template-links-template-online-and-digital-learning .standardBtn,
  .page-template-links-template-building-learning-independence .standardBtn, 
- .page-template-links-template-The-Purpose-And-Vision-Of-Education .standardBtn {
+ .page-template-links-template-The-Purpose-And-Vision-Of-Education .standardBtn,
+ .page-template-links-template-Professional-learning-for-the-21st-century .standardBtn {
     padding: 10px 75px;
     background: #f1637e;
     border-radius: 5px;
@@ -854,7 +861,8 @@ a.sso {
 .page-template-links-template-connecting-expanding-learning .standardBtn:hover,
 .page-template-links-template-online-and-digital-learning .standardBtn:hover,
 .page-template-links-template-building-learning-independence .standardBtn:hover, 
-.page-template-links-template-The-Purpose-And-Vision-Of-Education .standardBtn:hover {
+.page-template-links-template-The-Purpose-And-Vision-Of-Education .standardBtn:hover,
+.page-template-links-template-Professional-learning-for-the-21st-century .standardBtn:hover {
     background: #fcb34d;
     color: #fff;
 }
@@ -898,4 +906,12 @@ input.removeCheck {
     .linkBox {
         min-width: 98%;
     }
+}
+
+
+
+/* Shared Conten Form Page */
+
+.page-id-4685 .standardBtn{
+    margin: 0 0 20px 0;
 }
