@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Links - Online and digital learning
+ * Template Name: Links - Building learning independence
  * 
  *
  *
@@ -25,7 +25,7 @@ get_header(); ?>
 
                     <!-- wp query -->
 
-                    <h1 class="elementor-heading-title elementor-size-large">Online and digital learning links</h1>
+                    <h1 class="elementor-heading-title elementor-size-large">Building learning independence learning links</h1>
                     <hr />
 
 
@@ -43,7 +43,7 @@ get_header(); ?>
                                     array(
                                         'taxonomy' => 'user_submitted_link_categories', 
                                         'field'    => 'id',
-                                        'terms'    => array(273, 292, 291, 289, 290, 293, 288)
+                                        'terms'    => array(217, 298, 299, 294, 297, 295, 296)
                                     ),
                                 ),
                                 ));
