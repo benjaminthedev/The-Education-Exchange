@@ -828,7 +828,9 @@ a.sso {
 
  .page-template-links-template .standardBtn,
  .page-template-links-template-connecting-expanding-learning .standardBtn,
- .page-template-links-template-online-and-digital-learning .standardBtn{
+ .page-template-links-template-online-and-digital-learning .standardBtn,
+ .page-template-links-template-building-learning-independence .standardBtn, 
+ .page-template-links-template-The-Purpose-And-Vision-Of-Education .standardBtn {
     padding: 10px 75px;
     background: #f1637e;
     border-radius: 5px;
@@ -850,7 +852,9 @@ a.sso {
 
 .page-template-links-template .standardBtn:hover,
 .page-template-links-template-connecting-expanding-learning .standardBtn:hover,
-.page-template-links-template-online-and-digital-learning .standardBtn:hover {
+.page-template-links-template-online-and-digital-learning .standardBtn:hover,
+.page-template-links-template-building-learning-independence .standardBtn:hover, 
+.page-template-links-template-The-Purpose-And-Vision-Of-Education .standardBtn:hover {
     background: #fcb34d;
     color: #fff;
 }
