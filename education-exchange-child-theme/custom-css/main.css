@@ -842,7 +842,8 @@ a.sso {
  .page-template-links-template-building-learning-independence .standardBtn, 
  .page-template-links-template-The-Purpose-And-Vision-Of-Education .standardBtn,
  .page-template-links-template-Professional-learning-for-the-21st-century .standardBtn, 
- .page-template-share-content-Building-learning-independence .standardBtn{
+ .page-template-share-content-Building-learning-independence .standardBtn, 
+ .page-template-shared-content-The-purpose-and-vision-of-education .standardBtn{
     padding: 10px 15px;
     background: #f1637e;
     border-radius: 5px;
@@ -868,7 +869,8 @@ a.sso {
 .page-template-links-template-building-learning-independence .standardBtn:hover, 
 .page-template-links-template-The-Purpose-And-Vision-Of-Education .standardBtn:hover,
 .page-template-links-template-Professional-learning-for-the-21st-century .standardBtn:hover,
-.page-template-share-content-Building-learning-independence .standardBtn:hover {
+.page-template-share-content-Building-learning-independence .standardBtn:hover, 
+.page-template-shared-content-The-purpose-and-vision-of-education .standardBtn:hover {
     background: #fcb34d;
     color: #fff;
 }
@@ -944,7 +946,10 @@ input.removeCheck {
 
         background-color: #fff;
         /* width: 33%; */
-        width: 18vw;
+        /* width: 18vw; */
+        width: 15vw;
+
+        
         min-height: 100%;
         border-radius: 3px;
         border: 0 solid #818a91;
