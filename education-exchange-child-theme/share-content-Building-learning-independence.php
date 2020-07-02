@@ -49,6 +49,8 @@ get_header(); ?>
                             $the_query->the_post();?>
 
                             <div class="sharedContent"> 
+
+                            
         
                             <h3>
                                 <a href="<?php the_permalink(); ?>" alt="Read The Shared Content">
