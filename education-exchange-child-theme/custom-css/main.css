@@ -843,7 +843,10 @@ a.sso {
  .page-template-links-template-The-Purpose-And-Vision-Of-Education .standardBtn,
  .page-template-links-template-Professional-learning-for-the-21st-century .standardBtn, 
  .page-template-share-content-Building-learning-independence .standardBtn, 
- .page-template-shared-content-The-purpose-and-vision-of-education .standardBtn{
+ .page-template-shared-content-The-purpose-and-vision-of-education .standardBtn,
+ .page-template-shared-content-Online-and-digital-learning .standardBtn,
+ .page-template-shared-content-Professional-learning-for-the-21st-century .standardBtn,
+ .page-template-shared-content-Connecting-and-expanding-learning .standardBtn{
     padding: 10px 15px;
     background: #f1637e;
     border-radius: 5px;
@@ -870,7 +873,10 @@ a.sso {
 .page-template-links-template-The-Purpose-And-Vision-Of-Education .standardBtn:hover,
 .page-template-links-template-Professional-learning-for-the-21st-century .standardBtn:hover,
 .page-template-share-content-Building-learning-independence .standardBtn:hover, 
-.page-template-shared-content-The-purpose-and-vision-of-education .standardBtn:hover {
+.page-template-shared-content-The-purpose-and-vision-of-education .standardBtn:hover,
+.page-template-shared-content-Online-and-digital-learning .standardBtnL:hover,
+.page-template-shared-content-Professional-learning-for-the-21st-century .standardBtn:hover,
+.page-template-shared-content-Connecting-and-expanding-learning .standardBtn:hover {
     background: #fcb34d;
     color: #fff;
 }
