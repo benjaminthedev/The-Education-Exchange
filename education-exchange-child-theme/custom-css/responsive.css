@@ -32,6 +32,12 @@
     .box2Left {
         padding: 50px 10px !important;
     }
+
+    .sharedContent{
+        width: 40vw;
+    }
+
+
 }
 @media only screen and (max-width: 712px) {
     .main-box {
@@ -72,6 +78,10 @@
         flex-direction: column !important; 
         margin-right: 20px;
         margin-top: 20px;
+    }
+
+    .sharedContent{
+        width: 84vw;
     }
 
 

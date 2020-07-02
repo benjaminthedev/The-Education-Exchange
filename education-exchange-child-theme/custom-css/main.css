@@ -935,6 +935,7 @@ input.removeCheck {
    article.sharedContentArticle{
         display: flex;
         margin-top: 50px;
+        flex-wrap: wrap;
     }    
 
     .sharedContent {
@@ -942,7 +943,8 @@ input.removeCheck {
         margin: 10px;   
 
         background-color: #fff;
-        width: 100%;
+        /* width: 33%; */
+        width: 18vw;
         min-height: 100%;
         border-radius: 3px;
         border: 0 solid #818a91;

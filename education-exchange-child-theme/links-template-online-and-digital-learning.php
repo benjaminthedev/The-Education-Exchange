@@ -34,7 +34,7 @@ get_header(); ?>
 <div class="clear"></div>
 <a href="/submit-link/" class="standardBtn">Share Your Link</a>
 
-<div class="linkBoxWrapper">
+<article class="sharedContentArticle">
 
                     <?php
                         $the_query = new WP_Query( array(
@@ -51,9 +51,11 @@ get_header(); ?>
                         while ( $the_query->have_posts() ) :
                             $the_query->the_post();?>
 
-                            <div class="linkBox">
+                        <div class="sharedContent">
     
                             <h3><?php the_title(); ?></h3>
+                            
+                            <p><?php the_field('short_description'); ?></p>
 
                             <a href="<?php the_field('url_of_link'); ?>" target="_blank" alt="User Submitted Link"><?php the_field('url_of_link'); ?></a>
 
@@ -61,7 +63,7 @@ get_header(); ?>
 
                             <p>From: <?php the_field('country'); ?></p>
 
-                        </div><!-- end linkBox -->
+                        </div><!-- end sharedContent -->
 
                         <? endwhile;
 
@@ -73,7 +75,7 @@ get_header(); ?>
                     ?>
 
 
-</div><!-- end linkBox -->
+</article>
 
 				<?php do_action( 'ocean_after_content_inner' ); ?>
 
