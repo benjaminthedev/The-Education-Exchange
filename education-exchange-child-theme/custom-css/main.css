@@ -930,3 +930,31 @@ input.removeCheck {
     filter: none !important
 }
 
+/* Shared Content  */
+
+   article.sharedContentArticle{
+        display: flex;
+        margin-top: 50px;
+    }    
+
+    .sharedContent {
+        padding: 20px 20px;
+        margin: 10px;   
+
+        background-color: #fff;
+        width: 100%;
+        min-height: 100%;
+        border-radius: 3px;
+        border: 0 solid #818a91;
+
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+
+        -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+    }
+
+    .sharedContent h3 a {
+        color: #001035;
+    }

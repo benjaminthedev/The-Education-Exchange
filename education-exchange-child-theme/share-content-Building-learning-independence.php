@@ -28,46 +28,9 @@ get_header(); ?>
                     <h1 class="elementor-heading-title elementor-size-large">Building learning independence learning shared content.</h1>
                     <hr />
 
-
-
-<h5 class="center">Do you have an article you would like to be posted on the site? Please visit the:</h5>
+<h5 class="center">Do you have written reflections you'd like to share with The Education Exchange community?</h5>
 <div class="clear"></div>
 <a href="/shared-content-form" class="standardBtn">Shared Content Page</a>
-
-<style>
-
-  
-
-    article.sharedContentArticle{
-        display: flex;
-        margin-top: 50px;
-    }    
-
-
-    .sharedContent {
-        padding: 20px 20px;
-        margin: 10px;   
-
-
-        background-color: #fff;
-        width: 100%;
-        min-height: 100%;
-        border-radius: 3px;
-        border: 0 solid #818a91;
-
-        -webkit-transition: all .25s;
-        -o-transition: all .25s;
-        transition: all .25s;
-
-        -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
-        box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
-
-    }
-
-</style>
-
-
-
 
 <article class="sharedContentArticle">
                     <?php
