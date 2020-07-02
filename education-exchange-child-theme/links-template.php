@@ -62,7 +62,7 @@ box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
 </style>
 
 
-<h5 class="center">Do you have an link you would like to be shared on the site?</h5>
+<h5 class="center">Do you have a link you'd like to share with The Education Exchange community?</h5>
 <div class="clear"></div>
 <a href="/submit-link/" class="standardBtn">Share Your Link</a>
 

@@ -37,14 +37,7 @@ function oceanwp_child_enqueue_parent_style() {
 	//Home Page JS
 	if (is_page('home')) {
 		wp_enqueue_script( 'homeJS', get_stylesheet_directory_uri() . '/custom-js/home.js', array(), '', true );
-	}
-
-	//Home Page JS
-	// if (is_page('post-template-default')) {
-	// 	wp_enqueue_script( 'postJS', get_stylesheet_directory_uri() . '/custom-js/blogpost.js', array(), '', true );
-	// }
-	
-	
+	}	
 }
 add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
 
@@ -124,3 +117,9 @@ add_action( 'login_enqueue_scripts', 'my_login_logo' );
 // }
 
 // add_action('wp', 'add_login_check');
+
+//remove the [...] on excerpt.
+function new_excerpt_more( $more ) {
+    return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
