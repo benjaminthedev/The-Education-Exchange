@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Shared Content - Building learning independence
+ * Template Name: Shared Content - The purpose and vision of education
  * 
  *
  *
@@ -25,7 +25,7 @@ get_header(); ?>
 
                     <!-- wp query -->
 
-                    <h1 class="elementor-heading-title elementor-size-large">Building learning independence learning shared content.</h1>
+                    <h1 class="elementor-heading-title elementor-size-large">The purpose and vision of education - content shared by the community</h1>
                     <hr />
 
 <h5 class="center">Do you have written reflections you'd like to share with The Education Exchange community?</h5>
@@ -40,7 +40,7 @@ get_header(); ?>
                                     array(
                                         'taxonomy' => 'user_shared_content_categories', 
                                         'field'    => 'id',
-                                        'terms'    => array(327, 332, 333, 328, 331, 329, 330)
+                                        'terms'    => array(306, 307, 308, 309, 310, 311, 312 )
                                     ),
                                 ),
                                 ));
@@ -100,10 +100,3 @@ get_header(); ?>
 	<?php do_action( 'ocean_after_content_wrap' ); ?>
 
 <?php get_footer(); ?>
-
-
-
-
-
-
-
