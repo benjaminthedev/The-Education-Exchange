@@ -971,3 +971,29 @@ input.removeCheck {
     .sharedContent h3 a {
         color: #001035;
     }
+
+
+
+
+    /* Submit Activity Form Styles */
+
+    .time_hours{
+    float:left;
+}
+
+.time_minutes{
+    float:right;
+    
+}
+
+.time_hours, .time_minutes {
+    width: 48%;
+}
+
+.acf-field.acf-field-select.acf-field-5efde2453aa68.time_hours {
+    clear: none !important;
+}
+
+.acf-field.acf-field-select.acf-field-5eff0651f4ee9.time_minutes {
+    clear: none;
+}
