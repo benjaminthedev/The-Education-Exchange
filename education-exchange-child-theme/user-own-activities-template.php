@@ -25,11 +25,8 @@ get_header(); ?>
 
                     <!-- wp query -->
 
-                    <h1 class="elementor-heading-title elementor-size-large">Your Activity :(</h1>
+                    <h1 class="elementor-heading-title elementor-size-large">Your Activity</h1>
                     <hr />
-
-
-                    <p>fcygvuhbijnkjbhvgchfgx</p>
 
 
 <article class="sharedContentArticle">
@@ -52,16 +49,7 @@ get_header(); ?>
 
 
 
-                        // $the_query = new WP_Query( array(
-                        //     'post_type'      => 'user_logs',
-                        //         'tax_query'      => array(
-                        //             array(
-                        //                 'taxonomy' => 'user_sub_logs',
-                        //                 'field'    => 'id',
-                        //                 'terms'   => array(341)
-                        //             ),
-                        //         ),
-                        //         ));
+      
 
                         while ( $the_query->have_posts() ) :
                             $the_query->the_post();?>
@@ -87,11 +75,11 @@ get_header(); ?>
                                 <?php endif; ?>
 
                                 <?php if( get_field('time_spent_hours') ): ?>
-                                    <p>Hours: <?php the_field('time_spent_hours'); ?></p>
+                                    <p class="hours">Hours: <?php the_field('time_spent_hours'); ?></p>
                                 <?php endif; ?>
                                 
                                 <?php if( get_field('time_spent_minutes') ): ?>
-                                    <p>Minutes: <?php the_field('time_spent_minutes'); ?></p>
+                                    <p class="minutes">Minutes: <?php the_field('time_spent_minutes'); ?></p>
                                 <?php endif; ?>   
 
                                 <?php if( get_field('notes') ): ?>
@@ -99,33 +87,9 @@ get_header(); ?>
                                 <?php endif; ?>  
 
                                 <?php if( get_field('useful_links') ): ?>
-                                    <p>notes: <?php the_field('useful_links'); ?></p>
+                                    <p>Useful Links: <?php the_field('useful_links'); ?></p>
                                 <?php endif; ?>                                  
                                 
-                                
-
-
-                            
-        
-                            <h3>
-                                <a href="<?php the_permalink(); ?>" alt="Read The Shared Content">
-                                    Edit
-                                </a>
-                            </h3>
-
-                            <?php the_excerpt(); ?>
-
-                                <hr />
-
-                                <?php if( get_field('name') ): ?>
-                                    <p>Submitted by: <?php the_field('name'); ?></p>
-                                <?php endif; ?>
-
-                        <?php if( get_field('country') ): ?>                
-                            <p>From: <?php the_field('country'); ?></p>
-                        <?php endif; ?>
-                            <a href="<?php the_permalink(); ?>" alt="Read More">Read More »</a>
-
                         </div>
 
                         <? endwhile;
@@ -136,7 +100,12 @@ get_header(); ?>
                         */
                         wp_reset_postdata();
                     ?>
+
 </article>
+
+              <div class="clear"></div>
+
+        <a href="/edit-your-activities/">Edit Your Activities</a>
 
 
 
