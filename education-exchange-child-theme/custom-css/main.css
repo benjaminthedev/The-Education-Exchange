@@ -1038,3 +1038,6 @@ h5.customActivity {
     display: flex;        
     justify-content: space-between;
 }
+.totalHeading{
+    display: none;
+}

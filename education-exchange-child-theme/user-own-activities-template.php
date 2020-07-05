@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: User Own Activity Template BACKUP
+ * Template Name: User Own Activity Template Main
  * 
  *
  *
@@ -8,6 +8,8 @@
  */
 
 get_header(); ?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.min.js"></script>
 
 	<?php do_action( 'ocean_before_content_wrap' ); ?>
 
@@ -45,7 +47,7 @@ get_header(); ?>
             <p>Log in or sign up <a href="/login/" alt="Sign Up Or Log In Here">here</a></p>
         <?php } else { ?>
 
-<article>
+<article id="activityPDF primary">
 
 
 
@@ -170,21 +172,51 @@ get_header(); ?>
 
         <div class="clear"></div>
 
-  
-            <a href="/edit-your-activities/">Edit Your Activities</a>
+
+    <h1 class="totalHeading">
+      Total Activity Time:<br />
+      <span class="totalTime"></span>
+    </h1>                                    
+
+            <a href="/add-your-activity/" class="standardBtn">Add A New Activity</a>
+            <a href="/edit-your-activities/" class="standardBtn">Edit Your Activities</a>
+
+
+              <button class="standardBtn" id="downloadPdf">
+                    Download Your Activity
+              </button>
+            
         <?php } ?>                           
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
-	</div><!-- #content-wrap -->
+    </div><!-- #content-wrap -->
+    
+    <script>
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#activityPDF': function (element, renderer) {
+        return true;
+    }
+};
+
+
+jQuery(document).ready(function(){
+  console.log('test');
+
+
+jQuery('#downloadPdf').click(function () {
+    doc.fromHTML(jQuery('#primary').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('activity.pdf');
+});
+
+
+});
+
+
+
+    </script>
 <?php get_footer(); ?>
-
-
-
-
-
-
-
-<style>
-
-</style>
