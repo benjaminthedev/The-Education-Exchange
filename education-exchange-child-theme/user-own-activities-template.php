@@ -71,8 +71,7 @@ get_header(); ?>
                         while ( $the_query->have_posts() ) :
                             $the_query->the_post();?>
 
-                            <div >
-                                
+                            <div>                           
                          
                            
 
@@ -85,40 +84,77 @@ get_header(); ?>
                             <div class="rowDown">
                                 <?php if( get_field('learning_type') ): ?>
                                     <h5>Learning Type:</h5> 
-                                    <p class="learningType"><?php the_field('learning_type'); ?></p>
+                                    <p class="learningType">
+                                        <?php the_field('learning_type'); ?>
+                                    </p>
                                 <?php endif; ?>
                             </div>
 
 
 
-
+                            <div class="rowDown">            
                                 <?php if( get_field('start_date') ): ?>
-                                    <p><h5>Start Date:</h5> <?php the_field('start_date'); ?></p>
+                                    <h5>Start Date:</h5> 
+                                    <p class="startDate">
+                                        <?php the_field('start_date'); ?>
+                                    </p>
                                 <?php endif; ?>
-                                
-                                <?php if( get_field('end_date') ): ?>
-                                    <p><h5>End Date:</h5> <?php the_field('end_date'); ?></p>
-                                <?php endif; ?>
+                            </div>
+                            
+                            
 
+                            <div class="rowDown">                  
+                                <?php if( get_field('end_date') ): ?>
+                                    <h5>End Date:</h5>
+                                    <p class="startDate"> 
+                                        <?php the_field('end_date'); ?>
+                                    </p>
+                                <?php endif; ?>
+                            </div>   
+
+
+                            <div class="rowDown">                  
                                 <?php if( get_field('time_spent_hours') ): ?>
                                     <h5>Hours:</h5>
-                                    <p class="hours"><?php the_field('time_spent_hours'); ?></p>
+                                    <p class="hours">
+                                        <?php the_field('time_spent_hours'); ?>
+                                    </p>
                                 <?php endif; ?>
+                            </div>  
                                 
+
+                            <div class="rowDown">                                              
                                 <?php if( get_field('time_spent_minutes') ): ?>
-                                    
                                     <h5>Minutes:</h5>
-                                    <p class="minutes"><?php the_field('time_spent_minutes'); ?></p>
+                                    <p class="minutes">
+                                        <?php the_field('time_spent_minutes'); ?>
+                                    </p>
                                 <?php endif; ?>   
+                            </div>        
 
+
+
+                            <div class="rowDown">                      
                                 <?php if( get_field('notes') ): ?>
-                                    <p><h5>Notes:</h5> <?php the_field('notes'); ?></p>
+                                    <h5>Notes:</h5> 
+                                    <div class="notes">
+                                        <?php the_field('notes'); ?>
+                                    </div>
                                 <?php endif; ?>  
+                            </div>            
 
+
+
+                            <div class="rowDown">          
                                 <?php if( get_field('useful_links') ): ?>
-                                    <p>Useful Links: <?php the_field('useful_links'); ?></p>
+                                    <h5>Useful Links:</h5>
+                                    <div class="usefulLinks">
+                                        <?php the_field('useful_links'); ?>
+                                    </div>
                                 <?php endif; ?>                                  
-                                </div>
+                            </div>        
+
+                            </div>
                         </div>
 
                         <? endwhile;
