@@ -29,22 +29,6 @@ get_header(); ?>
                     <hr />
 
 
-
-
-       <?php 
-       
-              global $current_user;
-                get_currentuserinfo();
-                $authorID = $current_user->ID;
-
-       
-       
-       if ( !is_user_logged_in() ) { ?>
-            <p>You need to be signed up and logged in to add your activites</p>
-
-            <p>Log in or sign up <a href="/login/" alt="Sign Up Or Log In Here">here</a></p>
-        <?php } else { ?>
-
 <article class="sharedContentArticle">
 
 
@@ -52,21 +36,28 @@ get_header(); ?>
 
                     <?php
 
-         
-                //echo "Author ID: ";
-                //echo $authorID;
+                global $current_user;
+                get_currentuserinfo();
+                $authorID = $current_user->ID;
+
+                echo "Hello World";
+                echo $authorID;
 
                         $the_query = new WP_Query( array(
                             'post_type'      => 'user_logs',
                             'author' => $authorID,
-                                // 'tax_query'      => array(
-                                //     array(
-                                //         'taxonomy' => 'user_sub_logs', 
-                                //         'field'    => 'id',
-                                //         'terms'    => array(341)
-                                //     ),
-                                // ),
+                                'tax_query'      => array(
+                                    array(
+                                        'taxonomy' => 'user_sub_logs', 
+                                        'field'    => 'id',
+                                        'terms'    => array(341)
+                                    ),
+                                ),
                                 ));
+
+
+
+      
 
                         while ( $the_query->have_posts() ) :
                             $the_query->the_post();?>
@@ -120,15 +111,9 @@ get_header(); ?>
 
 </article>
 
-        <div class="clear"></div>
+              <div class="clear"></div>
 
-  
-            <a href="/edit-your-activities/">Edit Your Activities</a>
-        <?php } ?>                           
-
-
-
-        
+        <a href="/edit-your-activities/">Edit Your Activities</a>
 
 
 

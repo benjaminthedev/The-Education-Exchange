@@ -997,3 +997,8 @@ input.removeCheck {
 .acf-field.acf-field-select.acf-field-5eff0651f4ee9.time_minutes {
     clear: none;
 }
+
+h5.customActivity {
+    margin-bottom: 4px;
+    font-weight: bold;
+}
