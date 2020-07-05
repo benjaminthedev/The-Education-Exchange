@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: User Own Activity Template BACKUP
+ * Template Name: User Own Activity Template Main
  * 
  *
  *
@@ -170,21 +170,18 @@ get_header(); ?>
 
         <div class="clear"></div>
 
-  
-            <a href="/edit-your-activities/">Edit Your Activities</a>
+
+    <h1 class="totalHeading">
+      Total Activity Time:<br />
+      <span class="totalTime"></span>
+    </h1>                                    
+
+            <a href="/add-your-activity/" class="standardBtn">Add A New Activity</a>
+            <a href="/edit-your-activities/" class="standardBtn">Edit Your Activities</a>
+            
         <?php } ?>                           
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
 	</div><!-- #content-wrap -->
 <?php get_footer(); ?>
-
-
-
-
-
-
-
-<style>
-
-</style>
