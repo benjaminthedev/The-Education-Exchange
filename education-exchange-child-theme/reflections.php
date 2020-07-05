@@ -68,6 +68,10 @@ if ( !is_user_logged_in() ) {
 
                     li.collection-item {
                         list-style-type: none;
+                        border-bottom: 2px solid #001035;
+                        padding-bottom: 20px;
+                        padding-top: 20px;
+
                     }
 
                     ul.collection {
