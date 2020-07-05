@@ -33,6 +33,27 @@ if (document.getElementsByTagName('body')[0].classList.contains("page-id-4621"))
 
 
 
+const mins = document.querySelectorAll('.minutes');
+
+var totalMinutes = 0;
+
+mins.forEach(min => {
+
+    const convertMins = parseFloat(min.innerHTML);
+    // console.log(`convertMins: ${convertMins}`);
+
+    const calculate = min + convertMins;
+    console.log(calculate);
+
+    // const minutes = min.innerHTML;
+    // console.log(`Minutes: ${minutes}`);
+
+
+    //console.log(min.innerText);
+});
+
+
+// 140
 
 
 
