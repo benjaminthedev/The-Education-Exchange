@@ -45,7 +45,7 @@ get_header(); ?>
             <p>Log in or sign up <a href="/login/" alt="Sign Up Or Log In Here">here</a></p>
         <?php } else { ?>
 
-<article class="sharedContentArticle">
+<article>
 
 
 
@@ -71,42 +71,54 @@ get_header(); ?>
                         while ( $the_query->have_posts() ) :
                             $the_query->the_post();?>
 
-                            <div class="sharedContent">
+                            <div >
                                 
-                            <h1>Your Activity</h1>
-                            <?php the_title(); ?>
+                         
+                           
 
-                            <p>Learning Type: <?php the_field('learning_type'); ?></p>
+                            <div class="userLog">
 
+                                <h1><?php the_title(); ?></h1>
+
+                                <div class="activityWrapper">
+                            
+                            <div class="rowDown">
                                 <?php if( get_field('learning_type') ): ?>
-                                    <p>Learning Type: <?php the_field('learning_type'); ?></p>
+                                    <h5>Learning Type:</h5> 
+                                    <p class="learningType"><?php the_field('learning_type'); ?></p>
                                 <?php endif; ?>
+                            </div>
+
+
 
 
                                 <?php if( get_field('start_date') ): ?>
-                                    <p>Start Date: <?php the_field('start_date'); ?></p>
+                                    <p><h5>Start Date:</h5> <?php the_field('start_date'); ?></p>
                                 <?php endif; ?>
                                 
                                 <?php if( get_field('end_date') ): ?>
-                                    <p>Start Date: <?php the_field('end_date'); ?></p>
+                                    <p><h5>End Date:</h5> <?php the_field('end_date'); ?></p>
                                 <?php endif; ?>
 
                                 <?php if( get_field('time_spent_hours') ): ?>
-                                    <p class="hours">Hours: <?php the_field('time_spent_hours'); ?></p>
+                                    <h5>Hours:</h5>
+                                    <p class="hours"><?php the_field('time_spent_hours'); ?></p>
                                 <?php endif; ?>
                                 
                                 <?php if( get_field('time_spent_minutes') ): ?>
-                                    <p class="minutes">Minutes: <?php the_field('time_spent_minutes'); ?></p>
+                                    
+                                    <h5>Minutes:</h5>
+                                    <p class="minutes"><?php the_field('time_spent_minutes'); ?></p>
                                 <?php endif; ?>   
 
                                 <?php if( get_field('notes') ): ?>
-                                    <p>notes: <?php the_field('notes'); ?></p>
+                                    <p><h5>Notes:</h5> <?php the_field('notes'); ?></p>
                                 <?php endif; ?>  
 
                                 <?php if( get_field('useful_links') ): ?>
                                     <p>Useful Links: <?php the_field('useful_links'); ?></p>
                                 <?php endif; ?>                                  
-                                
+                                </div>
                         </div>
 
                         <? endwhile;
@@ -126,26 +138,9 @@ get_header(); ?>
             <a href="/edit-your-activities/">Edit Your Activities</a>
         <?php } ?>                           
 
-
-
-        
-
-
-
-				<?php do_action( 'ocean_after_content_inner' ); ?>
-
 			</div><!-- #content -->
-
-			<?php do_action( 'ocean_after_content' ); ?>
-
 		</div><!-- #primary -->
-
-		<?php do_action( 'ocean_after_primary' ); ?>
-
 	</div><!-- #content-wrap -->
-
-	<?php do_action( 'ocean_after_content_wrap' ); ?>
-
 <?php get_footer(); ?>
 
 
@@ -154,3 +149,6 @@ get_header(); ?>
 
 
 
+<style>
+
+</style>

@@ -36,17 +36,17 @@ if (document.getElementsByTagName('body')[0].classList.contains("page-id-4621"))
 
 
 
-// Hours Minutes
-setTimeout(function () {
+// // Hours Minutes
+// setTimeout(function () {
 
-    console.log('loaded time');
+//     console.log('loaded time');
 
 
 
-    const hours = document.querySelectorAll('.hours');
-    console.log(hours);
+//     const hours = document.querySelectorAll('.hours');
+//     console.log(hours);
 
-}, 3000);
+// }, 3000);
 
 
 
