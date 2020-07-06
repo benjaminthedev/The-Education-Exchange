@@ -20,16 +20,16 @@ if (document.getElementsByTagName('body')[0].classList.contains("bbpress")) {
 
 //This is for the submit-link page
 
-if (document.getElementsByTagName('body')[0].classList.contains("page-id-4621")) {
-    const newTesting = document.querySelectorAll('.acf-checkbox-list li label input');
+// if (document.getElementsByTagName('body')[0].classList.contains("page-id-4621")) {
+//     const newTesting = document.querySelectorAll('.acf-checkbox-list li label input');
 
-    newTesting[0].classList.add('removeCheck');
-    newTesting[7].classList.add('removeCheck');
-    newTesting[14].classList.add('removeCheck');
-    newTesting[21].classList.add('removeCheck');
-    newTesting[28].classList.add('removeCheck');
+//     newTesting[0].classList.add('removeCheck');
+//     newTesting[7].classList.add('removeCheck');
+//     newTesting[14].classList.add('removeCheck');
+//     newTesting[21].classList.add('removeCheck');
+//     newTesting[28].classList.add('removeCheck');
 
-}
+// }
 
 
 //Minutes
