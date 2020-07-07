@@ -998,6 +998,12 @@ input.removeCheck {
 
 /* -- Custom Activity -- */
 
+.wrapAllActivities{
+    width: 1024px ;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
 h5.customActivity {
     margin-bottom: 4px;
     font-weight: bold;
@@ -1014,7 +1020,8 @@ h5.customActivity {
     padding: 20px 20px;
     margin: 50px 0 ;
     background-color: #fff;
-    width: 97vw;
+    /* width: 97vw; */
+    width: 60vw;
     min-height: 100%;
     border-radius: 3px;
     border: 0 solid #818a91;
@@ -1040,4 +1047,13 @@ h5.customActivity {
 }
 .totalHeading{
     display: none;
+}
+
+.buttonsWrap {
+    margin-bottom: 100px;
+}
+
+.buttonsWrap a,
+.buttonsWrap button {
+    margin: 5px 10px;
 }

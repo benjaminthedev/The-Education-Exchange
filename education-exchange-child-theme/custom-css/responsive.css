@@ -38,6 +38,31 @@
     }
 
 
+      /* -- Activity Section -- */
+
+      .userLog{
+       width: 87vw;   
+  }
+
+.wrapAllActivities {
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+  .activityWrapper{
+      flex-direction: column;
+  }
+
+  .buttonsWrap a, .buttonsWrap button {
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: row;
+    width: 85vw;
+}
+
+
+
+
 }
 @media only screen and (max-width: 712px) {
     .main-box {
@@ -89,4 +114,35 @@
     width: 72%;
     margin-bottom: 0px;
   }
+
+
+  /* -- Activity Section -- */
+
+  .userLog{
+       width: 87vw;   
+  }
+
+  .wrapAllActivities {
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+  
+
+    h1.totalHeading {
+    width: 50vw;
+}
+
+  .activityWrapper{
+      flex-direction: column;
+  }
+
+  .buttonsWrap a, .buttonsWrap button {
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: row;
+    width: 85vw;
+}
+
+
 }
