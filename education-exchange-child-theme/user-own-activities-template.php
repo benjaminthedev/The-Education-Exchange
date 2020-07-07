@@ -13,15 +13,15 @@ get_header(); ?>
 
 	<?php do_action( 'ocean_before_content_wrap' ); ?>
 
-	<div id="content-wrap" class="container clr">
+	<div class="wrapAllActivities">
 
 		<?php do_action( 'ocean_before_primary' ); ?>
 
-		<div id="primary" class="content-area clr">
+		<div >
 
 			<?php do_action( 'ocean_before_content' ); ?>
 
-			<div id="content" class="site-content clr">
+			<div >
 
 				<?php do_action( 'ocean_before_content_inner' ); ?>
 
@@ -48,9 +48,6 @@ get_header(); ?>
         <?php } else { ?>
 
 <article id="activityPDF primary">
-
-
-
 
                     <?php
 
@@ -178,6 +175,7 @@ get_header(); ?>
       <span class="totalTime"></span>
     </h1>                                    
 
+    <div class="buttonsWrap">
             <a href="/add-your-activity/" class="standardBtn">Add A New Activity</a>
             <a href="/edit-your-activities/" class="standardBtn">Edit Your Activities</a>
 
@@ -186,7 +184,9 @@ get_header(); ?>
                     Download Your Activity
               </button>
             
-        <?php } ?>                           
+        <?php } ?>           
+        
+        </div>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
