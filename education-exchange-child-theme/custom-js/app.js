@@ -1,6 +1,13 @@
 //Main JS
 console.log('Welcome to The Education Exchange');
 
+//Hide The CCO Log In Button when logged in
+if (document.getElementsByTagName('body')[0].classList.contains("logged-in")) {
+    const CCObtnHide = document.querySelectorAll('.sso');
+    CCObtnHide[0].style.display = "none";
+}
+
+
 /* -- For blog posts
 Checks to see if body class list contains single if so then
 const changes the text on the bubble 
@@ -30,6 +37,15 @@ if (document.getElementsByTagName('body')[0].classList.contains("bbpress")) {
 //     newTesting[28].classList.add('removeCheck');
 
 // }
+
+
+
+
+
+
+
+
+
 
 
 //Minutes
@@ -84,4 +100,6 @@ if (addTotal > 1) {
     document.querySelector('.totalHeading').style.display = "block";
     console.log('More than one so should be showing');
 }
+
+
 

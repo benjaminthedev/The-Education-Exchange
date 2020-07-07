@@ -89,6 +89,8 @@ get_header(); ?>
 
 	</div><!-- #content-wrap -->
 
-	<?php do_action( 'ocean_after_content_wrap' ); ?>
+    <?php do_action( 'ocean_after_content_wrap' ); ?>
+    
+    <?php the_content(); ?>
 
 <?php get_footer(); ?>

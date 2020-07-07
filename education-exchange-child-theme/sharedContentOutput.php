@@ -112,6 +112,9 @@ box-shadow: 3px 3px 5px 0px rgba(12,24,58,1);
 
 	</div><!-- #content-wrap -->
 
-	<?php do_action( 'ocean_after_content_wrap' ); ?>
+    <?php do_action( 'ocean_after_content_wrap' ); ?>
+    
+    <?php the_content(); ?>
+
 
 <?php get_footer(); ?>

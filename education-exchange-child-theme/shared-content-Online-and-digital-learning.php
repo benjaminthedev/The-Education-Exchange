@@ -30,7 +30,7 @@ get_header(); ?>
 
 <h5 class="center">Do you have written reflections you'd like to share with The Education Exchange community?</h5>
 <div class="clear"></div>
-<a href="/shared-content-form" class="standardBtn">Shared Content Page</a>
+<a href="/shared-content-form" class="standardBtn">Share Your Writing</a>
 
 <article class="sharedContentArticle">
                     <?php
@@ -97,6 +97,8 @@ get_header(); ?>
 
 	</div><!-- #content-wrap -->
 
-	<?php do_action( 'ocean_after_content_wrap' ); ?>
+    <?php do_action( 'ocean_after_content_wrap' ); ?>
+    
+    <?php the_content(); ?>
 
 <?php get_footer(); ?>
