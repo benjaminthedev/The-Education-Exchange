@@ -1312,12 +1312,13 @@ body.my-account #bbpress-forums {
 #bbpress-forums ul.odd,
 #bbpress-forums div.even,
 #bbpress-forums ul.even {
-    background: transparent
+    background: transparent;
 }
 
 .single-topic #bbpress-forums div.odd,
 .single-topic #bbpress-forums ul.odd {
-    background-color: #fbfbfb;
+    /* background-color: #fbfbfb; */
+    background-color: #fff;
 }
 
 .bbp-topic-freshness>a,

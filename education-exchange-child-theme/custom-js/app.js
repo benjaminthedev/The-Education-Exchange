@@ -5,6 +5,7 @@ console.log('Welcome to The Education Exchange');
 if (document.getElementsByTagName('body')[0].classList.contains("logged-in")) {
     const CCObtnHide = document.querySelectorAll('.sso');
     CCObtnHide[0].style.display = "none";
+    //CCObtnHide[0].classList.add = "noShow";
 }
 
 
@@ -37,6 +38,15 @@ if (document.getElementsByTagName('body')[0].classList.contains("bbpress")) {
 //     newTesting[28].classList.add('removeCheck');
 
 // }
+
+
+
+// BBpress forums text changes
+
+const forumTitle = document.querySelectorAll('.li.bbp-forum-info');
+
+console.log(forumTitle);
+
 
 
 
