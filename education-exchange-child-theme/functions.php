@@ -38,6 +38,17 @@ function oceanwp_child_enqueue_parent_style() {
 	if (is_page('home')) {
 		wp_enqueue_script( 'homeJS', get_stylesheet_directory_uri() . '/custom-js/home.js', array(), '', true );
 	}	
+
+	
+	//User Activity JS
+	if (is_page(5722)) {
+		wp_enqueue_script( 'userActivity', get_stylesheet_directory_uri() . '/custom-js/userActivity.js', array(), '', true );
+	}
+	
+	//User LogIn JS
+	if (is_page(5397)) {
+		wp_enqueue_script( 'userlogin', get_stylesheet_directory_uri() . '/custom-js/userLogin.js', array(), '', true );
+	}	
 }
 add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
 
