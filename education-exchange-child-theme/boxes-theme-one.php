@@ -30,27 +30,46 @@ get_header(); ?>
 
 
 
+                     <div class="boxOneCustom">
+
+                              <div class="dashedBorderLeft">
+                                <!-- <img src="" alt="dashed border" /> -->
+                                <div class="borderDashed"></div>
+                      
+                              </div>
+
+
+
                         <a href="<?php the_field('box_1_link_url'); ?>" class="main-box one" >
-                            <article class="box_rule">
-                                <div class="golden-rule__number">1</div>
+                            <article class="box_rule_box_one">
+
+                                  <h1 class="box-heading">
+                                    1. <?php the_field('box_1_heading'); ?>
+                                  </h1>   
+
+
+
+                                <!-- <div class="golden-rule__number">1</div> -->
                                   
-
-                                <div class="box-rule-details">
-                                    <p><?php the_field('box_1_hover_text'); ?></p>
-                                </div>    
-
-
                               <div class="image-wrapper">
                                 <?php if( get_field('box_1_image') ): ?>
                                     <img src="<?php the_field('box_1_image'); ?>" class="box-image"/>
                                 <?php endif; ?>
                               </div>  
 
-                                  <h1 class="box-heading">
-                                    <?php the_field('box_1_heading'); ?>
-                                  </h1>
+
+
+                                <div class="box-rule-details">
+                                    <p><?php the_field('box_1_hover_text'); ?></p>
+                                </div>    
+
+
+
+
+
                             </article>
                         </a>
+                        </div> <!-- end boxOneCustom -->
 
                         <a href="<?php the_field('box_2_link_url'); ?>" class="main-box two">
                             <article class="box_rule">
