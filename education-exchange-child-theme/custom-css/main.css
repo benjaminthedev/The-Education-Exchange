@@ -509,7 +509,7 @@ span.bbp-breadcrumb-sep {
 span.bbp-breadcrumb-current {
     background: #0c183a;
     padding: 20px 40px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     display: block;
     border-radius: 13px;
     color: #fff;
@@ -619,6 +619,11 @@ a.bbp-author-link{
     display: none;
 }
 
+a.bbp-forum-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 #bbpress-forums li.bbp-body ul li:nth-child(1),
 #bbpress-forums li.bbp-body ul li:nth-child(4) {
     padding: 0 10px;
@@ -680,6 +685,22 @@ p.form-allowed-tags {
 .standardBtn:hover{
     background: #fcb34d;
     color: #fff;
+}
+
+div#bbp_login_widget-2 .bbp-username {
+    display: none;
+}
+
+div#bbp_login_widget-2 .bbp-password {
+    display: none;
+}
+
+div#bbp_login_widget-2 .bbp-remember-me {
+    display: none;
+}
+
+div#bbp_login_widget-2 button#user-submit {
+    display: none;
 }
 
 
@@ -877,10 +898,27 @@ a.sso {
     margin-top: 30px;
 }
 
+
+
+form select{
+    color: #f1637e;
+}
+
+
+.acf-required {
+    color: #f1637e;
+}
+
+
 /* Social Logins */
 
 .bbp-login-form #nsl-custom-login-form-1{
     display: none;
+}
+
+div#bbp_login_widget-2 .bbp-logged-in,
+div#bbp_login_widget-2 h4.widget-title{
+    display:none !important;
 }
 
 /* User Submitted Links */
@@ -979,6 +1017,14 @@ input.removeCheck {
     margin: 0 0 20px 0;
 }
 
+input.acfef-submit-button.acf-button.button.button-primary,
+a.button.logout-link, 
+input.user-registration-Button.button,
+button.btn.button.ur-submit-button{
+    
+    background: #f1637e;
+    border-radius: 5px;
+}
 
 
 /* Liked Post Filter */

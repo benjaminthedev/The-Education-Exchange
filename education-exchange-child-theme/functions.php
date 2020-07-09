@@ -28,27 +28,50 @@ function oceanwp_child_enqueue_parent_style() {
 
 
 	//New Scripts & Styles
-	wp_enqueue_script( 'customjs', get_stylesheet_directory_uri() . '/custom-js/app.js', array(), '1.0.0', true );
+	
 	wp_enqueue_style( 'mainStyle', get_stylesheet_directory_uri() . '/custom-css/main.css', array() );
 	wp_enqueue_style( 'responsiveStyle', get_stylesheet_directory_uri() . '/custom-css/responsive.css', array() );
 
 
+	//User LogIn JS
+	if (is_page(5397)) {
+		wp_enqueue_script( 'userlogin', get_stylesheet_directory_uri() . '/custom-js/userLogin.js', array(), '', true );
+	}	
 
 	//Home Page JS
 	if (is_page('home')) {
 		wp_enqueue_script( 'homeJS', get_stylesheet_directory_uri() . '/custom-js/home.js', array(), '', true );
 	}	
-
 	
 	//User Activity JS
 	if (is_page(5722)) {
 		wp_enqueue_script( 'userActivity', get_stylesheet_directory_uri() . '/custom-js/userActivity.js', array(), '', true );
 	}
 	
-	//User LogIn JS
-	if (is_page(5397)) {
-		wp_enqueue_script( 'userlogin', get_stylesheet_directory_uri() . '/custom-js/userLogin.js', array(), '', true );
+	
+
+	//All forum pages!
+	// if ( is_single(array( 5499, 5501, 5451 ) ) ){
+	// 	wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
+	// }	
+
+
+	if ( is_single( 'bbpress' ) ){
+		wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
 	}	
+
+	
+
+	// if ( is_page( array( 5499, 5501  ) ) ) {
+	//  // either in about us, or contact, or management page is in view
+	//  wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
+	// }
+
+
+	//Load this script last 
+	wp_enqueue_script( 'customjs', get_stylesheet_directory_uri() . '/custom-js/app.js', array(), '1.0.0', true );
+
+
 }
 add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
 
@@ -134,3 +157,31 @@ function new_excerpt_more( $more ) {
     return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+
+// Redirect not logged in user
+
+add_action( 'template_redirect', 'redirect_to_specific_page' );
+
+function redirect_to_specific_page() {
+
+if ( is_page(4767) && ! is_user_logged_in() ) {
+
+wp_redirect( 'https://theeducation.exchange/register/', 301 ); 
+  exit;
+    }
+}
+
+add_action( 'template_redirect01', 'redirect_to_specific_page01' );
+
+function redirect_to_specific_page01() {
+
+if ( is_page('login') && ! is_user_logged_in() ) {
+
+wp_redirect( 'https://theeducation.exchange/register/', 301 ); 
+  exit;
+    }
+}
+
+
+
