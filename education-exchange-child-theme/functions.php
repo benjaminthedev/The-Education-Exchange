@@ -56,10 +56,13 @@ function oceanwp_child_enqueue_parent_style() {
 	// }	
 
 
-	if ( is_single( 'bbpress' ) ){
+	// if ( is_single( 'bbpress' ) ){
+	// 	wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
+	// }	
+
+	if ( is_bbpress() ){
 		wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
 	}	
-
 	
 
 	// if ( is_page( array( 5499, 5501  ) ) ) {

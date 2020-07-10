@@ -23,7 +23,9 @@ get_header(); ?>
 
 			<div >
 
-				<?php do_action( 'ocean_before_content_inner' ); ?>
+                <?php do_action( 'ocean_before_content_inner' ); ?>
+                
+                       <?php the_content(); ?>
 
                     <!-- wp query -->
 

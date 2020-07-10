@@ -21,7 +21,9 @@ get_header(); ?>
 
 			<div id="content" class="site-content clr">
 
-				<?php do_action( 'ocean_before_content_inner' ); ?>
+                <?php do_action( 'ocean_before_content_inner' ); ?>
+                
+                <?php the_content(); ?>
 
                     <!-- wp query -->
 
