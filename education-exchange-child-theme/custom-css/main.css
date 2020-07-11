@@ -2,6 +2,27 @@ a:hover{
   color:#f1637e;
 }
 
+.elementor-widget-container .bbp-logged-in,
+.elementor-element-6d311e8{
+    display: none;
+}
+button.acfef-edit-button.edit-button {
+        padding: 10px 75px;
+        background: #f1637e;
+        border-radius: 5px;
+        text-transform: capitalize;
+        font-weight: 700;
+        letter-spacing: 0.04rem;
+        color: #fff;
+        margin-top: 40px;
+        display: inline-block;
+        border: none;
+}
+
+a#scroll-top {
+    background: #f1637e !important;
+}
+
 /*-- Home Page Boxes --*/
 
 @font-face {
