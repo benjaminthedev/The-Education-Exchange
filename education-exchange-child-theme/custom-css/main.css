@@ -882,6 +882,10 @@ a.sso {
     margin-top: 85px !important;
     margin-bottom: -50px ;
 }
+.page-id-5390 a.sso {
+    margin-top: 85px !important;
+    margin-bottom: -50px;
+}
 
 .newSocialLogin {
     margin-top: 60px;
@@ -899,7 +903,7 @@ form select{
 
 
 .acf-required {
-    color: #f1637e;
+    color: #f1637e !important;
 }
 
 
