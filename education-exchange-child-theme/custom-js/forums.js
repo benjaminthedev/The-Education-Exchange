@@ -1,7 +1,6 @@
 console.log('Forums JS Loaded');
 
 const accountLinkClicked = document.querySelectorAll('.bbp-author-link');
-
 accountLinkClicked.forEach(function (link) {
     link.addEventListener('click', event => {
         link.href = "/my-account/";
