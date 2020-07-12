@@ -54,10 +54,12 @@
   }
 
   .buttonsWrap a, .buttonsWrap button {
-    margin: 20px 10px;
-    display: flex;
-    flex-direction: row;
-    width: 85vw;
+   padding: 15px 0px;
+    width: 90vw;
+    display: block;
+    margin: 20px 0px;
+    text-align: center;
+
 }
 
 
@@ -138,10 +140,12 @@
   }
 
   .buttonsWrap a, .buttonsWrap button {
-    margin: 20px 10px;
-    display: flex;
-    flex-direction: row;
-    width: 85vw;
+    padding: 15px 0px;
+    width: 90vw;
+    display: block;
+    margin: 20px 0px;
+    text-align: center;
+
 }
 
 
