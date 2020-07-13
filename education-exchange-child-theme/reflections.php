@@ -41,10 +41,14 @@ if ( !is_user_logged_in() ) {
 
 					endwhile;
 
-				} ?>
+                } ?>
+                
+                
 
 
-                <h3>Reflections</h3>
+<div class="reflection">
+
+                <!-- <h3>Reflections</h3> -->
 
                 <style>
                     .btn{
@@ -77,7 +81,12 @@ if ( !is_user_logged_in() ) {
                     ul.collection {
                         padding: 20px 0px !important;
                         margin: 0px;
-                    }                    
+                    }        
+                    
+                    .reflection {
+                        width: 56vw;
+                        margin: 0 auto;
+                    }
                 </style>
 
 
@@ -121,7 +130,7 @@ if ( !is_user_logged_in() ) {
 
 
 
-                
+        </div><!-- end reflections -->        
 
                 <script>
 

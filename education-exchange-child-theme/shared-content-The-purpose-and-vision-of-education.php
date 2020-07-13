@@ -29,9 +29,9 @@ get_header(); ?>
                        <!-- <h1 class="elementor-heading-title elementor-size-large">Links shared by our community</h1> -->
                     <hr />
 
-<h5 class="center">Do you have written reflections you'd like to share with The Education Exchange community?</h5>
+<h5 class="center">Do you have written or video reflections you'd like to share with The Education Exchange community?</h5>
 <div class="clear"></div>
-<a href="/shared-content-form" class="standardBtn">Share Your Writing</a>
+<a href="/shared-content-form" class="standardBtn">Share Your Perspective</a>
 
 <!-- <h5 class="center">Do you have a link you'd like to share with The Education Exchange community?</h5>
 <div class="clear"></div>
