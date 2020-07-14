@@ -1175,10 +1175,51 @@ aside#right-sidebar {
 
 /* Odd Fix For bbpress */
 
-aside#right-sidebar {
+/* aside#right-sidebar {
     display: none;
 }
 
 .bbpress .content-area{
     width: 80vw;
+} */
+
+.cbxbookmark_card{
+    margin: 0 10px 20px 10px;
+    display: inline-block;
+    width: 16vw;
 }
+
+
+
+
+
+
+/* -- Cats Styles Start */
+
+aside#right-sidebar {
+display: none;
+}
+div.bbp-breadcrumb {
+display: none;
+}
+#main #content-wrap {
+padding-top: 0px;
+padding-bottom: 0px;
+}
+.container {
+width:100%;
+max-width: inherit;
+}
+.content-area {
+padding-right: 0px;
+}
+div.bbp-breadcrumb {
+display: none;
+}
+@media only screen and (max-width: 959px) {
+.container {
+ max-width: 100%;
+}
+}
+
+/* -- Cats Styles Start */

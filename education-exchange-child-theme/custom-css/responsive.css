@@ -145,7 +145,14 @@
     display: block;
     margin: 20px 0px;
     text-align: center;
+}
 
+.cbxbookmark_card {
+    margin: 0 10px 20px 10px;
+    display: inline-block;
+    width: 70vw;
+    min-height: 190px !important;
+    z-index: 1 !important;
 }
 
 

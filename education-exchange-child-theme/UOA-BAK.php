@@ -66,7 +66,7 @@ get_header(); ?>
 
                             <div class="sharedContent">
                                 
-                            <h1>Your Activity</h1>
+                            <h1>Record your professional learning </h1>
                             <?php the_title(); ?>
 
                             <p>Learning Type: <?php the_field('learning_type'); ?></p>
