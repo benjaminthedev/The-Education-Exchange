@@ -9,7 +9,9 @@
 
 get_header(); ?>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.min.js"></script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
 
 	<?php do_action( 'ocean_before_content_wrap' ); ?>
 
@@ -29,9 +31,11 @@ get_header(); ?>
 
                     <!-- wp query -->
 
-                    <h1 class="elementor-heading-title elementor-size-large">Your Activity</h1>
+                    <h1 class="elementor-heading-title elementor-size-large">Record your professional learning </h1>
+                    
                     <hr />
 
+                    <p>Use this space to record your professional learning. You could choose to keep a record of your engagement with The Education Exchange: 1 hour spent reading, 15 minutes spent watching videos, 30 minutes in a discussion with colleagues for instance. You can also use the space to record any other professional learning you engage in such as courses, webinars and research.</p>
 
 
 
@@ -49,7 +53,7 @@ get_header(); ?>
             <p>Log in or sign up <a href="/login/" alt="Sign Up Or Log In Here">here</a></p>
         <?php } else { ?>
 
-<article id="activityPDF primary">
+<article id="activityPDF">
 
                     <?php
 
@@ -196,6 +200,7 @@ get_header(); ?>
     
     <script>
 var doc = new jsPDF();
+
 var specialElementHandlers = {
     '#activityPDF': function (element, renderer) {
         return true;
@@ -209,8 +214,9 @@ jQuery(document).ready(function(){
 
 jQuery('#downloadPdf').click(function () {
     doc.fromHTML(jQuery('#primary').html(), 15, 15, {
-        'width': 170,
-            'elementHandlers': specialElementHandlers
+        // 'width': 170,
+        orientation: 'landscape',
+        'elementHandlers': specialElementHandlers
     });
     doc.save('activity.pdf');
 });

@@ -66,7 +66,9 @@ get_header(); ?>
 
                             <div class="sharedContent">
                                 
-                            <h1>Your Activity</h1>
+                            <h1>Record your professional learning </h1>
+
+                            <p>Use this space to record your professional learning. You could choose to keep a record of your engagement with The Education Exchange: 1 hour spent reading, 15 minutes spent watching videos, 30 minutes in a discussion with colleagues for instance. You can also use the space to record any other professional learning you engage in such as courses, webinars and research.</p>
                             <?php the_title(); ?>
 
                             <p>Learning Type: <?php the_field('learning_type'); ?></p>

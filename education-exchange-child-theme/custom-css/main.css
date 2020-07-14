@@ -1175,10 +1175,94 @@ aside#right-sidebar {
 
 /* Odd Fix For bbpress */
 
-aside#right-sidebar {
+/* aside#right-sidebar {
     display: none;
 }
 
 .bbpress .content-area{
     width: 80vw;
+} */
+
+.cbxbookmark_card{
+    margin: 0 10px 20px 10px;
+    display: inline-block;
+    width: 16vw;
+}
+
+
+
+
+
+
+/* -- Cats Styles Start */
+
+aside#right-sidebar {
+display: none;
+}
+div.bbp-breadcrumb {
+display: none;
+}
+#main #content-wrap {
+padding-top: 0px;
+padding-bottom: 0px;
+}
+.container {
+width:100%;
+max-width: inherit;
+}
+.content-area {
+padding-right: 0px;
+}
+div.bbp-breadcrumb {
+display: none;
+}
+@media only screen and (max-width: 959px) {
+.container {
+ max-width: 100%;
+}
+}
+
+
+
+/* New Styles Cat */
+
+@media only screen and (max-width: 960px){
+    .wrapAllActivities {
+        width: 100%;
+       margin-top: 0px;
+    }
+}
+    .wrapAllActivities {
+        width: 100%;
+        margin-top: 0px;
+    }
+    .reflection {
+        margin-bottom: 50px;
+    }
+
+/* -- Cats Styles Start */
+
+
+
+li.ursc-login-media-cco {
+    /* border-radius: 3px;
+    margin: 0px 20px 15px 0px; */
+    display: block;
+    
+}
+
+.ssoBtn {
+    background: #001035 !important;
+    display: block;
+    /* padding: 15px 10px;
+    border-radius: 5px;
+    color:#fff; */
+}
+
+ul.ursc-network-lists li {display: block !important;width: 26%;}
+
+i.fa.fa-graduation-cap {
+    margin-right: 4px;
+    margin-left: 1px;
+    font-size: 20px !important;
 }

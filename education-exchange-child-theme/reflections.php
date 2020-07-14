@@ -86,6 +86,7 @@ if ( !is_user_logged_in() ) {
                     .reflection {
                         width: 56vw;
                         margin: 0 auto;
+                        margin-bottom: 100px;
                     }
                 </style>
 
