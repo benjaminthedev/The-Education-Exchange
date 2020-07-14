@@ -48,6 +48,10 @@ function oceanwp_child_enqueue_parent_style() {
 		wp_enqueue_script( 'userActivity', get_stylesheet_directory_uri() . '/custom-js/userActivity.js', array(), '', true );
 	}
 	
+	//Non logged in users 
+	if (is_page(array(4731, 5397, 5390))) {
+		wp_enqueue_script( 'nonLoggedInJS', get_stylesheet_directory_uri() . '/custom-js/nonLoggedInJS.js', array(), '', true );
+	}
 	
 
 	//All forum pages!

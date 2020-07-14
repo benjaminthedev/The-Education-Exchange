@@ -186,9 +186,9 @@ get_header(); ?>
             <a href="/edit-your-activities/" class="standardBtn">Edit Your Activities</a>
 
 
-              <a class="standardBtn" id="downloadPdf">
+              <!-- <a class="standardBtn" id="downloadPdf">
                     Download Your Activity
-              </a>
+              </a> -->
             
         <?php } ?>           
         
