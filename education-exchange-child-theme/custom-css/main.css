@@ -928,6 +928,30 @@ div#bbp_login_widget-2 h4.widget-title{
 
 /* User Submitted Links */
 
+.sharedContent a {
+    margin-bottom: 10px;
+    display: block;
+
+    
+    padding: 10px 15px;
+    background: #f1637e;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 0.04rem;
+    color: #fff;
+    margin-top: 10px;
+    
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+    margin: 0 auto;
+    
+    
+    text-align: center;
+    margin-bottom: 20px;
+}
+
  .page-template-links-template .standardBtn,
  .page-template-links-template-connecting-expanding-learning .standardBtn,
  .page-template-links-template-online-and-digital-learning .standardBtn,
@@ -1221,7 +1245,6 @@ display: none;
  max-width: 100%;
 }
 }
-
 
 
 /* New Styles Cat */
