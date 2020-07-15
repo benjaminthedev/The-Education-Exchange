@@ -30,7 +30,7 @@ get_header(); ?>
 
 
 
-<h5 class="center">Do you have a link you'd like to share with The Education Exchange community?</h5>
+<h5 class="center">Do you have a link you'd like to share with The Education Exchange community???</h5>
 <div class="clear"></div>
 <a href="/submit-link/" class="standardBtn">Share Your Link</a>
 
@@ -43,7 +43,7 @@ get_header(); ?>
                                     array(
                                         'taxonomy' => 'user_submitted_link_categories', 
                                         'field'    => 'id',
-                                        'terms'    => array(217, 298, 299, 294, 297, 295, 296)
+                                        'terms'    => array(271)
                                     ),
                                 ),
                                 ));
@@ -57,7 +57,7 @@ get_header(); ?>
 
                             <p><?php the_field('short_description'); ?></p>
 
-                            <a href="<?php the_field('url_of_link'); ?>" target="_blank" alt="User Submitted Link"><?php the_field('url_of_link'); ?></a>
+                            <a href="<?php the_field('url_of_link'); ?>" target="_blank" alt="User Submitted Link">Click Here</a>
 
                             <p>Submitted by: <?php the_field('name'); ?></p>
 

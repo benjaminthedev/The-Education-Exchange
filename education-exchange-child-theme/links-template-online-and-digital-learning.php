@@ -57,7 +57,7 @@ get_header(); ?>
                             
                             <p><?php the_field('short_description'); ?></p>
 
-                            <a href="<?php the_field('url_of_link'); ?>" target="_blank" alt="User Submitted Link"><?php the_field('url_of_link'); ?></a>
+                           <a href="<?php the_field('url_of_link'); ?>" target="_blank" alt="User Submitted Link">Click Here</a>
 
                             <p>Submitted by: <?php the_field('name'); ?></p>
 
