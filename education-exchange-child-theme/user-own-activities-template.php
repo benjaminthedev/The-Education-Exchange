@@ -9,9 +9,8 @@
 
 get_header(); ?>
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.min.js"></script> -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+
 
 	<?php do_action( 'ocean_before_content_wrap' ); ?>
 
@@ -28,6 +27,8 @@ get_header(); ?>
                 <?php do_action( 'ocean_before_content_inner' ); ?>
                 
                        <?php the_content(); ?>
+
+                       <div class="newWrap">
 
                     <!-- wp query -->
 
@@ -183,48 +184,30 @@ get_header(); ?>
 
     <div class="buttonsWrap">
             <a href="/add-your-activity/" class="standardBtn">Add A New Activity</a>
-            <a href="/edit-your-activities/" class="standardBtn">Edit Your Activities</a>
+            <a href="/edit-your-activities/" class="standardBtn">Edit Your Activitiess</a>
 
 
               <!-- <a class="standardBtn" id="downloadPdf">
                     Download Your Activity
               </a> -->
+
+              <?php
+
+                create_save_as_pdf_pdfcrowd_button(array(
+                    'page_size' => 'letter',
+                    'button_text' => 'Save as Letter'));
+
+                ?>
             
         <?php } ?>           
         
+</div><!-- end newWrap -->
+
         </div>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
     </div><!-- #content-wrap -->
     
-    <script>
-var doc = new jsPDF();
 
-var specialElementHandlers = {
-    '#activityPDF': function (element, renderer) {
-        return true;
-    }
-};
-
-
-jQuery(document).ready(function(){
-  console.log('test');
-
-
-jQuery('#downloadPdf').click(function () {
-    doc.fromHTML(jQuery('#primary').html(), 15, 15, {
-        // 'width': 170,
-        orientation: 'landscape',
-        'elementHandlers': specialElementHandlers
-    });
-    doc.save('activity.pdf');
-});
-
-
-});
-
-
-
-    </script>
 <?php get_footer(); ?>

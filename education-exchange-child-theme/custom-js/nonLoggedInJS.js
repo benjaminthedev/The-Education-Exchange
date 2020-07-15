@@ -1,4 +1,4 @@
-console.log('COD - MW');
+// console.log('COD - MW');
 
 const newBtn = document.createElement('li');
 
