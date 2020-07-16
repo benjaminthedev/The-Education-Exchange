@@ -555,10 +555,10 @@ span#subscription-toggle {
 }
 
 ul.forum-titles li {
-    font-size: 20px;
+    font-size: 13px;
     color: #06183a;
+       text-transform: uppercase;
 }
-
 .bbp-pagination {
     margin-bottom: 50px;
 }
@@ -598,9 +598,7 @@ button#bbp_topic_submit {
     border: none !important;
 }
 
-ul.forum-titles li {
-    text-transform: uppercase;
-}
+
 
 #bbpress-forums li .bbp-topic-permalink {
     font-size: 18px !important;
@@ -962,7 +960,8 @@ div#bbp_login_widget-2 h4.widget-title{
  .page-template-shared-content-The-purpose-and-vision-of-education .standardBtn,
  .page-template-shared-content-Online-and-digital-learning .standardBtn,
  .page-template-shared-content-Professional-learning-for-the-21st-century .standardBtn,
- .page-template-shared-content-Connecting-and-expanding-learning .standardBtn{
+ .page-template-shared-content-Connecting-and-expanding-learning .standardBtn, 
+ .page-template-shared-content-Building-learning-independence .standardBtn{
     padding: 10px 15px;
     background: #f1637e;
     border-radius: 5px;
@@ -992,7 +991,8 @@ div#bbp_login_widget-2 h4.widget-title{
 .page-template-shared-content-The-purpose-and-vision-of-education .standardBtn:hover,
 .page-template-shared-content-Online-and-digital-learning .standardBtnL:hover,
 .page-template-shared-content-Professional-learning-for-the-21st-century .standardBtn:hover,
-.page-template-shared-content-Connecting-and-expanding-learning .standardBtn:hover {
+.page-template-shared-content-Connecting-and-expanding-learning .standardBtn:hover, 
+.page-template-shared-content-Building-learning-independence .standardBtn:hover {
     background: #fcb34d;
     color: #fff;
 }
@@ -1136,7 +1136,11 @@ h5.customActivity {
     font-weight: bold;
 }
 
-
+.newWrap {
+    width: 90vw;
+    /* background: green; */
+    margin: 0 auto;
+}
     .userLog {
  
     margin-top: 50px;
@@ -1148,7 +1152,7 @@ h5.customActivity {
     margin: 50px 0 ;
     background-color: #fff;
     /* width: 97vw; */
-    width: 60vw;
+    /* width: 100vw; */
     min-height: 100%;
     border-radius: 3px;
     border: 0 solid #818a91;

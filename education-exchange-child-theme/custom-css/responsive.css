@@ -12,8 +12,19 @@
     .box1Right {
         padding: 0 10px !important;
     }
+
+    .worldImage img {
+        width: 50% !important;
+        margin-top: 10px;
+    }
 }
 @media only screen and (max-width: 960px) {
+
+    .worldText {
+    width: 50%;
+    margin-left: 100px;
+}
+
     img.box-image {
         width: 50%;
     }
@@ -62,11 +73,22 @@
 
 }
 
+.worldImage img {
+    width: 70%;
+    margin-top: 10px;
+}
+
 
 
 
 }
 @media only screen and (max-width: 712px) {
+
+    .worldText {
+    width: 50%;
+    margin-left: 100px;
+}
+
     .main-box {
         min-width: 100%;
     }
@@ -155,5 +177,9 @@
     z-index: 1 !important;
 }
 
+.worldImage img {
+    width: 70%;
+    margin-top: 10px;
+}
 
 }
