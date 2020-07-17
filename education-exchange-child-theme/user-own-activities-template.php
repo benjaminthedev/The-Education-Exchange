@@ -32,11 +32,11 @@ get_header(); ?>
 
                     <!-- wp query -->
 
-                    <h1 class="elementor-heading-title elementor-size-large">Record your professional learning </h1>
+                    <!-- <h1 class="elementor-heading-title elementor-size-large">Record your professional learning </h1> -->
                     
-                    <hr />
+                    <!-- <hr /> -->
 
-                    <p>Use this space to record your professional learning. You could choose to keep a record of your engagement with The Education Exchange: 1 hour spent reading, 15 minutes spent watching videos, 30 minutes in a discussion with colleagues for instance. You can also use the space to record any other professional learning you engage in such as courses, webinars and research.</p>
+                    <!-- <p>Use this space to record your professional learning. You could choose to keep a record of your engagement with The Education Exchange: 1 hour spent reading, 15 minutes spent watching videos, 30 minutes in a discussion with colleagues for instance. You can also use the space to record any other professional learning you engage in such as courses, webinars and research.</p> -->
 
 
 
@@ -208,6 +208,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
     </div><!-- #content-wrap -->
-    
 
 <?php get_footer(); ?>

@@ -1293,3 +1293,17 @@ i.fa.fa-graduation-cap {
     margin-left: 1px;
     font-size: 20px !important;
 }
+
+
+
+
+
+
+
+
+
+/* --For All Logged Out Users Use - .logged-out-user */
+
+.logged-out-user .elementor-element-d34a45d{
+    display: none;
+}

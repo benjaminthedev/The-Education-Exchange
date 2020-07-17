@@ -1,7 +1,13 @@
 //Main JS
 console.log('Welcome to The Education Exchange');
 
+if (!document.getElementsByTagName('body')[0].classList.contains("logged-in")) {
+    console.log('Not Logged In AppJS');
+}
 
+const addingLO = document.querySelectorAll('body');
+
+addingLO[0].classList.add('logged-out-user');
 
 
 
@@ -11,6 +17,9 @@ console.log('Welcome to The Education Exchange');
 
 // regLinkBBP[0].innerText = "Log In";
 // regLinkBBP[0].href = "https://theeducation.exchange/login/";
+
+
+
 
 
 
