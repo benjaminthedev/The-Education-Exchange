@@ -89,7 +89,7 @@ add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
 function my_login_logo() { ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
-        background-image: url('http://staging.theeducation.exchange/wp-content/uploads/2020/05/EducationExchange_MainLogo_White.png');
+        background-image: url('http://gittheeducation.exchange/wp-content/uploads/2020/05/EducationExchange_MainLogo_White.png');
 		height: 65px;
     	width: 320px;
     	background-size: 271px 135px;
@@ -194,9 +194,29 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 
 
-//Will this stop the pop up???
+//Will this stop the pop up??? Log Out Session WordPress.
 
 add_filter( 'auth_cookie_expiration', 'keep_me_logged_in_for_1_year' );
 function keep_me_logged_in_for_1_year( $expirein ) {
     return 31556926; // 1 year in seconds
 }
+
+
+
+//Sorting out the search element
+
+// function wpb_modify_search_query( $query ) {
+//     global $wp_the_query;
+//     if( $query === $wp_the_query && $query->is_search() ) {
+//         $tax_query = array(
+//             array(
+//                 'taxonomy' => array('user_submitted_link_categories',  'user_shared_content_categories'),
+//                 'field' => 'slug',
+//                 'terms' => 'action',
+//                 'operator' => 'NOT IN',
+//             )
+//         );
+//         $query->set( 'tax_query', $tax_query );
+//     }
+// }
+// add_action( 'pre_get_posts', 'wpb_modify_search_query' );

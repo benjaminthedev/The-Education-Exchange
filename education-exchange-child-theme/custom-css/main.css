@@ -1302,8 +1302,23 @@ i.fa.fa-graduation-cap {
 
 
 
-/* --For All Logged Out Users Use - .logged-out-user */
+/* -- For All Logged Out Users Use - .logged-out-user */
 
 .logged-out-user .elementor-element-d34a45d{
     display: none;
 }
+
+
+/* .search-results .user_submitted_link_categories-online-and-digital-learning,
+.search-results .user_submitted_link_categories-building-learning-independence,
+.search-results .category-connecting-and-expanding-learning,
+.search-results .category-building-learning-independence,
+.search-results .post-4937 {
+    display: none !important;
+} */
+
+
+
+
+
+
