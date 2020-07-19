@@ -65,21 +65,13 @@ get_header(); ?>
                         $the_query = new WP_Query( array(
                             'post_type'      => 'user_logs',
                             'author' => $authorID,
-                                // 'tax_query'      => array(
-                                //     array(
-                                //         'taxonomy' => 'user_sub_logs', 
-                                //         'field'    => 'id',
-                                //         'terms'    => array(341)
-                                //     ),
-                                // ),
-                                ));
+                        ));
 
                         while ( $the_query->have_posts() ) :
                             $the_query->the_post();?>
 
                             <div>                           
-                         
-                           
+                                               
 
                             <div class="userLog">
 
