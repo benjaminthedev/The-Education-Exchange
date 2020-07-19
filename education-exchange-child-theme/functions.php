@@ -28,7 +28,6 @@ function oceanwp_child_enqueue_parent_style() {
 
 
 	//New Scripts & Styles
-	
 	wp_enqueue_style( 'mainStyle', get_stylesheet_directory_uri() . '/custom-css/main.css', array() );
 	wp_enqueue_style( 'responsiveStyle', get_stylesheet_directory_uri() . '/custom-css/responsive.css', array() );
 
@@ -191,32 +190,9 @@ add_filter('excerpt_more', 'new_excerpt_more');
 // }
 
 
-
-
-
 //Will this stop the pop up??? Log Out Session WordPress.
 
 add_filter( 'auth_cookie_expiration', 'keep_me_logged_in_for_1_year' );
 function keep_me_logged_in_for_1_year( $expirein ) {
     return 31556926; // 1 year in seconds
 }
-
-
-
-//Sorting out the search element
-
-// function wpb_modify_search_query( $query ) {
-//     global $wp_the_query;
-//     if( $query === $wp_the_query && $query->is_search() ) {
-//         $tax_query = array(
-//             array(
-//                 'taxonomy' => array('user_submitted_link_categories',  'user_shared_content_categories'),
-//                 'field' => 'slug',
-//                 'terms' => 'action',
-//                 'operator' => 'NOT IN',
-//             )
-//         );
-//         $query->set( 'tax_query', $tax_query );
-//     }
-// }
-// add_action( 'pre_get_posts', 'wpb_modify_search_query' );
