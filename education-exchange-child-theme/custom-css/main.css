@@ -1327,14 +1327,16 @@ i.fa.fa-graduation-cap {
 
 .page-id-4767 .standardBtn,
 .page-id-5722 .standardBtn:hover, 
-.page-id-4767 input.btn{
+.page-id-4767 input.btn,
+.page-id-5722 .standardBtn{
     background-color: #D93760 !important;
 }
 
 
 .page-id-4767 .standardBtn,
 .page-id-5722 .standardBtn:hover,
-.page-id-4767 input.btn:hover{
+.page-id-4767 input.btn:hover,
+.page-id-5722 .standardBtn:hover{
     background-color: #25346B !important; 
 }  
 
