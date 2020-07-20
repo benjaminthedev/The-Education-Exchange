@@ -97,6 +97,7 @@ if ( !is_user_logged_in() ) {
     
         <form id="task-form">
             <div class="input-field">
+                <label>Add A New Reflection</label>
                 <textarea type="text" name="task" id="task" placeholder="Add A New Reflection"></textarea>
             </div>    
             <input type="submit" value="Add A Reflection" class="btn">
