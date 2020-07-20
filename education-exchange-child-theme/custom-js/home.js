@@ -2,7 +2,10 @@
 const bodyCheck = document.getElementsByTagName('body')[0];
 
 if (bodyCheck.classList.contains("logged-in")) {
-    const areYouLoggedIn = document.querySelector('.standardBtn').innerText = "Visit Your Account";
+    const areYouLoggedIn = document.querySelectorAll('.standardBtn-New  ');
+    areYouLoggedIn[0].innerText = "Visit Your Account";
+    console.log(areYouLoggedIn);
+    console.log('User Logged In');
 }
 
 

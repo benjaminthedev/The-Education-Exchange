@@ -529,6 +529,10 @@ ul#menu-1-2145010d {
 
 /* BBPress Styles  */
 
+.bbpress p {
+    color: #D93760 !important;
+}
+
 
 .bbp-template-notice.info,
 span#subscription-toggle {
@@ -667,8 +671,9 @@ p.form-allowed-tags {
 /* --NEW Home Page Styles */
 /* --Home Page Standard Btn */
 .standardBtn {
-    padding: 10px 75px;
     background: #f1637e;
+
+    padding: 10px 75px;
     border-radius: 5px;
     text-transform: capitalize;
     font-weight: 700;
@@ -685,6 +690,29 @@ p.form-allowed-tags {
     background: #fcb34d;
     color: #fff;
 }
+/* Home Page Standard BTN Change  */
+
+ .standardBtn-New{
+    background-color: #D93760;
+
+    padding: 10px 75px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 0.04rem;
+    color: #fff;
+    margin-top: 40px;
+    display: inline-block;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75) !important;
+}
+
+ .standardBtn-New:hover{
+    background-color: #25346B;
+    color: #fff;
+}
+
 
 div#bbp_login_widget-2 .bbp-username {
     display: none;
@@ -738,12 +766,14 @@ transform: rotate(-380deg);
 /* BTN */
 .standardBtn-box2 {
     background: #fcb34d;
+    color: #25346B;
 }
 
 .standardBtn-box2:hover{
     background: #f1637e;
-    color: #fff;
+    color: #D93760;
 }
+
 
 /* Second Arrow */
 img.secondArrow {
@@ -786,10 +816,11 @@ img.thirdArrow {
 
 .standardBtn-box3 {
     background: #5eb3e4;
+    color: #25346B ;
 }
 .standardBtn-box3:hover{
     background: #25346b;
-    color: #fff;
+    color: #fff ;
 }
 
 /* -- Fourth Box -- */
@@ -821,7 +852,7 @@ img.fourthArrow {
 
 .standardBtn-box4:hover{
     background: #5eb3e4;
-    color: #fff;
+    color: #25346B;
 }
 
 
@@ -1289,3 +1320,31 @@ i.fa.fa-graduation-cap {
 .logged-out-user .elementor-element-d34a45d{
     display: none;
 }
+
+
+
+/* Btn Custom Pages */
+
+.page-id-4767 .standardBtn,
+.page-id-5722 .standardBtn:hover{
+    background-color: #D93760 !important;
+}
+
+
+.page-id-4767 .standardBtn,
+.page-id-5722 .standardBtn:hover{
+    background-color: #25346B !important; 
+}  
+
+/* Labels */
+
+label {
+    font-weight: 800;
+}
+
+/* New Font Colour For Home Page */
+
+.newColor{
+    color: #25346B;
+}
+

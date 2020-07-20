@@ -9,8 +9,7 @@
 
 get_header(); ?>
 
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 
 	<?php do_action( 'ocean_before_content_wrap' ); ?>
 
@@ -28,7 +27,7 @@ get_header(); ?>
                 
                        <?php the_content(); ?>
 
-                       <div class="newWrap">
+                       <div class="newWrap"  id="theActContent">
 
                     <!-- wp query -->
 
@@ -176,20 +175,16 @@ get_header(); ?>
 
     <div class="buttonsWrap">
             <a href="/add-your-activity/" class="standardBtn">Add A New Activity</a>
-            <a href="/edit-your-activities/" class="standardBtn">Edit Your Activitiess</a>
+            <a href="/edit-your-activities/" class="standardBtn">Edit Your Activities</a>
 
 
               <!-- <a class="standardBtn" id="downloadPdf">
                     Download Your Activity
               </a> -->
 
-              <?php
-
-                create_save_as_pdf_pdfcrowd_button(array(
-                    'page_size' => 'letter',
-                    'button_text' => 'Save as Letter'));
-
-                ?>
+              
+<a href="#" class="standardBtn" id="downloadActivity">Download PDF Activity</a>
+            
             
         <?php } ?>           
         
@@ -202,3 +197,60 @@ get_header(); ?>
     </div><!-- #content-wrap -->
 
 <?php get_footer(); ?>
+
+
+<script>
+
+jQuery(document).ready(function(){
+
+var element = document.getElementById("downloadActivity");
+element.addEventListener("click", demoFromHTML);
+
+
+
+function demoFromHTML() {
+        var pdf = new jsPDF('p', 'pt', 'letter');
+        // source can be HTML-formatted string, or a reference
+        // to an actual DOM element from which the text will be scraped.
+        source = jQuery('#theActContent')[0];
+
+        // we support special element handlers. Register them with jQuery-style 
+        // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
+        // There is no support for any other type of selectors 
+        // (class, of compound) at this time.
+        specialElementHandlers = {
+            // element with id of "bypass" - jQuery style selector
+            '#bypassme': function (element, renderer) {
+                // true = "handled elsewhere, bypass text extraction"
+                return true
+            }
+        };
+        margins = {
+            top: 40,
+            bottom: 60,
+            left: 40,
+            width: 522
+        };
+        // all coords and widths are in jsPDF instance's declared units
+        // 'inches' in this case
+        pdf.fromHTML(
+            source, // HTML string or DOM elem ref.
+            margins.left, // x coord
+            margins.top, { // y coord
+                'width': margins.width, // max width of content on PDF
+                'elementHandlers': specialElementHandlers
+            },
+
+            function (dispose) {
+                // dispose: object with X, Y of the last line add to the PDF 
+                //          this allow the insertion of new lines after html
+                pdf.save('activity.pdf');
+            }, margins
+        );
+        console.log('PDF Requested');
+    }
+
+      
+});
+
+</script>
