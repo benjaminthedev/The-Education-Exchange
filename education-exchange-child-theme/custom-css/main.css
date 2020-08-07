@@ -653,6 +653,20 @@ a.sso {
     background: #D93760;
 }
 
+.menu-item a.elementor-item:hover {
+    color: #D93760;
+}
+
+
+.menu-item a.elementor-item:hover {
+    color: #D93760;
+}
+.eicon-menu-bar:before {
+    content: '\e816';
+    color: #D93760;
+}
+
+
 
 .newSocialLogin {
     margin-top: 60px;
