@@ -1,1 +1,60 @@
-console.log("serActivity JS Loaded"); const mins = document.querySelectorAll(".minutes"); var totalMinutes = 0; mins.forEach(o => { const t = parseFloat(o.innerHTML); totalMinutes += t }), console.log(totalMinutes); const hours = document.querySelectorAll(".hours"); var totalHours = 0; hours.forEach(o => { const t = parseFloat(o.innerHTML); console.log(`Hours: ${t}`); const e = 60 * t; console.log(`new mins: ${e}`), totalHours += e }), console.log(`Total Hours ${totalHours}`); const addTotal = totalMinutes + totalHours; function time_convert(o) { return `${Math.floor(o / 60)} hrs : ${o % 60} Minutes` } console.log(`This is the total time: ${addTotal}`); const headingTotal = document.querySelector(".totalTime"); console.log(headingTotal), headingTotal.innerText = time_convert(addTotal), addTotal > 1 && (document.querySelector(".totalHeading").style.display = "block", console.log("More than one so should be showing"));
+console.log('serActivity JS Loaded');
+
+
+
+
+//Minutes
+const mins = document.querySelectorAll(".minutes");
+
+var totalMinutes = 0;
+
+mins.forEach(min => {
+    const convertMins = parseFloat(min.innerHTML);
+    totalMinutes = totalMinutes + convertMins;
+});
+
+console.log(totalMinutes);
+
+//Hours
+const hours = document.querySelectorAll(".hours");
+
+var totalHours = 0;
+
+hours.forEach(hour => {
+    const convertHours = parseFloat(hour.innerHTML);
+    console.log(`Hours: ${convertHours}`);
+
+    const newMins = convertHours * 60;
+    console.log(`new mins: ${newMins}`);
+
+    //  totalHours = totalHours + convertHours;
+    totalHours = totalHours + newMins;
+});
+
+console.log(`Total Hours ${totalHours}`);
+
+//Then add the lot
+
+const addTotal = totalMinutes + totalHours;
+console.log(`This is the total time: ${addTotal}`);
+
+//Then Convert The Lot
+
+function time_convert(addTotal) {
+    var hours = Math.floor(addTotal / 60);
+    var minutes = addTotal % 60;
+    return `${hours} hrs : ${minutes} Minutes`;
+}
+
+const headingTotal = document.querySelector(".totalTime");
+console.log(headingTotal);
+
+headingTotal.innerText = time_convert(addTotal);
+
+if (addTotal > 1) {
+    document.querySelector('.totalHeading').style.display = "block";
+    console.log('More than one so should be showing');
+}
+
+
+
