@@ -51,17 +51,37 @@ function oceanwp_child_enqueue_parent_style() {
 	if (is_page(array(4731, 5397, 5390))) {
 		wp_enqueue_script( 'nonLoggedInJS', get_stylesheet_directory_uri() . '/custom-js/nonLoggedInJS.js', array(), '', true );
 	}
+	
+
+	//All forum pages!
+	// if ( is_single(array( 5499, 5501, 5451 ) ) ){
+	// 	wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
+	// }	
+
+
+	// if ( is_single( 'bbpress' ) ){
+	// 	wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
+	// }	
 
 	if ( is_bbpress() ){
 		wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
 	}	
 	
+
+	// if ( is_page( array( 5499, 5501  ) ) ) {
+	//  // either in about us, or contact, or management page is in view
+	//  wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
+	// }
+
+
 	//Load this script last 
 	wp_enqueue_script( 'customjs', get_stylesheet_directory_uri() . '/custom-js/app.js', array(), '1.0.0', true );
 
 
 }
 add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
+
+
 
 // Custom Login
 
@@ -102,11 +122,73 @@ function my_login_logo() { ?>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
+// Log in redirect back to same page!
+
+// if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || (isset($_POST['login_location']) && !empty($_POST['login_location'])) ) {
+//     add_filter('login_redirect', 'my_login_redirect', 10, 3);
+//     function my_login_redirect() {
+//         $location = $_SERVER['HTTP_REFERER'];
+//         wp_safe_redirect($location);
+//         exit();
+//     }
+// }
+
+//If somehow the user is logged in the need to be redirect to home page if they end on login / register page
+
+// function redirect_to_specific_page() {
+	
+// 	if ( is_page('home') && is_user_logged_in() ) {
+		
+// 		wp_redirect( 'https://staging.theeducation.exchange/my-account/', 301 ); 
+// 		exit;
+//     }
+// }
+// add_action( 'template_redirect', 'redirect_to_specific_page' );
+
+
+// function add_login_check()
+// {
+//     if (is_user_logged_in()) {
+//         if (is_page('home')){
+//             wp_redirect('staging.theeducation.exchange/my-account/');
+//             exit; 
+//         }
+//     }
+// }
+
+// add_action('wp', 'add_login_check');
+
 //remove the [...] on excerpt.
 function new_excerpt_more( $more ) {
     return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+
+// Redirect not logged in user
+
+// add_action( 'template_redirect', 'redirect_to_specific_page' );
+
+// function redirect_to_specific_page() {
+
+// if ( is_page(4767) && ! is_user_logged_in() ) {
+
+// wp_redirect( 'https://theeducation.exchange/register/', 301 ); 
+//   exit;
+//     }
+// }
+
+// add_action( 'template_redirect01', 'redirect_to_specific_page01' );
+
+// function redirect_to_specific_page01() {
+
+// if ( is_page('login') && ! is_user_logged_in() ) {
+
+// wp_redirect( 'https://theeducation.exchange/register/', 301 ); 
+//   exit;
+//     }
+// }
+
 
 //Will this stop the pop up??? Log Out Session WordPress.
 
