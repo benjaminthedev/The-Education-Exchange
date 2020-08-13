@@ -339,6 +339,13 @@ div#wpd-post-rating {
 .wpd-login {
     display: none;
 }
+.wpd-avatar {
+    display: none;
+}
+
+.wpd-comment-left {
+    display: none;
+}
 a.bbp-breadcrumb-home {
     display: none;
 }
@@ -784,7 +791,8 @@ a.button.logout-link,
 button.btn.button.ur-submit-button,
 input.acfef-submit-button.acf-button.button.button-primary,
 input.user-registration-Button.button {
-    background: #f1637e;
+    /* background: #f1637e; */
+    background: #D93760;
     border-radius: 5px;
 }
 .wpulike-default .wp_ulike_put_image.wp_ulike_btn_is_active:after {
