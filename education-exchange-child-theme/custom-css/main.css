@@ -682,7 +682,8 @@ a.sso {
     margin-top: 30px;
 }
 form select {
-    color: #f1637e;
+    /* color: #f1637e; */
+    color: #D93760;
 }
 .acf-required {
     color: #f1637e !important;
