@@ -62,6 +62,11 @@ function oceanwp_child_enqueue_parent_style() {
 		wp_enqueue_script( 'connectingExpaningContentForm', get_stylesheet_directory_uri() . '/custom-js/connectingExpaningContentForm.js', array(), '', true );
 	}
 
+	//connectingExpaningContentForm content form!
+	if (is_page(9074)) {
+		wp_enqueue_script( 'onlineDigitalContentForm', get_stylesheet_directory_uri() . '/custom-js/onlineDigitalContentForm.js', array(), '', true );
+	}
+
 	
 
 	//All forum pages!
