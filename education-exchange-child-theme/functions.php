@@ -51,6 +51,17 @@ function oceanwp_child_enqueue_parent_style() {
 	if (is_page(array(4731, 5397, 5390))) {
 		wp_enqueue_script( 'nonLoggedInJS', get_stylesheet_directory_uri() . '/custom-js/nonLoggedInJS.js', array(), '', true );
 	}
+
+	//The purpose of vision and eduction shared content form!
+	if (is_page(9058)) {
+		wp_enqueue_script( 'visionEducationSharedFormJS', get_stylesheet_directory_uri() . '/custom-js/visionEducationSharedFormJS.js', array(), '', true );
+	}
+
+	//connectingExpaningContentForm content form!
+	if (is_page(9069)) {
+		wp_enqueue_script( 'connectingExpaningContentForm', get_stylesheet_directory_uri() . '/custom-js/connectingExpaningContentForm.js', array(), '', true );
+	}
+
 	
 
 	//All forum pages!
