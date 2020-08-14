@@ -67,6 +67,16 @@ function oceanwp_child_enqueue_parent_style() {
 		wp_enqueue_script( 'onlineDigitalContentForm', get_stylesheet_directory_uri() . '/custom-js/onlineDigitalContentForm.js', array(), '', true );
 	}
 
+	//buildingLearningSharedContentForm content form!
+	if (is_page(9081)) {
+		wp_enqueue_script( 'buildingLearningSharedContentForm', get_stylesheet_directory_uri() . '/custom-js/buildingLearningSharedContentForm.js', array(), '', true );
+	}
+
+	//professionalLearningContentForm content form!
+	if (is_page(9083)) {
+		wp_enqueue_script( 'professionalLearningContentForm', get_stylesheet_directory_uri() . '/custom-js/professionalLearningContentForm.js', array(), '', true );
+	}	
+
 	
 
 	//All forum pages!
