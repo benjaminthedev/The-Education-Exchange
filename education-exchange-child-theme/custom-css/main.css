@@ -973,3 +973,18 @@ label {
 .newColor {
     color: #25346b;
 }
+
+
+
+/* When submits a link or shared content */
+
+.acf-notice.-success.acf-success-message.-dismiss {
+    background: #D93760;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    border: 2px solid #D93760;
+    margin-top: 0px;
+}
+
+p.success-msg {font-size: 22px;}
