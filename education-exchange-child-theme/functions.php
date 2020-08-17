@@ -52,6 +52,8 @@ function oceanwp_child_enqueue_parent_style() {
 		wp_enqueue_script( 'nonLoggedInJS', get_stylesheet_directory_uri() . '/custom-js/nonLoggedInJS.js', array(), '', true );
 	}
 
+	// All the shared content forms!
+
 	//The purpose of vision and eduction shared content form!
 	if (is_page(9058)) {
 		wp_enqueue_script( 'visionEducationSharedFormJS', get_stylesheet_directory_uri() . '/custom-js/visionEducationSharedFormJS.js', array(), '', true );
@@ -62,7 +64,7 @@ function oceanwp_child_enqueue_parent_style() {
 		wp_enqueue_script( 'connectingExpaningContentForm', get_stylesheet_directory_uri() . '/custom-js/connectingExpaningContentForm.js', array(), '', true );
 	}
 
-	//connectingExpaningContentForm content form!
+	//onlineDigitalContentForm content form!
 	if (is_page(9074)) {
 		wp_enqueue_script( 'onlineDigitalContentForm', get_stylesheet_directory_uri() . '/custom-js/onlineDigitalContentForm.js', array(), '', true );
 	}
@@ -77,13 +79,32 @@ function oceanwp_child_enqueue_parent_style() {
 		wp_enqueue_script( 'professionalLearningContentForm', get_stylesheet_directory_uri() . '/custom-js/professionalLearningContentForm.js', array(), '', true );
 	}	
 
+	// All The Link Forms
+
+	//visionEducationLinkJS content form!
+	if (is_page(9101)) {
+		wp_enqueue_script( 'visionEducationLinkJS', get_stylesheet_directory_uri() . '/custom-js/visionEducationLinkJS.js', array(), '', true );
+	}	
+
+	//connectingExpaningLinkJS content form!
+	if (is_page(9105)) {
+		wp_enqueue_script( 'connectingExpaningLinkJS', get_stylesheet_directory_uri() . '/custom-js/connectingExpaningLinkJS.js', array(), '', true );
+	}	
+
+	//onlineDigitalLinkJS content form!
+	if (is_page(9110)) {
+		wp_enqueue_script( 'onlineDigitalLinkJS', get_stylesheet_directory_uri() . '/custom-js/onlineDigitalLinkJS.js', array(), '', true );
+	}
 	
+	//buildingLearningLinkJS content form!
+	if (is_page(9116)) {
+		wp_enqueue_script( 'buildingLearningLinkJS', get_stylesheet_directory_uri() . '/custom-js/buildingLearningLinkJS.js', array(), '', true );
+	}		
 
 	//All forum pages!
 	// if ( is_single(array( 5499, 5501, 5451 ) ) ){
 	// 	wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
 	// }	
-
 
 	// if ( is_single( 'bbpress' ) ){
 	// 	wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
