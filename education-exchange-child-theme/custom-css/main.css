@@ -21,7 +21,7 @@ button.acfef-edit-button.edit-button {
     box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.75) !important;
 }
 a#scroll-top {
-    background: #f1637e !important;
+    background: #D93760 !important;
 }
 .page-id-5724 h2.acfef-form-title {
     margin-left: 10px;
@@ -978,7 +978,7 @@ label {
 
 /* When submits a link or shared content */
 
-.acf-notice.-success.acf-success-message.-dismiss {
+.acf-success-message {
     background: #D93760;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -987,4 +987,5 @@ label {
     margin-top: 0px;
 }
 
-p.success-msg {font-size: 22px;}
+.success-msg {font-size: 22px !important;}
+

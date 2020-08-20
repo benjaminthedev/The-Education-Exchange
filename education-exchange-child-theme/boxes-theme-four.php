@@ -8,24 +8,24 @@
 
 get_header(); ?>
 
-<div id="content-wrap" class="container clr">
+<div class="container">
 
-    <div id="primary" class=" clr">
-                    <div class="custom-boxes">
+<div id="primary" class=" clr">
+<div class="custom-boxes">
 
-                      <div class="main-box customOne">
-                       <article class="box_rule">
+<div class="main-box customOne">
+<article class="box_rule">
 
-                          <?php if( get_field('main_heading') ): ?>
-                            <h1 class="main_heading"><?php the_field('main_heading'); ?></h1>                               
-                          <?php endif; ?>
+<?php if( get_field('main_heading') ): ?>
+<h1 class="main_heading"><?php the_field('main_heading'); ?></h1>                               
+<?php endif; ?>
 
-                              <?php if( get_field('smaller_heading') ): ?>
-                                <h3 class="smaller_heading"><?php the_field('smaller_heading'); ?></h3>                                                                     
-                              <?php endif; ?>
+<?php if( get_field('smaller_heading') ): ?>
+<h3 class="smaller_heading"><?php the_field('smaller_heading'); ?></h3>                                                                     
+<?php endif; ?>
 
-                            </article>
-                      </div>
+</article>
+</div>
 
 
 
