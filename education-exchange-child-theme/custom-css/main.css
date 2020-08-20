@@ -979,13 +979,13 @@ label {
 /* When submits a link or shared content */
 
 .acf-success-message {
-    background: #D93760;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-    border: 2px solid #D93760;
-    margin-top: 0px;
+    background: #D93760 !important;
+    padding-top: 20px!important;
+    padding-bottom: 20px!important;
+    text-align: center!important;
+    border: 2px solid #D93760!important;
+    margin-top: 0px!important;
 }
 
-.success-msg {font-size: 22px !important;}
+p.success-msg {font-size: 22px !important;}
 
