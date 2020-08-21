@@ -989,3 +989,12 @@ label {
 
 p.success-msg {font-size: 22px !important;}
 
+
+/* sharedBoxesHeight */
+
+.sharedBoxesHeight .elementor-col-100{
+    min-height: 450px;
+    padding-top: 10px
+}
+ 
+
