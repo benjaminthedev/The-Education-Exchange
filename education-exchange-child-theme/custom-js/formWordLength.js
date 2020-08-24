@@ -22,11 +22,36 @@ document.querySelectorAll('input[data-max-words]').forEach(input => {
 });
 
 
-/*
-
-const nnewTest = document.querySelectorAll('.mce-content-body');
-console.log(newTest[0].innerText)
-if(nnewTest[0].innerText > 10){console.log('dede')};
 
 
-*/
+
+
+
+
+const myVar = setInterval(everyTwoSeconds, 2000);
+
+function everyTwoSeconds() {
+    console.log('Running every 2 seconds');
+
+    const nnewTest = document.querySelectorAll('.mce-content-body');
+    // console.log(newTest[0].innerText)
+
+    console.log(nnewTest);
+
+
+    //if (nnewTest[0].innerText > 10) { console.log('dede') };
+    // if (nnewTest[0].values.length = 5) {
+    //     console.log('dedededessssss')
+    // } else {
+    //     console.log('dedededessssss')
+    // }
+
+}
+
+
+
+// const nnewTest = document.querySelectorAll('.mce-content-body');
+// console.log(newTest[0].innerText)
+// if (nnewTest[0].innerText > 10) { console.log('dede') };
+
+
