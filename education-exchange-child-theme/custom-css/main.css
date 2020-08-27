@@ -339,13 +339,13 @@ div#wpd-post-rating {
 .wpd-login {
     display: none;
 }
-.wpd-avatar {
+/* .wpd-avatar {
     display: none;
-}
+} */
 
-.wpd-comment-left {
+/* .wpd-comment-left {
     display: none;
-}
+} */
 a.bbp-breadcrumb-home {
     display: none;
 }
