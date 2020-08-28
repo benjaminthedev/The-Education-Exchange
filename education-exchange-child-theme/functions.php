@@ -108,7 +108,7 @@ function oceanwp_child_enqueue_parent_style() {
 
 
 	//https://theeducation.exchange/shared-content-form/ content form - test
-	if (is_page(4675)) {
+	if (is_page(array(4675, 9058))) {
 		wp_enqueue_script( 'formWordLength', get_stylesheet_directory_uri() . '/custom-js/formWordLength.js', array(), '', true );
 	}	
 
@@ -254,36 +254,3 @@ add_filter( 'auth_cookie_expiration', 'keep_me_logged_in_for_1_year' );
 function keep_me_logged_in_for_1_year( $expirein ) {
     return 31556926; // 1 year in seconds
 }
-
-
-
-
-// ADD NEW COLUMN
-function v2008_c_head($defaults) {
-	$column_name = 'user_logs';//column slug
-	$column_heading = 'User Log';//column heading
-	$defaults[$column_name] = $column_heading;
-	return $defaults;
-}
- 
-// SHOW THE COLUMN CONTENT
-function v2008_c_content($name, $post_ID) {
-    $column_name = 'Hours';//column slug	
-    $column_field = 'time_spent_hours';//field slug	34
-    if ($name == $column_name) {
-        $post_meta = get_post_meta($post_ID,$column_field,true);
-        if ($post_meta) {
-            echo $post_meta;
-        }
-    }
-}
-
-// ADD STYLING FOR COLUMN
-function v2008_c_style(){
-	$column_name = 'solution';//column slug	
-	echo "<style>.column-$column_name{width:10%;}</style>";
-}
-
-add_filter('manage_solutions_posts_columns', 'v2008_c_head');
-add_action('manage_solutions_posts_custom_column', 'v2008_c_content', 10, 2);
-add_filter('admin_head', 'v2008_c_style');

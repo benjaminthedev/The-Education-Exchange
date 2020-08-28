@@ -22,21 +22,31 @@ document.querySelectorAll('input[data-max-words]').forEach(input => {
 });
 
 
+//Getting the user name:
+
+const userName = document.querySelectorAll('.avatar-24');
+console.log(userName[0].innerText);
+console.log(userName[0].parentElement.innerText);
+
+//get the form
+
+
+//Then set it to the form!
 
 
 
 
 
 
-const myVar = setInterval(everyTwoSeconds, 2000);
+// const myVar = setInterval(everyTwoSeconds, 2000);
 
-function everyTwoSeconds() {
-    console.log('Running every 2 seconds');
+//function everyTwoSeconds() {
+    // console.log('Running every 2 seconds');
 
-    const nnewTest = document.querySelectorAll('.mce-content-body');
+    // const nnewTest = document.querySelectorAll('.mce-content-body');
     // console.log(newTest[0].innerText)
 
-    console.log(nnewTest);
+//    console.log(nnewTest);
 
 
     //if (nnewTest[0].innerText > 10) { console.log('dede') };
@@ -46,7 +56,7 @@ function everyTwoSeconds() {
     //     console.log('dedededessssss')
     // }
 
-}
+//}
 
 
 
