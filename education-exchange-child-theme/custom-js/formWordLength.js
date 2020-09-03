@@ -1,3 +1,59 @@
+
+
+window.addEventListener('load', (event) => {
+    console.log('page is fully loaded');
+
+    const newFrame = document.getElementById('acf-editor-35_ifr');
+    console.log(newFrame);
+
+    //const textArea = document.querySelectorAll('iframe#acf-editor-35_ifr');
+    //console.log(textArea);
+
+    // function start() {
+    //     let textLeng = newFrame.value.length;
+    //     console.log(textLeng);
+    // }
+
+    // newFrame.addEventListener('keypress', start, false);
+
+
+    const myVar = setInterval(everyTwoSeconds, 2000);
+
+    function everyTwoSeconds() {
+        console.log('2 seconds of loading');
+
+
+        const log = document.querySelector('.mce-content-body');
+
+        document.addEventListener('keypress', logKey);
+
+        function logKey(e) {
+            log.textContent += ` ${e.code}`;
+            console.log(log.innerText);
+        }
+
+
+        // const texttext = document.querySelector('.mce-content-body');
+        // console.log(texttext.innerText);
+
+
+    }
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
 // Get all inputs that have a word limit
 document.querySelectorAll('input[data-max-words]').forEach(input => {
     // Remember the word limit for the current input
@@ -23,20 +79,13 @@ document.querySelectorAll('input[data-max-words]').forEach(input => {
 
 
 //Getting the user name:
-
 const userName = document.querySelectorAll('.avatar-24');
-console.log(userName[0].innerText);
-console.log(userName[0].parentElement.innerText);
-
-//get the form
-
-
+//Storing the user name in own const
+const newUserName = userName[0].parentElement.innerText;
 //Then set it to the form!
-
-
-
-
-
+const blankNameField = document.querySelectorAll('.userNameField input[type="text"]');
+//Ser the value!
+blankNameField[0].value = newUserName;
 
 // const myVar = setInterval(everyTwoSeconds, 2000);
 
