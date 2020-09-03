@@ -3,6 +3,22 @@
 window.addEventListener('load', (event) => {
     console.log('page is fully loaded');
 
+
+    // var inputItem = document.querySelectorAll('iframe#acf-editor-35_ifr .mce-content-body');
+    // console.log(inputItem)
+
+    // inputItem.addEventListener('keydown', runEvent);
+
+    // function runEvent(e) {
+    //     console.log(e.type);
+    //     console.log(console.e.value);
+    // }
+
+
+
+
+
+
     const newFrame = document.getElementById('acf-editor-35_ifr');
     console.log(newFrame);
 
@@ -20,7 +36,18 @@ window.addEventListener('load', (event) => {
     const myVar = setInterval(everyTwoSeconds, 2000);
 
     function everyTwoSeconds() {
+
         console.log('2 seconds of loading');
+
+        var isClicked = document.querySelectorAll('iframe#acf-editor-35_ifr .mce-content-body');
+        isClicked.addEventListener('click', runEvent);
+
+        function runEvent() {
+            console.log('event type: ' + e.type);
+        }
+
+        var inputItem = document.querySelectorAll('iframe#acf-editor-35_ifr .mce-content-body p');
+        console.log(inputItem);
 
 
         const log = document.querySelector('.mce-content-body');
