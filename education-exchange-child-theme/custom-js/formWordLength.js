@@ -65,21 +65,7 @@ window.addEventListener('load', (event) => {
 
 
     }
-
-
-
-
 });
-
-
-
-
-
-
-
-
-
-
 
 // Get all inputs that have a word limit
 document.querySelectorAll('input[data-max-words]').forEach(input => {
