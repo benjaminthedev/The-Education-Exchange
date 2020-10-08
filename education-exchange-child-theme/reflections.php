@@ -88,6 +88,12 @@ if ( !is_user_logged_in() ) {
                         margin: 0 auto;
                         margin-bottom: 100px;
                     }
+                    input#filter {
+                        width: 100%;
+                        border: 1px solid lightgray;
+                        padding: 10px;
+                        border-radius: 5px;
+                    }
                 </style>
 
 
@@ -100,6 +106,19 @@ if ( !is_user_logged_in() ) {
                 <label>Add A New Reflection</label>
                 <textarea type="text" name="task" id="task" placeholder="Add A New Reflection"></textarea>
             </div>    
+
+            <label for="themes">What Theme?</label>
+
+            
+             <select id="themes" name="theme" data-dropdown>
+                <option value="0">What theme did you choose?</option>
+                <option value="1">The purpose and vision of education</option>
+                <option value="2">Connecting and expanding learning</option>
+                <option value="3">Online and digital learning</option>
+                <option value="4">Building learning independence</option>
+                <option value="5">Professional learning for the 21st century</option>
+            </select>        
+
             <input type="submit" value="Add A Reflection" class="btn">
         </form>
         </section>
@@ -112,14 +131,30 @@ if ( !is_user_logged_in() ) {
 
     <div class="input-field">
         <h2 class="filter">Filter Your Reflections</h2>
-        <input type="text" name="filter" id="filter">
-        <label for="filter">Filter Reflections</label>
+        <label for="filter">Filter Reflections</label><br />
+        <br />
+        <input type="text" name="filter" id="filter" placeholder="Search for your reflection">
+
+        <br />
+        <br />
+
+           <label for="themes">What Theme?</label>
+
+            
+             <select id="themes" name="theme" data-dropdown>
+                <option value="0">Please select a theme</option>
+                <option value="1">The purpose and vision of education</option>
+                <option value="2">Connecting and expanding learning</option>
+                <option value="3">Online and digital learning</option>
+                <option value="4">Building learning independence</option>
+                <option value="5">Professional learning for the 21st century</option>
+            </select>  
     </div>
 
 
 
         <ul class="collection">
-        <h5>Reflections:</h5>
+            <h5>Your Reflections:</h5>
             <li class="collection-item">
             <hr />    
             </li>
@@ -145,7 +180,6 @@ const clearBtn = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
 const showMe = document.getElementById('showMe');
-//console.log(showMe);
 
 
 // Load all event listeners
@@ -324,7 +358,13 @@ function filterTasks(e) {
         }
     });
 }
+
+
+
+
+// New Dropdown filter
                 
+
 
                 
                 </script>
