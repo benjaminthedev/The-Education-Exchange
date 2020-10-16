@@ -1,8 +1,5 @@
 console.log('serActivity JS Loaded');
 
-
-
-
 //Minutes
 const mins = document.querySelectorAll(".minutes");
 
