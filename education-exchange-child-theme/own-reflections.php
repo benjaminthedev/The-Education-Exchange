@@ -9,8 +9,6 @@
 
 get_header(); ?>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
-
 	<?php do_action( 'ocean_before_content_wrap' ); ?>
 
 	<div class="wrapAllActivities">
@@ -28,11 +26,8 @@ get_header(); ?>
                        <?php the_content(); ?>
 
                        <div class="newWrap">
-
-                    
-
-
-       <?php 
+                
+                       <?php 
        
               global $current_user;
                 get_currentuserinfo();
