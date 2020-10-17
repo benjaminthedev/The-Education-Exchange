@@ -112,25 +112,9 @@ function oceanwp_child_enqueue_parent_style() {
 		wp_enqueue_script( 'formWordLength', get_stylesheet_directory_uri() . '/custom-js/formWordLength.js', array(), '', true );
 	}	
 
-	//All forum pages!
-	// if ( is_single(array( 5499, 5501, 5451 ) ) ){
-	// 	wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
-	// }	
-
-	// if ( is_single( 'bbpress' ) ){
-	// 	wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
-	// }	
-
 	if ( is_bbpress() ){
 		wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
 	}	
-	
-
-	// if ( is_page( array( 5499, 5501  ) ) ) {
-	//  // either in about us, or contact, or management page is in view
-	//  wp_enqueue_script( 'forumsJS', get_stylesheet_directory_uri() . '/custom-js/forums.js', array(), '', true );
-	// }
-
 
 	//Load this script last 
 	wp_enqueue_script( 'customjs', get_stylesheet_directory_uri() . '/custom-js/app.js', array(), '1.0.0', true );

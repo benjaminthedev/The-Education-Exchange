@@ -15,11 +15,11 @@ get_header(); ?>
 
 		<?php do_action( 'ocean_before_primary' ); ?>
 
-		<div >
+		<div>
 
 			<?php do_action( 'ocean_before_content' ); ?>
 
-			<div >
+			<div>
 
                 <?php do_action( 'ocean_before_content_inner' ); ?>
                 
@@ -49,7 +49,7 @@ get_header(); ?>
 
 <article id="activityPDF">
 
-<h4>Your Reflections</h4>
+<h4>Your Reflections!</h4>
 
 
 
@@ -63,99 +63,25 @@ get_header(); ?>
 
                         while ( $the_query->have_posts() ) :
                             $the_query->the_post();?>
-
-
-
-
-                            <div>                           
-                                               
+                                                      
+                                             
 
                             <div class="userLog">
 
-                                <h1><?php the_title(); ?></h1>
+                                <!-- <h1><?php //the_title(); ?></h1> -->
 
+                                <h3><?php the_field('title_of_reflection'); ?></h3>
+                                <br />
 
-                                 <?php the_field('reflection'); ?>
+                                 <div class="user__reflection">
+                                    <?php the_field('reflection'); ?>                                
+                                 </div>
+                                 <br />
 
-                                 <?php the_field('what_theme'); ?>
+                                 <em>Theme: <?php the_field('what_theme'); ?></em>
 
-                                <div class="activityWrapper">
-                            
-                            <div class="rowDown">
-                                <?php if( get_field('learning_type') ): ?>
-                                    <h5>Learning Type:</h5> 
-                                    <p class="learningType">
-                                        <?php the_field('learning_type'); ?>
-                                    </p>
-                                <?php endif; ?>
-                            </div>
-
-
-
-                            <div class="rowDown">            
-                                <?php if( get_field('start_date') ): ?>
-                                    <h5>Start Date:</h5> 
-                                    <p class="startDate">
-                                        <?php the_field('start_date'); ?>
-                                    </p>
-                                <?php endif; ?>
-                            </div>
-                            
-                            
-
-                            <div class="rowDown">                  
-                                <?php if( get_field('end_date') ): ?>
-                                    <h5>End Date:</h5>
-                                    <p class="startDate"> 
-                                        <?php the_field('end_date'); ?>
-                                    </p>
-                                <?php endif; ?>
-                            </div>   
-
-
-                            <div class="rowDown">                  
-                                <?php if( get_field('time_spent_hours') ): ?>
-                                    <h5>Hours:</h5>
-                                    <p class="hours">
-                                        <?php the_field('time_spent_hours'); ?>
-                                    </p>
-                                <?php endif; ?>
-                            </div>  
-                                
-
-                            <div class="rowDown">                                              
-                                <?php if( get_field('time_spent_minutes') ): ?>
-                                    <h5>Minutes:</h5>
-                                    <p class="minutes">
-                                        <?php the_field('time_spent_minutes'); ?>
-                                    </p>
-                                <?php endif; ?>   
-                            </div>        
-
-
-
-                            <div class="rowDown">                      
-                                <?php if( get_field('notes') ): ?>
-                                    <h5>Notes:</h5> 
-                                    <div class="notes">
-                                        <?php the_field('notes'); ?>
-                                    </div>
-                                <?php endif; ?>  
-                            </div>            
-
-
-
-                            <div class="rowDown">          
-                                <?php if( get_field('useful_links') ): ?>
-                                    <h5>Useful Links:</h5>
-                                    <div class="usefulLinks">
-                                        <?php the_field('useful_links'); ?>
-                                    </div>
-                                <?php endif; ?>                                  
-                            </div>        
-
-                            </div>
-                        </div>
+                            </div><!-- end userLog -->                             
+                        
 
                         <? endwhile;
 
@@ -166,17 +92,14 @@ get_header(); ?>
                         wp_reset_postdata();
                     ?>
 
-</article>
+            </article>
 
         <div class="clear"></div>
 
 
-    <div class="buttonsWrap">
+         <div class="buttonsWrap">
             <a href="/add-a-new-reflection/" class="standardBtn">Add A New Reflection</a>
-            <!-- <a href="#" class="standardBtn">Edit Your Reflections</a> -->
-
-
-            
+            <a href="/edit-your-reflections/" class="standardBtn">Edit Your Reflections</a>
         <?php } ?>           
         
 </div><!-- end newWrap -->
