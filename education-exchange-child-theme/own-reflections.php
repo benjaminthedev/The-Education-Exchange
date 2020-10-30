@@ -43,9 +43,6 @@ get_header(); ?>
 
           <div class="reflections__filters">
                 <h4>Reflections Filters</h4>
-
-                
-
                 <select name="themes" class="themeSelect">
                     <option value="00">What theme is your reflection in please? </option>
                     <option value="01">The purpose and vision of education</option>
@@ -54,25 +51,11 @@ get_header(); ?>
                     <option value="04">Building learning independence</option>
                     <option value="05">Professional learning for the 21st century</option>
                 </select>
-
-
-            <div class="result"></div>
-
-
-                <?php //echo do_shortcode('[facetwp facet="drop"]'); ?>
-
- <?php //echo do_shortcode('[facetwp facet="enw"]'); ?>
-
- <?php //echo do_shortcode(''); ?>
-
- 
-
-                <?php //echo do_shortcode('[facetwp template="reflections"]'); ?>
             </div>
 
-<article id="activityPDF">
+            <article id="activityPDF">
 
-<h4>Your Reflections!</h4>
+                <h4>Your Reflections!</h4>
 
                     <?php
 
@@ -121,80 +104,79 @@ get_header(); ?>
             .userLog.not__showing {
                 display: none;
             }
-            .userLog.newnewnew {
-                background: lightblue;
-            }
             </style>
 
             <script>
-    /*
-    
-    POA
+                //Target Value - options
+                const selectElement = document.querySelector('.themeSelect');
+                //Event listener on change for the options above
+                selectElement.addEventListener('change', (event) => {
+                //Target Value Selected:
+                console.log(`Your chosen target is ${event.target.value}`);
 
-    1, Get all the what__fields textContent etc 
-    2, Stick in an array?
-    3, Create a dropdown select filter
-    4, If X is selected then hide x parent containing div - add class  - hides the whole thing
-    5, If none select then show all
+                //all fields
+                const allFields = document.querySelectorAll('.what__field');
 
-Use this to hide!
-    allFields[0].parentElement.classList.add('not__showing');
+                //foreach on allFields 
+                    allFields.forEach((text) => {  
+                        //What is the textContent?        
+                        const textEle = text.textContent;
+                        //What is the target value
+                        const valueIs = event.target.value;
+                        //Add Class
+                        //const addClass = text.parentElement.classList.add('not__showing');
+                        //Remove Class
+                        //const remove = text.parentElement.classList.remove('not__showing');
+                        //text.parentElement.classList.remove('not__showing');
 
+                        // //Theme one
+                        // const themeOne = "Theme: The purpose and vision of education";
+                        // //Theme two
+                        // const themeTwo = "Theme: Connecting and expanding learning";
+                        // //Theme three                        
+                        // const themeThree = "Theme: Online and digital learning";
+                        // //Theme four                        
+                        // const themeFour = "Theme: Building learning independence";
+                        // //Theme five                        
+                        // const themeFive = "Theme: Professional learning for the 21st century";
 
-            Default:
-    allFields[0].parentElement.classList.remove('not__showing');
+                        // //Add Class
+                        // const addClass = text.parentElement.classList.add('not__showing');
+                                                                      
+                        // //Checking 00 theme
+                        // let firstTheme;
+                        // firstTheme = valueIs === "00" ? addClass : text.parentElement.classList.remove('not__showing');
+                        
+                        // //Checking first theme
+                        // let firstTheme;
+                        // firstTheme = valueIs === "01" && textEle === themeOne ? addClass : text.parentElement.classList.remove('not__showing');
 
+                        // //Checking second theme
+                        // let secondTheme;
+                        // secondTheme = valueIs === "02" && textEle === themeTwo ? addClass : text.parentElement.classList.remove('not__showing');
 
-    Notes:
+                        // //Checking third theme
+                        // let thirdTheme;
+                        // thirdTheme = valueIs === "03" && textEle === themeThree ? addClass : text.parentElement.classList.remove('not__showing');                        
+                        
+                        // //Checking fourth theme
+                        // let fourthTheme;
+                        // fourthTheme = valueIs === "04" && textEle === themeFour ? addClass : text.parentElement.classList.remove('not__showing');                          
 
-
-    Use this to hide!
-    allFields[0].parentElement.classList.add('not__showing');
-
-
-            Default:
-    allFields[0].parentElement.classList.remove('not__showing');
-
-    
-    */
-
-
-
-//Target Value 
-const selectElement = document.querySelector('.themeSelect');
-
-selectElement.addEventListener('change', (event) => {
-//Target Value Selected:
-//   const result = document.querySelector('.result');
-//   result.textContent = `You like ${event.target.value}`;
-console.log(`Your chosen target is ${event.target.value}`);
-
-//all fields
-const allFields = document.querySelectorAll('.what__field');
-//sconsole.log(allFields);
-
-
-// 
-    allFields.forEach((text, i) => {          
-        const textEle = text.textContent;
-        //console.log(`this is textEle: ${textEle}`);
-
-        if(event.target.value === "01" && textEle === "Theme: The purpose and vision of education"){
-            console.log('the same as Theme: The purpose and vision of education - working');
-            text.parentElement.classList.add('newnewnew');
-        } else {
-            text.parentElement.classList.remove('newnewnew');
-        }
-
-        //not__showing 
-        // allFields[0].parentElement.classList.add('not__showing');
+                        // //Checking fifth theme
+                        // let fifthTheme;
+                        // fifthTheme = valueIs === "05" && textEle === themeFive ? addClass : text.parentElement.classList.remove('not__showing');                          
 
 
+                        //If is 01
+                        // if(valueIs === "01" && textEle === "Theme: The purpose and vision of education"){
+                        //     text.parentElement.classList.add('newnewnew');
+                        // } else {
+                        //     text.parentElement.classList.remove('newnewnew');
+                        // }
+                    });
 
-            
-    });
-
-});
+                });
 
             </script>
 
