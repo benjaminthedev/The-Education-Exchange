@@ -44,14 +44,35 @@ get_header(); ?>
           <div class="reflections__filters">
                 <h4>Reflections Filters</h4>
 
-                <?php echo do_shortcode('[facetwp facet="drop"]'); ?>
+                
+
+                <select name="themes" class="themeSelect">
+                    <option value="00">What theme is your reflection in please? </option>
+                    <option value="01">The purpose and vision of education</option>
+                    <option value="02">Connecting and expanding learning</option>
+                    <option value="03">Online and digital learning</option>
+                    <option value="04">Building learning independence</option>
+                    <option value="05">Professional learning for the 21st century</option>
+                </select>
+
+
+            <div class="result"></div>
+
+
+                <?php //echo do_shortcode('[facetwp facet="drop"]'); ?>
+
+ <?php //echo do_shortcode('[facetwp facet="enw"]'); ?>
+
+ <?php //echo do_shortcode(''); ?>
+
+ 
+
+                <?php //echo do_shortcode('[facetwp template="reflections"]'); ?>
             </div>
 
 <article id="activityPDF">
 
 <h4>Your Reflections!</h4>
-
-
 
                     <?php
 
@@ -59,9 +80,11 @@ get_header(); ?>
                             'post_type' => 'userreflections',
                             'author' => $authorID,
                             'facetwp' => true
-                        ));
+                        ));?>
 
-                        while ( $the_query->have_posts() ) :
+                        <?php //echo do_shortcode('[facetwp facet="drop"]'); ?>
+
+                        <?php while ( $the_query->have_posts() ) :
                             $the_query->the_post();?>
                                                       
                                              
@@ -78,7 +101,7 @@ get_header(); ?>
                                  </div>
                                  <br />
 
-                                 <em>Theme: <?php the_field('what_theme'); ?></em>
+                                 <em class="what__field">Theme: <?php the_field('what_theme'); ?></em>
 
                             </div><!-- end userLog -->                             
                         
@@ -93,6 +116,87 @@ get_header(); ?>
                     ?>
 
             </article>
+
+            <style>
+            .userLog.not__showing {
+                display: none;
+            }
+            .userLog.newnewnew {
+                background: lightblue;
+            }
+            </style>
+
+            <script>
+    /*
+    
+    POA
+
+    1, Get all the what__fields textContent etc 
+    2, Stick in an array?
+    3, Create a dropdown select filter
+    4, If X is selected then hide x parent containing div - add class  - hides the whole thing
+    5, If none select then show all
+
+Use this to hide!
+    allFields[0].parentElement.classList.add('not__showing');
+
+
+            Default:
+    allFields[0].parentElement.classList.remove('not__showing');
+
+
+    Notes:
+
+
+    Use this to hide!
+    allFields[0].parentElement.classList.add('not__showing');
+
+
+            Default:
+    allFields[0].parentElement.classList.remove('not__showing');
+
+    
+    */
+
+
+
+//Target Value 
+const selectElement = document.querySelector('.themeSelect');
+
+selectElement.addEventListener('change', (event) => {
+//Target Value Selected:
+//   const result = document.querySelector('.result');
+//   result.textContent = `You like ${event.target.value}`;
+console.log(`Your chosen target is ${event.target.value}`);
+
+//all fields
+const allFields = document.querySelectorAll('.what__field');
+//sconsole.log(allFields);
+
+
+// 
+    allFields.forEach((text, i) => {          
+        const textEle = text.textContent;
+        //console.log(`this is textEle: ${textEle}`);
+
+        if(event.target.value === "01" && textEle === "Theme: The purpose and vision of education"){
+            console.log('the same as Theme: The purpose and vision of education - working');
+            text.parentElement.classList.add('newnewnew');
+        } else {
+            text.parentElement.classList.remove('newnewnew');
+        }
+
+        //not__showing 
+        // allFields[0].parentElement.classList.add('not__showing');
+
+
+
+            
+    });
+
+});
+
+            </script>
 
         <div class="clear"></div>
 
