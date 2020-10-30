@@ -106,7 +106,6 @@ function oceanwp_child_enqueue_parent_style() {
 		wp_enqueue_script( 'professionalLearningLinkJS', get_stylesheet_directory_uri() . '/custom-js/professionalLearningLinkJS.js', array(), '', true );
 	}	
 
-
 	//https://theeducation.exchange/shared-content-form/ content form - test
 	if (is_page(array(4675, 9058))) {
 		wp_enqueue_script( 'formWordLength', get_stylesheet_directory_uri() . '/custom-js/formWordLength.js', array(), '', true );
