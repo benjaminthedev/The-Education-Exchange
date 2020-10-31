@@ -72,7 +72,7 @@ get_header(); ?>
                                                       
                                              
 
-                            <div class="userLog">
+                            <div class="userLog ">
 
                                 <!-- <h1><?php //the_title(); ?></h1> -->
 
@@ -101,7 +101,7 @@ get_header(); ?>
             </article>
 
             <style>
-            .userLog.not__showing {
+            .userLog.hide_me {
                 display: none;
             }
             </style>
@@ -123,6 +123,47 @@ get_header(); ?>
                         const textEle = text.textContent;
                         //What is the target value
                         const valueIs = event.target.value;
+
+                          //Ugh massive if statement
+                          // will come back a refactor and remove all crap code.
+                        if(valueIs === "00"){
+                            text.parentElement.classList.add('new_show');
+                            text.parentElement.classList.remove('hide_me');
+                        } else if(valueIs === "01" && textEle === "Theme: The purpose and vision of education"){
+                            text.parentElement.classList.remove('hide_me');
+                            text.parentElement.classList.add('new_show');
+                        } else if(valueIs === "02" && textEle === "Theme: Connecting and expanding learning"){
+                            text.parentElement.classList.remove('hide_me');
+                            text.parentElement.classList.add('new_show');
+                        } else if(valueIs === "03" && textEle === "Theme: Online and digital learning"){
+                            text.parentElement.classList.remove('hide_me');
+                            text.parentElement.classList.add('new_show');
+                        } else if(valueIs === "04" && textEle === "Theme: Building learning independence"){
+                            text.parentElement.classList.remove('hide_me');
+                            text.parentElement.classList.add('new_show');
+                        } else if(valueIs === "05" && textEle === "Theme: Professional learning for the 21st century"){
+                            text.parentElement.classList.remove('hide_me');
+                            text.parentElement.classList.add('new_show');
+                        }   else {
+                            text.parentElement.classList.add('hide_me');
+                        }
+                        
+
+                         //If is 01
+                        // if(valueIs === "01" && textEle === "Theme: The purpose and vision of education"){
+                        //     text.parentElement.classList.add('newnewnew');
+                        // } else {
+                        //     text.parentElement.classList.remove('show__me');
+                        // }
+
+                        // If is selected num - hide the rest 
+                        //if back on 00 then show all
+
+                        
+                        
+                        
+                        
+                        
                         //Add Class
                         //const addClass = text.parentElement.classList.add('not__showing');
                         //Remove Class
