@@ -12,21 +12,19 @@
     .box1Right {
         padding: 0 10px !important;
     }
+
     .worldImage img {
         width: 50% !important;
         margin-top: 10px;
     }
-    .worldText {
-        width: 50%;
-        margin-left: 50px;
-        margin-bottom: 20px;
-    }
 }
 @media only screen and (max-width: 960px) {
+
     .worldText {
-        width: 50%;
-        margin-left: 100px;
-    }
+    width: 50%;
+    margin-left: 100px;
+}
+
     img.box-image {
         width: 50%;
     }
@@ -45,46 +43,52 @@
     .box2Left {
         padding: 50px 10px !important;
     }
-    .sharedContent {
+
+    .sharedContent{
         width: 40vw;
     }
-    .userLog {
-        width: 87vw;
-    }
-    .wrapAllActivities {
-        width: 90vw;
-        margin: 0 auto;
-        margin-top: 30px;
-    }
-    .activityWrapper {
-        flex-direction: column;
-    }
-    .buttonsWrap a,
-    .buttonsWrap button {
-        padding: 15px 0;
-        width: 90vw;
-        display: block;
-        margin: 20px 0;
-        text-align: center;
-    }
-    .worldImage img {
-        width: 70%;
-        margin-top: 10px;
-    }
+
+
+      /* -- Activity Section -- */
+
+      .userLog{
+       width: 87vw;   
+     }
+
+.wrapAllActivities {
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+  .activityWrapper{
+      flex-direction: column;
+  }
+
+  .buttonsWrap a, .buttonsWrap button {
+   padding: 15px 0px;
+    width: 90vw;
+    display: block;
+    margin: 20px 0px;
+    text-align: center;
+
+}
+
+.worldImage img {
+    width: 70%;
+    margin-top: 10px;
+}
+
+
+
+
 }
 @media only screen and (max-width: 712px) {
-    
-    li.ursc-login-media-cco.ursc-login-media {
-        display: block;
-        width: 100%;
-        text-align: center;
-        font-size: 10px;
-    }
 
     .worldText {
-        width: 50%;
-        margin-left: 100px;
-    }
+    width: 50%;
+    margin-left: 100px;
+}
+
     .main-box {
         min-width: 100%;
     }
@@ -118,55 +122,64 @@
     div#fourthArrowHeading h5 {
         margin-right: 0;
     }
-    article.sharedContentArticle {
-        flex-direction: column !important;
+    
+    article.sharedContentArticle{
+        flex-direction: column !important; 
         margin-right: 20px;
         margin-top: 20px;
     }
-    .sharedContent {
+
+    .sharedContent{
         width: 84vw;
     }
-    .page-template-links-template .standardBtn,
-    .page-template-links-template-Professional-learning-for-the-21st-century .standardBtn,
-    .page-template-links-template-The-Purpose-And-Vision-Of-Education .standardBtn,
-    .page-template-links-template-building-learning-independence .standardBtn,
-    .page-template-links-template-connecting-expanding-learning .standardBtn,
-    .page-template-links-template-online-and-digital-learning .standardBtn,
-    .page-template-share-content-Building-learning-independence .standardBtn {
-        width: 72%;
-        margin-bottom: 0;
-    }
-    .userLog {
-        width: 87vw;
-    }
-    .wrapAllActivities {
-        width: 90vw;
-        margin: 0 auto;
-        margin-top: 30px;
-    }
+
+
+  .page-template-links-template .standardBtn, .page-template-links-template-connecting-expanding-learning .standardBtn, .page-template-links-template-online-and-digital-learning .standardBtn, .page-template-links-template-building-learning-independence .standardBtn, .page-template-links-template-The-Purpose-And-Vision-Of-Education .standardBtn, .page-template-links-template-Professional-learning-for-the-21st-century .standardBtn, .page-template-share-content-Building-learning-independence .standardBtn{
+    width: 72%;
+    margin-bottom: 0px;
+  }
+
+
+  /* -- Activity Section -- */
+
+  .userLog{
+       width: 87vw;   
+  }
+
+  .wrapAllActivities {
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+  
+
     h1.totalHeading {
-        width: 50vw;
-    }
-    .activityWrapper {
-        flex-direction: column;
-    }
-    .buttonsWrap a,
-    .buttonsWrap button {
-        padding: 15px 0;
-        width: 90vw;
-        display: block;
-        margin: 20px 0;
-        text-align: center;
-    }
-    .cbxbookmark_card {
-        margin: 0 10px 20px 10px;
-        display: inline-block;
-        width: 70vw;
-        min-height: 190px !important;
-        z-index: 1 !important;
-    }
-    .worldImage img {
-        width: 70%;
-        margin-top: 10px;
-    }
+    width: 50vw;
+}
+
+  .activityWrapper{
+      flex-direction: column;
+  }
+
+  .buttonsWrap a, .buttonsWrap button {
+    padding: 15px 0px;
+    width: 90vw;
+    display: block;
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.cbxbookmark_card {
+    margin: 0 10px 20px 10px;
+    display: inline-block;
+    width: 70vw;
+    min-height: 190px !important;
+    z-index: 1 !important;
+}
+
+.worldImage img {
+    width: 70%;
+    margin-top: 10px;
+}
+
 }

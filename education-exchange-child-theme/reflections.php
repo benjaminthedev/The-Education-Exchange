@@ -180,6 +180,7 @@ const clearBtn = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
 const showMe = document.getElementById('showMe');
+//console.log(showMe);
 
 
 // Load all event listeners
