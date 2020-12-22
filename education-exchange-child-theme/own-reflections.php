@@ -101,6 +101,10 @@ get_header(); ?>
             </article>
 
             <style>
+            .userLog.not__showing {
+                display: none;
+            }
+
             .userLog.hide_me {
                 display: none;
             }
@@ -124,8 +128,7 @@ get_header(); ?>
                         //What is the target value
                         const valueIs = event.target.value;
 
-                          //Ugh massive if statement
-                          // will come back a refactor and remove all crap code.
+                          //Ugh massive if statement - will come back a refactor and remove all crap code.
                         if(valueIs === "00"){
                             text.parentElement.classList.add('new_show');
                             text.parentElement.classList.remove('hide_me');
